@@ -1,0 +1,31 @@
+{
+  "name": "project-quan-ly-nha-tro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --inspect src/index.js",
+    "watch": "sass  --embed-source-map --watch  src/resources/scss/app.scss src/public/css/app.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iTrong0703/MyTinyWorld.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iTrong0703/MyTinyWorld/issues"
+  },
+  "homepage": "https://github.com/iTrong0703/MyTinyWorld#readme",
+  "dependencies": {
+    "express": "^4.18.3",
+    "express-handlebars": "^7.1.2",
+    "json-server": "^1.0.0-alpha.23",
+    "sass": "^1.71.1"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.0"
+  }
+}
