@@ -1,0 +1,22 @@
+// tạo file .env bỏ vô
+
+APP_NAME=MYTINYWORLD
+APP_URL=http://localhost:3000
+
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=123123
+DB_NAME=my_tiny_world
+
+SESSION_SECRET=mytinyworld
+
+BCRYPT_SALT_ROUND=1
+
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=trongpro012847@gmail.com
+MAIL_PASSWORD=tjbwgvkioayiydwo
+MAIL_ENCRYPTION=TLS
+MAIL_FROM_ADDRESS=trongpro012847@gmail.com
+MAIL_FROM_NAME="${APP_NAME}"
