@@ -17,31 +17,33 @@ exports.login = (req, res) => {
                 console.log('Đăng nhập khôngg thành công');
                 res.redirect('/login');
             } else {
-                console.log('Đăng nhập thành công');
-                if (password === user.password) {
-                    // res.render('home', { layout: 'main.hbs' });
-                    req.session.loggedin = true;
-                    res.redirect('/');
-                }
-                // bcrypt.compare(password, user.password, (err, result) => {
-                //     if (result == true) {
-                //         console.log('bcrypt = true');
-                //         req.session.loggedin = true;
-                //         req.session.user = user;
-                //         res.redirect('/home');
-                //     } else {
-                //         // A user with that email address does not exists
-                //         console.log('bcrypt = false');
-                //         const conflictError = 'User credentials are not valid.';
-                //         res.render('authen/login', { email, password, conflictError });
-                //     }
-                // })
+                // không dùng bcrypt
+                // if (password === user.password) {
+                //     // res.render('home', { layout: 'main.hbs' });
+                //     req.session.loggedin = true;
+                //     res.redirect('/');
+                // }
+
+                // dùng bcrypt để dịch mã
+                bcrypt.compare(password, user.password, (err, result) => {
+                    if (result == true) {
+                        console.log('bcrypt = true');
+                        req.session.loggedin = true;
+                        req.session.user = user;
+                        res.redirect('/');
+                    } else {
+                        // A user with that email address does not exists
+                        console.log('bcrypt = false');
+                        const conflictError = 'User credentials are not valid.';
+                        res.render('authen/login', { layout: 'authen', email, password, conflictError });
+                    }
+                })
             }
         })
     } else {
         // A user with that email address does not exists
         const conflictError = 'User credentials are not valid.';
-        res.render('authen/login', { email, password, conflictError });
+        res.render('authen/login', { layout: 'authen', email, password, conflictError });
     }
 }
 

@@ -34,10 +34,6 @@ app.set('views', path.join(__dirname, 'resources', 'views')); // vì ta để vi
 
 
 
-// app.get('/', (req, res) => {
-//     res.render('login', {layout: 'authen.hbs'});
-// })
-
 // Route inits
 route(app);
 

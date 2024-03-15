@@ -6,7 +6,7 @@ const authenMiddleware = require('../app/middlewares/AuthenMiddleware');
 const homeController = require('../app/controllers/HomeController');
 
 // dùng get do nó là cấp nhỏ hơn, chỉ file index mới dùng use
-router.get('/', authenMiddleware.loggedin, homeController.index); //gọi phương thức index của class SiteController
+router.get('/', authenMiddleware.loggedin, homeController.index); // nếu đăng nhập/đăng ký thành công thì vào đây
 
 
 

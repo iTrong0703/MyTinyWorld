@@ -5,9 +5,7 @@ const authenRouter = require('./authen');
 function route(app) {
 
 
-    app.use('/', homeRouter);
-    app.use('/login', authenRouter);
-
+    app.use('/', homeRouter, authenRouter);
 
 }
 
