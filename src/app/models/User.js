@@ -1,13 +1,13 @@
 const sql = require("../config/connectDb");
 
 const User = function (user) {
-    this.name = user.name;
-    this.password = user.password;
     this.email = user.email;
+    this.password = user.password;
+
 };
 
 User.create = (newUser, result) => {
-    sql.query("INSERT INTO users SET ?", newUser, (err, res) => {
+    sql.query("INSERT INTO user SET ?", newUser, (err, res) => {
         if (err) {
             console.log("error: ", err);
             result(err, null);
@@ -19,7 +19,7 @@ User.create = (newUser, result) => {
 };
 
 User.findByEmail = (email, result) => {
-    sql.query(`SELECT * from users WHERE email = '${email}'`, (err, res) => {
+    sql.query(`SELECT * from user WHERE email = '${email}'`, (err, res) => {
         if (err) {
             console.log("Không tìm thấy email");
             result(err, null);
@@ -35,8 +35,9 @@ User.findByEmail = (email, result) => {
 }
 
 User.verify = (email, result) => {
+    console.log('verfy: ' + email);
     sql.query(
-        "UPDATE users SET email_verified_at = ? WHERE email = ?",
+        "UPDATE user SET email_verified_at = ? WHERE email = ?",
         [new Date(), email],
         (err, res) => {
             if (err) {
@@ -53,9 +54,32 @@ User.verify = (email, result) => {
     );
 }
 
+User.checkVerify = (email, result) => {
+    sql.query(
+        "SELECT email_verified_at FROM user WHERE email = ?",
+        [email],
+        (err, res) => {
+            if (err) {
+                console.log("Error checking verification:", err);
+                result(err, null);
+                return;
+            }
+
+            if (res.length) {
+                // Nếu có một dòng được trả về, có nghĩa là email đã được xác minh
+                result(null, { verified: true, email_verified_at: res[0].email_verified_at });
+            } else {
+                // Nếu không có dòng nào được trả về, có nghĩa là email chưa được xác minh
+                result(null, { verified: false });
+            }
+        }
+    );
+};
+
+
 User.resetPassword = (email, password, result) => {
     sql.query(
-        "UPDATE users SET password = ? WHERE email = ?",
+        "UPDATE user SET password = ? WHERE email = ?",
         [password, email],
         (err, res) => {
             if (err) {

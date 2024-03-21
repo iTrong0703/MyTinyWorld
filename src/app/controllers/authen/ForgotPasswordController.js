@@ -3,40 +3,51 @@ const bcrypt = require('bcrypt');
 const mailer = require('../../utils/mailer');
 
 exports.showForgotForm = (req, res) => {
-    res.render('authen/resetPass/email');
+
+    if (!req.query.status) {
+        console.log('status: ' + req.query.status);
+        res.render('authen/forgotPassword/submitEmail', { layout: 'authen.hbs' });
+    } else if (req.query.status === 'success') {
+        console.log('status: ' + req.query.status);
+        res.redirect('/verify');
+    }
+}
+
+
+
+
+exports.showResetForm = (req, res) => {
+    if (!req.params.email || !req.query.token) {
+        res.redirect('/forgot')
+    } else {
+        res.render('authen/forgotPassword/changePass', { layout: 'authen.hbs', email: req.params.email, token: req.query.token });
+    }
 }
 
 exports.sendResetLinkEmail = (req, res) => {
     if (!req.body.email) {
-        res.redirect('/reset')
+        res.redirect('/forgot')
     } else {
         User.findByEmail(req.body.email, (err, user) => {
             if (!user) {
-                res.redirect('/reset')
+                res.redirect('/forgot')
             } else {
                 bcrypt.hash(user.email, parseInt(process.env.BCRYPT_SALT_ROUND)).then((hashedEmail) => {
-                    mailer.sendMail(user.email, "Reset password", `<a href="${process.env.APP_URL}/reset/${user.email}?token=${hashedEmail}"> Reset Password </a>`)
-                    console.log(`${process.env.APP_URL}/reset/${user.email}?token=${hashedEmail}`);
+                    mailer.sendMailForgotPass(user, "Đổi mật khẩu", hashedEmail)
+                    console.log(`${process.env.APP_URL}/forgot/${user.email}?token=${hashedEmail}`);
                 })
-                res.redirect('/reset?status=success')
+                res.redirect('/forgot?status=success')
             }
         })
     }
 }
 
-exports.showResetForm = (req, res) => {
-    if (!req.params.email || !req.query.token) {
-        res.redirect('/reset')
-    } else {
-        res.render('authen/resetPass/reset', { email: req.params.email, token: req.query.token })
-    }
-}
 
 exports.reset = (req, res) => {
     const { email, token, password } = req.body;
     console.log(email, token, password);
     if (!email || !token || !password) {
-        res.redirect('/reset');
+        res.redirect('/forgot');
     } else {
         bcrypt.compare(email, token, (err, result) => {
             console.log('compare', result);
@@ -44,14 +55,14 @@ exports.reset = (req, res) => {
                 bcrypt.hash(password, parseInt(process.env.BCRYPT_SALT_ROUND)).then((hashedPassword) => {
                     User.resetPassword(email, hashedPassword, (err, result) => {
                         if (!err) {
-                            res.redirect('/login');
+                            res.redirect('/verifySuccess?status=changePasswordSuccess');
                         } else {
                             res.redirect("/500");
                         }
                     })
                 })
             } else {
-                res.redirect('/reset');
+                res.redirect('/forgot');
             }
         })
     }
