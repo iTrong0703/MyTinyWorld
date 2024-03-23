@@ -1,36 +1,118 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+<!-- Body Inner -->
+<div class="body-inner">
+    <!-- Topbar -->
+    <div id="topbar" class="dark topbar-fullwidth">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="top-menu">
+                        <li><a href="#">SĐT Hỗ Trợ: 0123456789</a></li>
+                        <li><a href="#">Email Hỗ Trợ: abc@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 d-none d-sm-block">
+                    <div class="social-icons social-icons-colored-hover">
+                        <ul>
+                            <li class="social-facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li class="social-twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li class="social-google"><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                            <li class="social-youtube"><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</nav>
+    <!-- end: Topbar -->
+    <!-- Header -->
+    <header id="header" class="dark" data-fullwidth="true">
+        <div class="header-inner">
+            <div class="container">
+                <!--Logo-->
+                <div id="logo">
+                    <a href="/">
+                        <img src="/img/logo.png" alt="" style="display: block;">
+                    </a>
+                </div>
+                <!--End: Logo-->
+
+
+                <!--Navigation Resposnive Trigger-->
+                <div id="mainMenu-trigger">
+                    <a class="lines-button x"><span class="lines"></span></a>
+                </div>
+                <!--end: Navigation Resposnive Trigger-->
+                <!--Navigation-->
+                <div id="mainMenu">
+                    <div class="container">
+                        <nav>
+                            <ul>
+                                <li><a href="/">Trang chủ</a></li>
+                                <li class="dropdown"><a href="#">Quản Lý</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-submenu"><a href="#">Quản lý A</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Quản lý A1</a></li>
+                                                <li><a href="#">Quản lý A2</a></li>
+                                                <li><a href="#">Quản lý A3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown-submenu"><a href="#">Quản lý B<span
+                                                    class="badge bg-danger">NEW</span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Quản lý B1</a></li>
+                                                <li><a href="#">Quản lý B2</a></li>
+                                                <li><a href="#">Quản lý B3</a></li>
+                                            </ul>
+                                        </li>
+
+
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Thanh Toán</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-submenu"><a href="#">Thanh toán A</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Thanh toán A1</a></li>
+                                                <li><a href="#">Thanh toán A2</a></li>
+                                                <li><a href="#">Thanh toán A3</a></li>
+
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown-submenu"><a href="#">Thanh toán A</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Thanh toán A1</a></li>
+                                                <li><a href="#">Thanh toán A2</a></li>
+                                                <li><a href="#">Thanh toán A3</a></li>
+
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Tài Khoản</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-submenu"><a href="#">Thanh toán A</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Thanh toán A1</a></li>
+                                                <li><a href="#">Thanh toán A2</a></li>
+                                                <li><a href="#">Thanh toán A3</a></li>
+
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown-submenu"><a href="/logout">Đăng xuất</a>
+
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!--end: Navigation-->
+            </div>
+        </div>
+    </header>
+    <!-- end: Header -->
