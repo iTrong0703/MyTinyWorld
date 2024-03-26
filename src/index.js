@@ -1,14 +1,19 @@
 
-const express = require('express'); //yêu cầu thư viện express vừa cài để add vào chương trình
+const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
+const cookieParser = require('cookie-parser');
 const handlebars = require('express-handlebars');
 const session = require('express-session');
-require('dotenv/config');
-const app = express(); //sử dụng toán tử call () để gọi express
-const port = 3000
-
+const app = express();
+const db = require('./config/db');
 const route = require('./routes');
+require('dotenv/config');
+
+// Connect to DB
+db.connect(app);
+
+// Session
 console.log('SESSION_SECRET:', process.env.SESSION_SECRET);
 app.use(session({
     secret: process.env.SESSION_SECRET,
@@ -16,11 +21,13 @@ app.use(session({
     saveUninitialized: true
 }));
 
+// middleware
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ // middleware for form-data
     extended: true //nếu k thêm vào sẽ bị warning
 }));
 app.use(express.json()); // middleware for XMLHttpRequest, fetch, axios,… json data
+app.use(cookieParser());
 
 // HTTP logger
 // app.use(morgan('combined'))
@@ -33,10 +40,8 @@ app.set('view engine', 'hbs'); // set ứng dụng sử dụng view engine là h
 app.set('views', path.join(__dirname, 'resources', 'views')); // vì ta để views vào thư mục resources nên phải set lại
 
 
-
 // Route inits
 route(app);
 
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
-})
+
+

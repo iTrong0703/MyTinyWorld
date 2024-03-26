@@ -1,11 +1,13 @@
 
-const homeRouter = require('./home');
-const authenRouter = require('./authen');
+const authRoutes = require('./authRoutes');
+const { requireAuth, checkUser } = require('../middlewares/authMiddleware');
 
 function route(app) {
-
-
-    app.use('/', homeRouter, authenRouter);
+    // routes
+    app.get('*', checkUser);
+    app.get('/', requireAuth, (req, res) => res.render('home'));
+    // app.get('/smoothies', requireAuth, (req, res) => res.render('smoothies'));
+    app.use(authRoutes);
 
 }
 
