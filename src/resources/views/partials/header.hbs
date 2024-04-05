@@ -1,11 +1,10 @@
-<!-- Body Inner -->
-<div class="body-inner">
+<div id="header" class="header navbar-default hidden-print">
     <!-- Topbar -->
     <div id="topbar" class="dark topbar-fullwidth">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <ul class="top-menu">
+                    <ul class="top-contact">
                         <li><a href="#">SĐT Hỗ Trợ: 0123456789</a></li>
                         <li><a href="#">Email Hỗ Trợ: abc@gmail.com</a></li>
                     </ul>
@@ -24,95 +23,55 @@
         </div>
     </div>
     <!-- end: Topbar -->
-    <!-- Header -->
-    <header id="header" class="dark" data-fullwidth="true">
-        <div class="header-inner">
-            <div class="container">
-                <!--Logo-->
-                <div id="logo">
-                    <a href="/">
-                        <img src="/img/logo.png" alt="" style="display: block;">
-                    </a>
-                </div>
-                <!--End: Logo-->
+    <!-- begin navbar-header -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed navbar-toggle-left" data-click="sidebar-minify">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a href="/" class="navbar-brand">
+            MY TINY WORLD </a>
 
-
-                <!--Navigation Resposnive Trigger-->
-                <div id="mainMenu-trigger">
-                    <a class="lines-button x"><span class="lines"></span></a>
-                </div>
-                <!--end: Navigation Resposnive Trigger-->
-                <!--Navigation-->
-                <div id="mainMenu">
-                    <div class="container">
-                        <nav>
-                            <ul>
-                                <li><a href="/">Trang chủ</a></li>
-                                <li class="dropdown"><a href="#">Quản Lý</a>
-                                    <ul class="dropdown-menu">
-                                        <li class="dropdown-submenu"><a href="#">Quản lý A</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Quản lý A1</a></li>
-                                                <li><a href="#">Quản lý A2</a></li>
-                                                <li><a href="#">Quản lý A3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown-submenu"><a href="#">Quản lý B<span
-                                                    class="badge bg-danger">NEW</span></a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Quản lý B1</a></li>
-                                                <li><a href="#">Quản lý B2</a></li>
-                                                <li><a href="#">Quản lý B3</a></li>
-                                            </ul>
-                                        </li>
-
-
-                                    </ul>
-                                </li>
-                                <li class="dropdown"><a href="#">Thanh Toán</a>
-                                    <ul class="dropdown-menu">
-                                        <li class="dropdown-submenu"><a href="#">Thanh toán A</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Thanh toán A1</a></li>
-                                                <li><a href="#">Thanh toán A2</a></li>
-                                                <li><a href="#">Thanh toán A3</a></li>
-
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown-submenu"><a href="#">Thanh toán A</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Thanh toán A1</a></li>
-                                                <li><a href="#">Thanh toán A2</a></li>
-                                                <li><a href="#">Thanh toán A3</a></li>
-
-                                            </ul>
-                                        </li>
-
-                                    </ul>
-                                </li>
-                                <li class="dropdown"><a href="#">Tài Khoản</a>
-                                    <ul class="dropdown-menu">
-                                        <li class="dropdown-submenu"><a href="#">Thanh toán A</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Thanh toán A1</a></li>
-                                                <li><a href="#">Thanh toán A2</a></li>
-                                                <li><a href="#">Thanh toán A3</a></li>
-
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown-submenu"><a href="/logout">Đăng xuất</a>
-
-                                        </li>
-
-                                    </ul>
-                                </li>
-
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <!--end: Navigation-->
+        {{!-- <a href="/" class="navbar-brand image">
+            <div class="image">
+                <img src="/img/logo.png" alt="" style="display: block; width: 100px; height: auto; ">
             </div>
-        </div>
-    </header>
-    <!-- end: Header -->
+        </a> --}}
+    </div>
+    <!-- end navbar-header -->
+
+    <!-- begin header-nav -->
+    <ul class="navbar-nav navbar-right">
+        <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle icon">
+                <i class="fa-solid fa-comment"></i>
+                <span class="label">0</span>
+            </a>
+
+            <div class="dropdown-menu media-list dropdown-menu-right" style="max-height: 350px; overflow-y: auto;">
+                <div class="dropdown-header">EXPIRED LEASES (0)</div>
+
+                <div class="dropdown-header">Open Complaints (0)</div>
+            </div>
+        </li>
+        <li class="dropdown navbar-user">
+            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="d-md-inline">Hi, Admin<img src="http://localhost/mars/uploads/website/favicon.png"
+                        alt="Mars Room Management System"></span> </a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a href="http://localhost/mars/profile_settings" class="dropdown-item">Profile Settings</a>
+                <div class="dropdown-divider"></div>
+                <a href="/logout" class="dropdown-item">Log Out</a>
+            </div>
+        </li>
+    </ul>
+    <!-- end header navigation right -->
+
+    {{!-- Search form --}}
+    {{!-- <div class="search-form">
+        <button class="search-btn" type="submit"><i class="material-icons">search</i></button>
+        <input type="text" class="form-control" placeholder="Search Something...">
+        <a href="#" class="close" data-dismiss="navbar-search"><i class="material-icons">close</i></a>
+    </div> --}}
+</div>

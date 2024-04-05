@@ -1,13 +1,14 @@
 
-const authRoutes = require('./authRoutes');
-const { requireAuth, checkUser } = require('../middlewares/authMiddleware');
+const authRouter = require('./authRouter');
+const homeRouter = require('./homeRouter');
+const { checkUser } = require('../middlewares/authMiddleware');
 
 function route(app) {
     // routes
     app.get('*', checkUser);
-    app.get('/', requireAuth, (req, res) => res.render('home'));
-    // app.get('/smoothies', requireAuth, (req, res) => res.render('smoothies'));
-    app.use(authRoutes);
+    app.use('/', homeRouter);
+    app.get('/rooms', (req, res) => res.render('rooms'));
+    app.use(authRouter);
 
 }
 

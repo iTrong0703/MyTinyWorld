@@ -1,0 +1,537 @@
+<!-- Body Inner -->
+<div class="body-inner">
+    <!-- Topbar -->
+    <div id="topbar" class="dark topbar-fullwidth">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="top-menu">
+                        <li><a href="#">SĐT Hỗ Trợ: 0123456789</a></li>
+                        <li><a href="#">Email Hỗ Trợ: abc@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 d-none d-sm-block">
+                    <div class="social-icons social-icons-colored-hover">
+                        <ul>
+                            <li class="social-facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li class="social-twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li class="social-google"><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                            <li class="social-youtube"><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end: Topbar -->
+    <!-- Header -->
+    <header id="header" class="dark" data-fullwidth="true">
+        <div class="header-inner">
+            <div class="container">
+                <!--Logo-->
+                <div id="logo">
+                    <a href="/">
+                        <img src="/img/logo.png" alt="" style="display: block;">
+                    </a>
+                </div>
+                <!--End: Logo-->
+
+
+                <!--Navigation Resposnive Trigger-->
+                <div id="mainMenu-trigger" onclick="mainMenu()">
+                    <a class="lines-button x"><span class="lines"></span></a>
+                </div>
+                <!--end: Navigation Resposnive Trigger-->
+                <!--Navigation-->
+                <div id="mainMenu">
+                    <div class="container">
+                        <nav>
+                            <ul>
+                                <li><a href="/">Trang chủ</a></li>
+                                <li class="dropdown"><a href="#">Quản Lý</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-submenu"><a href="#">Quản lý A</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Quản lý A1</a></li>
+                                                <li><a href="#">Quản lý A2</a></li>
+                                                <li><a href="#">Quản lý A3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown-submenu"><a href="#">Quản lý B<span
+                                                    class="badge bg-danger">NEW</span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Quản lý B1</a></li>
+                                                <li><a href="#">Quản lý B2</a></li>
+                                                <li><a href="#">Quản lý B3</a></li>
+                                            </ul>
+                                        </li>
+
+
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Thanh Toán</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-submenu"><a href="#">Thanh toán A</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Thanh toán A1</a></li>
+                                                <li><a href="#">Thanh toán A2</a></li>
+                                                <li><a href="#">Thanh toán A3</a></li>
+
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown-submenu"><a href="#">Thanh toán A</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Thanh toán A1</a></li>
+                                                <li><a href="#">Thanh toán A2</a></li>
+                                                <li><a href="#">Thanh toán A3</a></li>
+
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Tài Khoản</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-submenu"><a href="#">Thanh toán A</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Thanh toán A1</a></li>
+                                                <li><a href="#">Thanh toán A2</a></li>
+                                                <li><a href="#">Thanh toán A3</a></li>
+
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown-submenu"><a href="/logout">Đăng xuất</a>
+
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!--end: Navigation-->
+            </div>
+        </div>
+    </header>
+    <!-- end: Header -->
+
+    <footer id="footer" class="inverted">
+    <div class="copyright-content">
+        <div class="container">
+            <div class="copyright-text text-center">&copy; 2024 MyTinyWorld - From Group 6 With Love ❤️<a href="#"
+                    target="_blank" rel="noopener"> link</a>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<div class="body-inner">
+    <!-- Section -->
+    <section class="pt-5 pb-5" data-bg-image="images/pages/1.jpg">
+        <div class="container-fluid d-flex flex-column">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-md-6 col-lg-4 col-xl-3 mx-auto">
+                    <div class="card">
+                        <div class="card-body py-5 px-sm-5">
+                            <div class="mb-5 text-center">
+                                <h2 class="h2 mb-1">Quên mật khẩu?</h2>
+                                <form class="form-validation" action="/password_reset?source=submitEmail" method="POST">
+                                    <div class="form-group">
+                                        <p class="center">Để đổi mật khẩu mới, hãy nhập địa chỉ email của bạn bên dưới.
+                                        </p>
+                                        <label for="email" style="text-align: left;">Email</label>
+                                        <input type="email" name="email" class="form-control form-white placeholder"
+                                            placeholder="Hãy nhập email..." required>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary">Xác minh Email</button>
+                                    </div>
+                                </form>
+                                <div class="mt-4"><small>Already have an acocunt?</small> <a href="/signin"
+                                        class="small fw-bold">Sign in</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </section>
+    <!-- end: Section -->
+</div>
+<!-- end: Body Inner -->
+
+
+<div class="body-inner">
+    <!-- Section -->
+    <section class="pt-5 pb-5" data-bg-image="images/pages/1.jpg">
+        <div class="container-fluid d-flex flex-column">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-md-6 col-lg-4 col-xl-3 mx-auto">
+                    <div class="card">
+                        <div class="card-body py-5 px-sm-5">
+                            <div class="mb-5 text-center">
+                                <h2 class="h2 mb-1">Thay đổi mật khẩu</h2>
+                                <form class="form-validation" action="/password_reset?source=changePassword"
+                                    method="POST">
+                                    <div class="form-group">
+                                        <p class="center">Hãy nhập mật khẩu mới của bạn.
+                                        </p>
+                                        <input type="hidden" value="{{token}}" name="token">
+                                        <label for="email" style="text-align: left;">Email</label>
+                                        <input type="text" name="email" value="{{email}}"
+                                            class="form-control form-white placeholder" placeholder="Hãy nhập email..."
+                                            required readonly>
+                                        <label for="password" style="text-align: left;">Mật khẩu</label>
+                                        <input type="password" name="password"
+                                            class="form-control form-white placeholder"
+                                            placeholder="Hãy nhập mật khẩu mới" required>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary">Đổi mật khẩu</button>
+                                    </div>
+                                </form>
+
+                                <div class="mt-4"><small>Already have an acocunt?</small> <a href="/signin"
+                                        class="small fw-bold">Sign in</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </section>
+    <!-- end: Section -->
+</div>
+<!-- end: Body Inner -->
+
+
+<div class="body-inner">
+    <!-- Section -->
+    <section class="pt-5 pb-5" data-bg-image="images/pages/1.jpg">
+        <div class="container-fluid d-flex flex-column">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-md-6 col-lg-4 col-xl-3 mx-auto">
+                    <div class="card">
+                        <div class="card-body py-5 px-sm-5">
+                            <div class="mb-5 text-center">
+                                <h6 class="h3 mb-1">{{message}}</h6>
+                                <p class="text-muted mb-0">Vui lòng quay lại trang đăng nhập bằng cách nhấn vào nút bên
+                                    dưới
+                                </p>
+                            </div>
+                            <span class="clearfix"></span>
+                            <div>
+                                <img src="/img/success.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="mt-4 text-center">
+                                <a href="/signin" class="btn btn-primary">Quay lại trang đăng nhập.</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end: Section -->
+</div>
+<!-- end: Body Inner -->
+
+
+<div class="body-inner">
+    <!-- Section -->
+    <section class="pt-5 pb-5" data-bg-image="images/pages/1.jpg">
+        <div class="container-fluid d-flex flex-column">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-md-6 col-lg-4 col-xl-3 mx-auto">
+                    <div class="card">
+                        <div class="card-body py-5 px-sm-5">
+                            <div class="mb-5 text-center">
+                                <h6 class="h3 mb-1">{{title}}</h6>
+                                <p class="text-muted mb-0">{{description}}</p>
+                            </div>
+                            <span class="clearfix"></span>
+                            <div>
+                                <img src="/img/email.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="mt-4 text-center"><small>Đã có tài khoản?</small> <a href="/signin"
+                                    class="small fw-bold">Nhấn vào đây!!!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end: Section -->
+</div>
+<!-- end: Body Inner -->
+
+
+<div class="body-inner">
+    <!-- Section -->
+    <section class="pt-5 pb-5" data-bg-image="images/pages/1.jpg">
+        <div class="container-fluid d-flex flex-column">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+                    <div class="card shadow-lg">
+                        <div class="card-body py-5 px-sm-5">
+                            <h3>Register New Account</h3>
+                            <p>Create an account by entering the information below. If you are a returning customer
+                                please login at the top of the page.</p>
+                            <form id="form1" class="form-validate mt-5" action="/signup" method="POST">
+                                <div class="h5 mb-4">Account details</div>
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label for="email">Email address</label>
+                                        <input type="email" class="form-control" name="email"
+                                            placeholder="Enter your email" required="">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="password">Password</label>
+                                        <div class="input-group ">
+                                            <input class="form-control" name="password" id="password"
+                                                placeholder="Enter password" type="text" required="">
+                                            <span class="input-group-text show-hide"
+                                                onclick="togglePasswordVisibility('password', this)"><i
+                                                    class="fa-regular fa-eye-slash" aria-hidden="true"
+                                                    style="cursor: pointer;"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn m-t-30 mt-3">Submit</button>
+                            </form>
+                            <div class="mt-4"><small>Already have an acocunt?</small> <a href="/login"
+                                    class="small fw-bold">Sign in</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end: Section -->
+</div>
+<!-- end: Body Inner -->
+
+
+
+
+
+
+
+
+
+
+
+{{!-- <div class="body-inner">
+    <!-- Section -->
+    <section class="pt-5 pb-5" data-bg-image="images/pages/1.jpg">
+        <div class="container-fluid d-flex flex-column">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+                    <div class="card shadow-lg">
+                        <div class="card-body py-5 px-sm-5">
+                            <h3>Register New Account</h3>
+                            <p>Create an account by entering the information below. If you are a returning customer
+                                please login at the top of the page.</p>
+                            <form id="form1" class="form-validate mt-5" action="/register" method="POST">
+                                <div class="h5 mb-4">Account details</div>
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label for="username">Username</label>
+                                        <input type="text" class="form-control" name="username"
+                                            placeholder="Enter username" required="">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="email">Email address</label>
+                                        <input type="email" class="form-control" name="email"
+                                            placeholder="Enter your email" required="">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label for="password">Password</label>
+                                        <div class="input-group show-hide-password">
+                                            <input class="form-control" name="password" placeholder="Enter password"
+                                                type="text" required="">
+                                            <span class="input-group-text"><i class="icon-eye" aria-hidden="true"
+                                                    style="cursor: pointer;"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="password2">Confirm Password</label>
+                                        <div class="input-group show-hide-password">
+                                            <input class="form-control" name="password2" placeholder="Enter password"
+                                                type="password" required="">
+                                            <span class="input-group-text"><i class="icon-eye-off" aria-hidden="true"
+                                                    style="cursor: pointer;"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label for="name">Name</label>
+                                        <input type="text" class="form-control" name="name"
+                                            placeholder="Enter your Name" required="">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="surname">Surname</label>
+                                        <input type="text" class="form-control" name="surname"
+                                            placeholder="Enter your Surname" required="">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label for="gender">Gender</label>
+                                        <select class="form-select" name="gender" required="">
+                                            <option value="">Select your gender</option>
+                                            <option>Female</option>
+                                            <option>Male</option>
+                                            <option>Rather not say</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="gender">Date of Birth</label>
+                                        <input class="form-control" type="date" name="dateofbirth" required="">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label for="telephone">Telephone</label>
+                                        <input class="form-control" type="tel" name="telephone"
+                                            placeholder="Enter your Telephone number" required="">
+                                    </div>
+                                </div>
+                                <div class="h5 mb-4">Mailing Address</div>
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label for="address">Address</label>
+                                        <input type="text" class="form-control" name="address"
+                                            placeholder="Enter your Street Address" required="">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="address2">Address 2</label>
+                                        <input type="text" class="form-control" name="address2"
+                                            placeholder="Enter your Apartment, studio, or floor" required="">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label for="city">City</label>
+                                        <input type="text" class="form-control" name="city"
+                                            placeholder="Enter your City" required="">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label>Zip Code:</label>
+                                        <input type="number" class="form-control" name="zip"
+                                            placeholder="Enter Zip Code" required="">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label for="state">State</label>
+                                        <select name="state" class="form-select" required="">
+                                            <option value="">Australia</option>
+                                            <option>Option 1</option>
+                                            <option>Option 2</option>
+                                            <option>Option 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="country">Country</label>
+                                        <select name="country" class="form-select" required="">
+                                            <option value="">United States</option>
+                                            <option>Option 1</option>
+                                            <option>Option 2</option>
+                                            <option>Option 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-check mb-1 mt-5">
+                                    <input type="checkbox" name="reminders" id="reminders" class="form-check-input"
+                                        value="1" required="">
+                                    <label class="form-check-label" for="reminders">Send me occasional
+                                        reminders
+                                        about these settings</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" name="terms_conditions" id="terms_conditions"
+                                        class="form-check-input" value="1" required="">
+                                    <label class="form-check-label" for="terms_conditions">By checking
+                                        this
+                                        option, you agree to acceot with the <a href="#">Terms and
+                                            Conditions</a>.</label>
+                                </div>
+                                <button type="submit" class="btn m-t-30 mt-3">Submit</button>
+                            </form>
+                            <div class="mt-4"><small>Already have an acocunt?</small> <a href="page-user-login.html"
+                                    class="small fw-bold">Sign in</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end: Section -->
+</div>
+<!-- end: Body Inner -->
+
+
+<div class="body-inner">
+    <!-- Section -->
+    <section class="pt-5 pb-5" data-bg-image="images/pages/1.jpg">
+        <div class="container-fluid d-flex flex-column">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-md-6 col-lg-4 col-xl-3 mx-auto">
+                    <div class="card">
+                        <div class="card-body py-5 px-sm-5">
+                            <div class="mb-5 text-center">
+                                <h6 class="h3 mb-1">Đăng nhập</h6>
+                                <p class="text-muted mb-0">Hãy đăng nhập tài khoản dựa trên email trong hợp đồng của
+                                    bạn!!!</p>
+                            </div><span class="clearfix"></span>
+                            <form class="form-validate" action="/signin" method="POST">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <div class="input-group">
+                                        <input type="email" class="form-control" name="email"
+                                            placeholder="Hãy nhập email" required="">
+                                        <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label for="password">Mật khẩu</label>
+                                    <div class="input-group ">
+                                        <input class="form-control" name="password" id="password"
+                                            placeholder="Hãy nhập mật khẩu" type="password" required="">
+                                        <span class="input-group-text show-hide"
+                                            onclick="togglePasswordVisibility('password', this)"><i
+                                                class="fa-regular fa-eye-slash" aria-hidden="true"
+                                                style="cursor: pointer;"></i></span>
+                                    </div>
+                                </div>
+                                <div class="mt-4"><button type="submit"
+                                        class="btn btn-primary btn-block btn-primary">Đăng nhập</button></div>
+                            </form>
+                            <div class="mt-4 text-center"><small>Not registered?</small> <a href="/signup"
+                                    class="small fw-bold">Create account</a>
+                            </div>
+                            <div class="mt-4 text-center"><small>Quên mật khẩu?</small> <a href="/password_reset"
+                                    class="small fw-bold">Nhấn vào đây!!!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end: Section -->
+</div>
+<!-- end: Body Inner -->

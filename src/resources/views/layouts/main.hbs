@@ -11,26 +11,358 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/plugins.css">
+
+    <link rel="stylesheet" href="/css/responsive.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <div class="app">
+    <div id="page-container" class="fade page-sidebar-fixed page-header-fixed page-with-wide-sidebar show">
         {{> header}}
 
-        <div class="container">
+        <div class="content-container">
+            <div id="sidebar" class="sidebar" data-disable-slide-animation="true">
+                <!-- begin sidebar scrollbar -->
+
+                <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;">
+                    <div data-scrollbar="true" data-height="100%" style="overflow-y: scroll; width: auto; height: 100%;"
+                        data-init="true">
+                        <!-- begin sidebar user -->
+                        <ul class="nav">
+                            <li class="nav-profile">
+                                <div class="text-center">
+                                    <div class="cover with-shadow"></div>
+                                    <div class="image">
+                                        <img src="http://localhost/mars/uploads/website/favicon.png"
+                                            alt="Mars Room Management System">
+                                    </div>
+                                    <div class="info">
+                                        Admin <small>
+                                            Admin </small>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- end sidebar user -->
+                        <!-- begin sidebar nav -->
+                        <ul class="nav">
+                            <li class="nav-header">Navigation</li>
+                            <li class="active">
+                                <a href="/">
+                                    <i class="fa fa-home"></i>
+                                    <span>Trang Chủ</span>
+                                </a>
+                            </li>
+                            <li class="has-sub closed">
+                                <a href="javascript:;">
+                                    <b class="caret"></b>
+                                    <i class="far fa-credit-card"></i>
+                                    <span>Hóa Đơn</span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="">
+                                        <a href="http://localhost/mars/generate_invoice">Tạo Hóa Đơn</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="http://localhost/mars/monthly_invoices">Hóa Đơn Tháng</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="http://localhost/mars/tenant_invoices">Hóa Đơn Nhân Viên</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="http://localhost/mars/invoices">Tất Cả Hóa Đơn</a>
+                                    </li>
+                                </ul>
+                                <div class="float-sub-menu-container" id="float-sub-menu" data-offset-top="96"
+                                    data-menu-offset-top="96" style="inset: 96px auto auto 60px;">
+                                    <div class="float-sub-menu-arrow" id="float-sub-menu-arrow"
+                                        style="top: 20px; bottom: auto;">
+                                    </div>
+                                    <div class="float-sub-menu-line" id="float-sub-menu-line"
+                                        style="top: 20px; bottom: auto;">
+                                    </div>
+                                    <ul class="float-sub-menu">
+                                        <li class="">
+                                            <a href="http://localhost/mars/generate_invoice">Tạo Hóa Đơn</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="http://localhost/mars/monthly_invoices">Hóa Đơn Tháng</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="http://localhost/mars/tenant_invoices">Hóa Đơn Nhân Viên</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="http://localhost/mars/invoices">Tất Cả Hóa Đơn</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="">
+                                <a href="/rooms">
+                                    <i class="fa fa-building"></i>
+                                    <span>Phòng</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="http://localhost/mars/tenants">
+                                    <i class="fa fa-users"></i>
+                                    <span>Khách Thuê</span>
+                                </a>
+                            </li>
+                            <li class="has-sub ">
+                                <a href="javascript:;">
+                                    <b class="caret"></b>
+                                    <i class="fa fa-money-bill-alt"></i>
+                                    <span>Hóa Đơn Dịch Vụ</span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="">
+                                        <a href="http://localhost/mars/utility_bills">Utility Bill</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="http://localhost/mars/utility_bill_categories">Utility Bill
+                                            Category</a>
+                                    </li>
+                                </ul>
+                                <div class="float-sub-menu-container" id="float-sub-menu" data-offset-top="204"
+                                    data-menu-offset-top="204" style="inset: 204px auto auto 60px;">
+                                    <div class="float-sub-menu-arrow" id="float-sub-menu-arrow"
+                                        style="top: 20px; bottom: auto;">
+                                    </div>
+                                    <div class="float-sub-menu-line" id="float-sub-menu-line"
+                                        style="top: 20px; bottom: auto;">
+                                    </div>
+                                    <ul class="float-sub-menu">
+                                        <li class="">
+                                            <a href="http://localhost/mars/utility_bills">Utility Bill</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="http://localhost/mars/utility_bill_categories">Utility Bill
+                                                Category</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="">
+                                <a href="http://localhost/mars/complaints">
+                                    <i class="fa fa-life-ring"></i>
+                                    <span>Khiếu Nại</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="http://localhost/mars/notices">
+                                    <i class="fa fa-podcast"></i>
+                                    <span>Thông Báo</span>
+                                </a>
+                            </li>
+                            <li class="has-sub ">
+                                <a href="javascript:;">
+                                    <b class="caret"></b>
+                                    <i class="fa fa-file-excel"></i>
+                                    <span>Báo Cáo</span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="">
+                                        <a href="http://localhost/mars/rents_report">Rents</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="http://localhost/mars/expenses_report">Expenses</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="http://localhost/mars/utilities_report">Utilities</a>
+                                    </li>
+                                </ul>
+                                <div class="float-sub-menu-container" id="float-sub-menu" data-offset-top="312"
+                                    data-menu-offset-top="312" style="inset: 312px auto auto 60px;">
+                                    <div class="float-sub-menu-arrow" id="float-sub-menu-arrow"
+                                        style="top: 20px; bottom: auto;">
+                                    </div>
+                                    <div class="float-sub-menu-line" id="float-sub-menu-line"
+                                        style="top: 20px; bottom: auto;">
+                                    </div>
+                                    <ul class="float-sub-menu">
+                                        <li class="">
+                                            <a href="http://localhost/mars/rents_report">Rents</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="http://localhost/mars/expenses_report">Expenses</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="http://localhost/mars/utilities_report">Utilities</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="">
+                                <a href="http://localhost/mars/account">
+                                    <i class="fa fa-list-ol"></i>
+                                    <span>Tài Khoản</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="http://localhost/mars/expenses">
+                                    <i class="fas fa-credit-card"></i>
+                                    <span>Chi Phí</span>
+                                </a>
+                            </li>
+                            <li class="has-sub ">
+                                <a href="javascript:;">
+                                    <b class="caret"></b>
+                                    <i class="fa fa-user"></i>
+                                    <span>Nhân Viên</span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="">
+                                        <a href="http://localhost/mars/staff">Staff</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="http://localhost/mars/add_staff_payroll">Add Staff Payroll</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="http://localhost/mars/staff_payroll">Staff Payroll</a>
+                                    </li>
+                                </ul>
+                                <div class="float-sub-menu-container" id="float-sub-menu" data-offset-top="420"
+                                    data-menu-offset-top="420" style="inset: 420px auto auto 60px;">
+                                    <div class="float-sub-menu-arrow" id="float-sub-menu-arrow"
+                                        style="top: 20px; bottom: auto;">
+                                    </div>
+                                    <div class="float-sub-menu-line" id="float-sub-menu-line"
+                                        style="top: 20px; bottom: auto;">
+                                    </div>
+                                    <ul class="float-sub-menu">
+                                        <li class="">
+                                            <a href="http://localhost/mars/staff">Staff</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="http://localhost/mars/add_staff_payroll">Add Staff Payroll</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="http://localhost/mars/staff_payroll">Staff Payroll</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="">
+                                <a href="http://localhost/mars/board_members">
+                                    <i class="fa fa-user-circle"></i>
+                                    <span>Nhân Viên</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="http://localhost/mars/lease_monitor">
+                                    <i class="fa fa-desktop"></i>
+                                    <span>Nhân Viên</span>
+                                </a>
+                            </li>
+                            <li class="has-sub ">
+                                <a href="javascript:;">
+                                    <b class="caret"></b>
+                                    <i class="fa fa-cog"></i>
+                                    <span>Nhân Viên</span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="">
+                                        <a href="http://localhost/mars/website_settings">Website</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="http://localhost/mars/profession_settings">Profession</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="http://localhost/mars/service_settings">Service</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="http://localhost/mars/id_type_settings">ID Type</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="http://localhost/mars/payment_method_settings">Payment Method</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="http://localhost/mars/board_member_settings">Board Member</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="http://localhost/mars/profile_settings">Profile</a>
+                                    </li>
+                                </ul>
+                                <div class="float-sub-menu-container" id="float-sub-menu" data-offset-top="528"
+                                    data-menu-offset-top="528" style="inset: 528px auto auto 60px;">
+                                    <div class="float-sub-menu-arrow" id="float-sub-menu-arrow"
+                                        style="top: 20px; bottom: auto;">
+                                    </div>
+                                    <div class="float-sub-menu-line" id="float-sub-menu-line"
+                                        style="top: 20px; bottom: auto;">
+                                    </div>
+                                    <ul class="float-sub-menu">
+                                        <li class="">
+                                            <a href="http://localhost/mars/website_settings">Website</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="http://localhost/mars/profession_settings">Profession</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="http://localhost/mars/service_settings">Service</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="http://localhost/mars/id_type_settings">ID Type</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="http://localhost/mars/payment_method_settings">Payment Method</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="http://localhost/mars/board_member_settings">Board Member</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="http://localhost/mars/profile_settings">Profile</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="">
+                                <a href="https://support.t1m9m.com" target="_blank">
+                                    <i class="fa fa-question-circle"></i>
+                                    <span>Nhân Viên</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- end sidebar nav -->
+                    </div>
+
+                    <div class="slimScrollBar"
+                        style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 584.953px;">
+                    </div>
+                    <div class="slimScrollRail"
+                        style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;">
+                    </div>
+                </div>
+                <!-- end sidebar scrollbar -->
+            </div>
             {{{body}}}
         </div>
 
         {{> footer}}
     </div>
 
-    <!-- Latest compiled JavaScript -->
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    {{!-- bootstrap --}}
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+    <script src="/js/functions.js"></script>
+
+
+
+
 
 </body>
 
