@@ -1,0 +1,383 @@
+<div id="content" class="content">
+    <!-- begin breadcrumb -->
+    <ol class="breadcrumb pull-right">
+        <li class="breadcrumb-item"><a href="http://localhost/mars/">Dashboard</a></li>
+        <li class="breadcrumb-item active">Generate Invoice</li>
+    </ol>
+    <!-- end breadcrumb -->
+    <!-- begin page-header -->
+    <h1 class="page-header">
+        Generate invoices for Tenants </h1>
+    <!-- end page-header -->
+
+    <!-- begin row -->
+    <div class="row">
+        <!-- begin col-6 -->
+        <div class="col-lg-6 offset-lg-3 ui-sortable">
+            <!-- begin panel -->
+            <div class="panel panel-inverse">
+                <!-- begin panel-body -->
+                <ul class="nav nav-tabs nav-tabs-inverse nav-justified nav-justified-mobile">
+                    <li class="nav-item">
+                        <a href="#date-range" data-toggle="tab" class="nav-link active">
+                            <span class="d-md-inline">Hóa Đơn </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#multiple-months" data-toggle="tab" class="nav-link">
+                            <span class="d-md-inline">Multiple Months</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#single-month" data-toggle="tab" class="nav-link">
+                            <span class="d-md-inline">Single Month</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade active show" id="date-range">
+                        <form action="http://localhost/mars/generate_invoice/range" method="post"
+                            data-parsley-validate="true" accept-charset="utf-8" novalidate="">
+                            <div class="form-group">
+                                <label>Tenant *</label>
+                                <div>
+                                    <select style="width: 100%"
+                                        class="form-control default-select2 select2-hidden-accessible"
+                                        data-parsley-required="true" name="tenant_id" tabindex="-1" aria-hidden="true">
+                                        <option value="">Select tenant</option>
+                                        <option value="1">Thanh Trong - 1</option>
+                                    </select><span class="select2 select2-container select2-container--default"
+                                        dir="ltr" style="width: 100%;"><span class="selection"><span
+                                                class="select2-selection select2-selection--single" role="combobox"
+                                                aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                                aria-labelledby="select2-tenant_id-3x-container"><span
+                                                    class="select2-selection__rendered"
+                                                    id="select2-tenant_id-3x-container" title="Select tenant">Select
+                                                    tenant</span><span class="select2-selection__arrow"
+                                                    role="presentation"><b
+                                                        role="presentation"></b></span></span></span><span
+                                            class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Status *</label>
+                                <div>
+                                    <select style="width: 100%"
+                                        class="form-control default-select2 select2-hidden-accessible"
+                                        data-parsley-required="true" name="status" tabindex="-1" aria-hidden="true">
+                                        <option value="">Select status</option>
+                                        <option value="0">Due</option>
+                                        <option value="1">Paid</option>
+                                    </select><span class="select2 select2-container select2-container--default"
+                                        dir="ltr" style="width: 100%;"><span class="selection"><span
+                                                class="select2-selection select2-selection--single" role="combobox"
+                                                aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                                aria-labelledby="select2-status-74-container"><span
+                                                    class="select2-selection__rendered" id="select2-status-74-container"
+                                                    title="Select status">Select status</span><span
+                                                    class="select2-selection__arrow" role="presentation"><b
+                                                        role="presentation"></b></span></span></span><span
+                                            class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Range *</label>
+                                <div class="input-group input-daterange">
+                                    <input type="text" class="form-control" name="start" placeholder="Date start"
+                                        data-parsley-required="true">
+                                    <span class="input-group-addon">to</span>
+                                    <input type="text" class="form-control" name="end" placeholder="Date end"
+                                        data-parsley-required="true">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Due Date (mm/dd/yyyy) *</label>
+                                <input name="due_date" type="text" class="form-control" id="datepicker-default"
+                                    placeholder="Due Date" data-parsley-required="true">
+                            </div>
+
+                            <button type="submit" class="mb-sm btn btn-block btn-primary">Generate time period
+                                invoice</button>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="multiple-months">
+                        <form action="http://localhost/mars/generate_invoice/multiple" method="post"
+                            data-parsley-validate="true" accept-charset="utf-8" novalidate="">
+                            <div class="form-group">
+                                <label>Tenant *</label>
+                                <div>
+                                    <select style="width: 100%"
+                                        class="form-control default-select2 select2-hidden-accessible"
+                                        data-parsley-required="true" name="tenant_id" tabindex="-1" aria-hidden="true">
+                                        <option value="">Select tenant</option>
+                                        <option value="1">Thanh Trong - 1</option>
+                                    </select><span class="select2 select2-container select2-container--default"
+                                        dir="ltr" style="width: 100%;"><span class="selection"><span
+                                                class="select2-selection select2-selection--single" role="combobox"
+                                                aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                                aria-labelledby="select2-tenant_id-wt-container"><span
+                                                    class="select2-selection__rendered"
+                                                    id="select2-tenant_id-wt-container" title="Select tenant">Select
+                                                    tenant</span><span class="select2-selection__arrow"
+                                                    role="presentation"><b
+                                                        role="presentation"></b></span></span></span><span
+                                            class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Status *</label>
+                                <div>
+                                    <select style="width: 100%"
+                                        class="form-control default-select2 select2-hidden-accessible"
+                                        data-parsley-required="true" name="status" tabindex="-1" aria-hidden="true">
+                                        <option value="">Select status</option>
+                                        <option value="0">Due</option>
+                                        <option value="1">Paid</option>
+                                    </select><span class="select2 select2-container select2-container--default"
+                                        dir="ltr" style="width: 100%;"><span class="selection"><span
+                                                class="select2-selection select2-selection--single" role="combobox"
+                                                aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                                aria-labelledby="select2-status-xa-container"><span
+                                                    class="select2-selection__rendered" id="select2-status-xa-container"
+                                                    title="Select status">Select status</span><span
+                                                    class="select2-selection__arrow" role="presentation"><b
+                                                        role="presentation"></b></span></span></span><span
+                                            class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Year *</label>
+                                <div>
+                                    <select style="width: 100%"
+                                        class="form-control default-select2 select2-hidden-accessible"
+                                        data-parsley-required="true" name="year" tabindex="-1" aria-hidden="true">
+                                        <option value="">Select year</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
+                                        <option value="2026">2026</option>
+                                        <option value="2027">2027</option>
+                                        <option value="2028">2028</option>
+                                    </select><span class="select2 select2-container select2-container--default"
+                                        dir="ltr" style="width: 100%;"><span class="selection"><span
+                                                class="select2-selection select2-selection--single" role="combobox"
+                                                aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                                aria-labelledby="select2-year-ak-container"><span
+                                                    class="select2-selection__rendered" id="select2-year-ak-container"
+                                                    title="Select year">Select year</span><span
+                                                    class="select2-selection__arrow" role="presentation"><b
+                                                        role="presentation"></b></span></span></span><span
+                                            class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Months *</label>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="checkbox checkbox-css">
+                                            <input type="checkbox" id="January" value="January" name="months[]"
+                                                data-parsley-required="true" data-parsley-multiple="months">
+                                            <label for="January">January</label>
+                                        </div>
+                                        <div class="checkbox checkbox-css">
+                                            <input type="checkbox" id="May" value="May" name="months[]"
+                                                data-parsley-multiple="months">
+                                            <label for="May">May</label>
+                                        </div>
+                                        <div class="checkbox checkbox-css">
+                                            <input type="checkbox" id="September" value="September" name="months[]"
+                                                data-parsley-multiple="months">
+                                            <label for="September">September</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="checkbox checkbox-css">
+                                            <input type="checkbox" id="February" value="February" name="months[]"
+                                                data-parsley-multiple="months">
+                                            <label for="February">February</label>
+                                        </div>
+                                        <div class="checkbox checkbox-css">
+                                            <input type="checkbox" id="June" value="June" name="months[]"
+                                                data-parsley-multiple="months">
+                                            <label for="June">June</label>
+                                        </div>
+                                        <div class="checkbox checkbox-css">
+                                            <input type="checkbox" id="October" value="October" name="months[]"
+                                                data-parsley-multiple="months">
+                                            <label for="October">October</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="checkbox checkbox-css">
+                                            <input type="checkbox" id="March" value="March" name="months[]"
+                                                data-parsley-multiple="months">
+                                            <label for="March">March</label>
+                                        </div>
+                                        <div class="checkbox checkbox-css">
+                                            <input type="checkbox" id="July" value="July" name="months[]"
+                                                data-parsley-multiple="months">
+                                            <label for="July">July</label>
+                                        </div>
+                                        <div class="checkbox checkbox-css">
+                                            <input type="checkbox" id="November" value="November" name="months[]"
+                                                data-parsley-multiple="months">
+                                            <label for="November">November</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="checkbox checkbox-css">
+                                            <input type="checkbox" id="April" value="April" name="months[]"
+                                                data-parsley-multiple="months">
+                                            <label for="April">April</label>
+                                        </div>
+                                        <div class="checkbox checkbox-css">
+                                            <input type="checkbox" id="August" value="August" name="months[]"
+                                                data-parsley-multiple="months">
+                                            <label for="August">August</label>
+                                        </div>
+                                        <div class="checkbox checkbox-css">
+                                            <input type="checkbox" id="December" value="December" name="months[]"
+                                                data-parsley-multiple="months">
+                                            <label for="December">December</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Due Date (mm/dd/yyyy) *</label>
+                                <input name="due_date" type="text" class="form-control" id="datepicker-inline"
+                                    placeholder="Due Date" data-parsley-required="true">
+                            </div>
+
+                            <button type="submit" class="mb-sm btn btn-block btn-primary">Generate single tenant
+                                invoice(s)</button>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="single-month">
+                        <form action="http://localhost/mars/generate_invoice/single" method="post"
+                            data-parsley-validate="true" accept-charset="utf-8" novalidate="">
+                            <div class="form-group">
+                                <label>Tenant *</label>
+                                <div>
+                                    <select class="multiple-select2 form-control select2-hidden-accessible" multiple=""
+                                        name="tenants[]" data-parsley-required="true" style="width: 100%"
+                                        data-parsley-multiple="tenants[]" tabindex="-1" aria-hidden="true">
+                                        <option value="All">All Tenants</option>
+                                        <option value="1">Thanh Trong - 1</option>
+                                    </select><span class="select2 select2-container select2-container--default"
+                                        dir="ltr" style="width: 100%;"><span class="selection"><span
+                                                class="select2-selection select2-selection--multiple" role="combobox"
+                                                aria-haspopup="true" aria-expanded="false" tabindex="-1">
+                                                <ul class="select2-selection__rendered">
+                                                    <li class="select2-search select2-search--inline"><input
+                                                            class="select2-search__field" type="search" tabindex="0"
+                                                            autocomplete="off" autocorrect="off" autocapitalize="off"
+                                                            spellcheck="false" role="textbox" aria-autocomplete="list"
+                                                            placeholder="Select tenants" style="width: 100px;"></li>
+                                                </ul>
+                                            </span></span><span class="dropdown-wrapper"
+                                            aria-hidden="true"></span></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Status *</label>
+                                <div>
+                                    <select style="width: 100%"
+                                        class="form-control default-select2 select2-hidden-accessible"
+                                        data-parsley-required="true" name="status" tabindex="-1" aria-hidden="true">
+                                        <option value="">Select status</option>
+                                        <option value="0">Due</option>
+                                        <option value="1">Paid</option>
+                                    </select><span class="select2 select2-container select2-container--default"
+                                        dir="ltr" style="width: 100%;"><span class="selection"><span
+                                                class="select2-selection select2-selection--single" role="combobox"
+                                                aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                                aria-labelledby="select2-status-at-container"><span
+                                                    class="select2-selection__rendered" id="select2-status-at-container"
+                                                    title="Select status">Select status</span><span
+                                                    class="select2-selection__arrow" role="presentation"><b
+                                                        role="presentation"></b></span></span></span><span
+                                            class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Year *</label>
+                                <div>
+                                    <select style="width: 100%"
+                                        class="form-control default-select2 select2-hidden-accessible"
+                                        data-parsley-required="true" name="year" tabindex="-1" aria-hidden="true">
+                                        <option value="">Select year</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
+                                        <option value="2026">2026</option>
+                                        <option value="2027">2027</option>
+                                        <option value="2028">2028</option>
+                                    </select><span class="select2 select2-container select2-container--default"
+                                        dir="ltr" style="width: 100%;"><span class="selection"><span
+                                                class="select2-selection select2-selection--single" role="combobox"
+                                                aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                                aria-labelledby="select2-year-zd-container"><span
+                                                    class="select2-selection__rendered" id="select2-year-zd-container"
+                                                    title="Select year">Select year</span><span
+                                                    class="select2-selection__arrow" role="presentation"><b
+                                                        role="presentation"></b></span></span></span><span
+                                            class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Month *</label>
+                                <div>
+                                    <select style="width: 100%"
+                                        class="form-control default-select2 select2-hidden-accessible"
+                                        data-parsley-required="true" name="month" tabindex="-1" aria-hidden="true">
+                                        <option value="">Select month</option>
+                                        <option value="January">January</option>
+                                        <option value="February">February</option>
+                                        <option value="March">March</option>
+                                        <option value="April">April</option>
+                                        <option value="May">May</option>
+                                        <option value="June">June</option>
+                                        <option value="July">July</option>
+                                        <option value="August">August</option>
+                                        <option value="September">September</option>
+                                        <option value="October">October</option>
+                                        <option value="November">November</option>
+                                        <option value="December">December</option>
+                                    </select><span class="select2 select2-container select2-container--default"
+                                        dir="ltr" style="width: 100%;"><span class="selection"><span
+                                                class="select2-selection select2-selection--single" role="combobox"
+                                                aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                                aria-labelledby="select2-month-ao-container"><span
+                                                    class="select2-selection__rendered" id="select2-month-ao-container"
+                                                    title="Select month">Select month</span><span
+                                                    class="select2-selection__arrow" role="presentation"><b
+                                                        role="presentation"></b></span></span></span><span
+                                            class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Due Date (mm/dd/yyyy) *</label>
+                                <input name="due_date" type="text" class="form-control" id="datepicker-autoClose"
+                                    placeholder="Due Date" data-parsley-required="true">
+                            </div>
+
+                            <button type="submit" class="mb-sm btn btn-block btn-primary">Generate monthly
+                                invoice(s)</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- end panel-body -->
+            </div>
+            <!-- end panel -->
+        </div>
+        <!-- end col-6 -->
+    </div>
+    <!-- end row -->
+</div>

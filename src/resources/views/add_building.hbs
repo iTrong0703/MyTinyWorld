@@ -1,0 +1,373 @@
+<div id="content" class="content">
+    <!-- begin breadcrumb -->
+    <ol class="breadcrumb pull-right">
+        <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+        <li class="breadcrumb-item active">Thêm nhà</li>
+    </ol>
+    <!-- end breadcrumb -->
+    <!-- begin page-header -->
+    <h1 class="page-header">Thêm nhà trọ mới</h1>
+    <!-- end page-header -->
+
+    <!-- begin row -->
+    <div class="row">
+        <!-- begin col-12 -->
+        <div class="col-lg-12 ui-sortable">
+            <!-- begin panel -->
+            <div class="panel panel-inverse">
+                <!-- begin panel-body -->
+                <div class="panel-body">
+                    <form action="#" method="post" data-parsley-validate="true" enctype="multipart/form-data"
+                        accept-charset="utf-8" novalidate="">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <label>Tên nhà *</label>
+                                    <input value="" type="text" name="name" placeholder="Nhập tên nhà" required
+                                        class="form-control" data-parsley-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label>Tỉnh *</label>
+                                    <select style="width: 100%"
+                                        class="form-control default-select2 select2-hidden-accessible" id="city"
+                                        name="id_type_id" tabindex="-1" aria-hidden="true">
+                                        <option value="">Chọn tỉnh thành</option>
+
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Quận huyện *</label>
+                                    <select style="width: 100%"
+                                        class="form-control default-select2 select2-hidden-accessible" id="district"
+                                        name="id_type_id" tabindex="-1" aria-hidden="true">
+                                        <option value="">Chọn quận huyện</option>
+
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Phường xã *</label>
+                                    <select style="width: 100%"
+                                        class="form-control default-select2 select2-hidden-accessible" id="ward"
+                                        name="id_type_id" tabindex="-1" aria-hidden="true">
+                                        <option value="">Chọn phường xã</option>
+
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Địa chỉ *</label>
+                                    <input value="" type="text" name="#" placeholder="Nhập địa chỉ" required
+                                        class="form-control" data-parsley-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label>Link google map</label>
+                                    <input value="" type="text" name="#" placeholder="Nhập link google map nếu có"
+                                        class="form-control" data-parsley-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label>Chủ nhà</label>
+                                    <input value="" type="text" name="#" placeholder="" class="form-control"
+                                        data-parsley-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label>SĐT Chủ nhà</label>
+                                    <input value="" type="text" name="#" placeholder="Nhập số điện thoại chủ nhà"
+                                        class="form-control" data-parsley-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label>Quản lý</label>
+                                    <input value="" type="text" name="#" placeholder="" class="form-control"
+                                        data-parsley-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label>SĐT Quản lý</label>
+                                    <input value="" type="text" name="#" placeholder="Nhập số điện thoại quản lý"
+                                        class="form-control" data-parsley-required="true">
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <label>Ghi chú</label>
+                                            <textarea style="resize: none" type="text" name="#"
+                                                placeholder="Nhập ghi chú nếu có" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <label>Số lượng phòng</label>
+                                    <input value="" type="text" name="" placeholder="Nhập số lượng phòng"
+                                        class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Loại phòng</label>
+                                    <select style="width: 100%"
+                                        class="form-control default-select2 select2-hidden-accessible" name="#"
+                                        tabindex="-1" aria-hidden="true">
+
+                                        <option value=""></option>
+                                        <option value="PHONG">Phòng</option>
+                                        <option value="G-NAM">Giường Nam</option>
+                                        <option value="G-NU">Giường Nữ</option>
+                                        <option value="Studio">Phòng Studio</option>
+                                        <option value="1PN">1 Phòng ngủ</option>
+                                        <option value="2PN">2 Phòng ngủ</option>
+                                        <option value="3PN">3 Phòng ngủ</option>
+                                        <option value="Suite-1">Suite 1</option>
+                                        <option value="Superior">Superior</option>
+                                        <option value="Studio-Special">Studio Special</option>
+                                        <option value="MBang">Mặt bằng</option>
+                                        <option value="Penthouse">Penthouse</option>
+                                        <option value="Duplex">Duplex</option>
+                                        <option value="Sleepbox">Sleepbox</option>
+                                        <option value="Standard">Standard</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Vị trí</label>
+                                    <select style="width: 100%"
+                                        class="form-control default-select2 select2-hidden-accessible" name="#"
+                                        tabindex="-1" aria-hidden="true">
+                                        <option value=""></option>
+                                        <option value="HAM">Hầm</option>
+                                        <option value="TRET">Trệt</option>
+                                        <option value="LUNG">Tầng lửng</option>
+                                        <option value="LAU1">Lầu 1</option>
+                                        <option value="LAU2">Lầu 2</option>
+                                        <option value="LAU3">Lầu 3</option>
+                                        <option value="LAU4">Lầu 4</option>
+                                        <option value="LAU5">Lầu 5</option>
+                                        <option value="LAU6">Lầu 6</option>
+                                        <option value="LAU7">Lầu 7</option>
+                                        <option value="LAU8">Lầu 8</option>
+                                        <option value="LAU9">Lầu 9</option>
+                                        <option value="LAU10">Lầu 10</option>
+                                        <option value="LAU11">Lầu 11</option>
+                                        <option value="LAU12">Lầu 12</option>
+                                        <option value="LAU13">Lầu 13</option>
+                                        <option value="LAU14">Lầu 14</option>
+                                        <option value="LAU15">Lầu 15</option>
+                                        <option value="LAU16">Lầu 16</option>
+                                        <option value="LAU17">Lầu 17</option>
+                                        <option value="LAU18">Lầu 18</option>
+                                        <option value="LAU19">Lầu 19</option>
+                                        <option value="LAU20">Lầu 20</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Diện tích</label>
+                                    <input type="" name="" placeholder="Nhập diện tích phòng" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Toilet</label>
+                                    <select style="width: 100%"
+                                        class="form-control default-select2 select2-hidden-accessible" name="#"
+                                        tabindex="-1" aria-hidden="true">
+                                        <option value=""></option>
+                                        <option value="CHUNG">Chung</option>
+                                        <option value="RIENG">Riêng</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Sân phơi</label>
+                                    <select style="width: 100%"
+                                        class="form-control default-select2 select2-hidden-accessible" name="#"
+                                        tabindex="-1" aria-hidden="true">
+                                        <option value=""></option>
+                                        <option value="CHUNG">Chung</option>
+                                        <option value="RIENG">Riêng</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Chỗ để xe</label>
+                                    <select style="width: 100%"
+                                        class="form-control default-select2 select2-hidden-accessible" name="#"
+                                        tabindex="-1" aria-hidden="true">
+                                        <option value="" selected="selected"></option>
+                                        <option value="C">Chung</option>
+                                        <option value="R">Trong phòng</option>
+                                        <option value="OUT">Bãi ngoài</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Máy giặt</label>
+                                    <select style="width: 100%"
+                                        class="form-control default-select2 select2-hidden-accessible" name="#"
+                                        tabindex="-1" aria-hidden="true">
+                                        <option value="" selected="selected"></option>
+                                        <option value="R">Riêng</option>
+                                        <option value="C">Chung</option>
+                                        <option value="K">Không</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Loại khóa cổng</label>
+                                    <select style="width: 100%"
+                                        class="form-control default-select2 select2-hidden-accessible" name="#"
+                                        tabindex="-1" aria-hidden="true">
+                                        <option value=""></option>
+                                        <option value="Normal">Khóa thường</option>
+                                        <option value="Fingerprint">Vân tay</option>
+                                        <option value="Magnetic">Thẻ từ</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Giờ giấc</label>
+                                    <select style="width: 100%"
+                                        class="form-control default-select2 select2-hidden-accessible" name="#"
+                                        tabindex="-1" aria-hidden="true">
+                                        <option value=""></option>
+                                        <option value="Y">Tự do</option>
+                                        <option value="N">Theo qui định</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Cho nuôi thú cưng</label>
+                                    <select style="width: 100%"
+                                        class="form-control default-select2 select2-hidden-accessible" name="#"
+                                        tabindex="-1" aria-hidden="true">
+                                        <option value=""></option>
+                                        <option value="Y">Có</option>
+                                        <option value="N">Không</option>
+                                        <option value="Y-IF">Có (kèm điều kiện)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Nội thất</label>
+                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
+                                            class="custom-control-label p-t-5 text-red ">Máy lạnh</span>
+                                    </label>
+                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
+                                            class="custom-control-label p-t-5 text-red ">Giếng trời</span>
+                                    </label>
+                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
+                                            class="custom-control-label p-t-5 text-red ">Gác</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
+                                            class="custom-control-label p-t-5 text-red ">Kệ bếp</span>
+                                    </label>
+                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
+                                            class="custom-control-label p-t-5 text-red ">Bồn rửa chén</span>
+                                    </label>
+                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
+                                            class="custom-control-label p-t-5 text-red ">Cửa sổ</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
+                                            class="custom-control-label p-t-5 text-red ">Ban công</span>
+                                    </label>
+                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
+                                            class="custom-control-label p-t-5 text-red ">Tủ lạnh</span>
+                                    </label>
+                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
+                                            class="custom-control-label p-t-5 text-red ">Tivi</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
+                                            class="custom-control-label p-t-5 text-red ">Thang máy</span>
+                                    </label>
+                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
+                                            class="custom-control-label p-t-5 text-red ">Nước nóng</span>
+                                    </label>
+                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
+                                            class="custom-control-label p-t-5 text-red ">Giường</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
+                                            class="custom-control-label p-t-5 text-red ">Nệm</span>
+                                    </label>
+                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
+                                            class="custom-control-label p-t-5 text-red ">Tủ quần áo</span>
+                                    </label>
+                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
+                                            class="custom-control-label p-t-5 text-red ">Chung chủ </span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
+                                            class="custom-control-label p-t-5 text-red ">Bảo vệ</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label>Nội thất khác</label>
+                                    <input type="" name="" placeholder="Nhập tên loại nội thất khác"
+                                        class="form-control">
+                                </div>
+
+                                <button type="submit" class="mb-sm btn btn-primary">Thêm</button>
+                    </form>
+                </div>
+                <!-- end panel-body -->
+            </div>
+            <!-- end panel -->
+        </div>
+        <!-- end col-12 -->
+    </div>
+    <!-- end row -->
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+<script>
+    var citis = document.getElementById("city");
+    var districts = document.getElementById("district");
+    var wards = document.getElementById("ward");
+    var Parameter = {
+        url: "https://raw.githubusercontent.com/kenzouno1/DiaGioiHanhChinhVN/master/data.json",
+        method: "GET",
+        responseType: "application/json",
+    };
+    var promise = axios(Parameter);
+    promise.then(function (result) {
+        renderCity(result.data);
+    });
+
+    function renderCity(data) {
+        for (const x of data) {
+            citis.options[citis.options.length] = new Option(x.Name, x.Id);
+        }
+        citis.onchange = function () {
+            district.length = 1;
+            ward.length = 1;
+            if (this.value != "") {
+                const result = data.filter(n => n.Id === this.value);
+
+                for (const k of result[0].Districts) {
+                    district.options[district.options.length] = new Option(k.Name, k.Id);
+                }
+            }
+        };
+        district.onchange = function () {
+            ward.length = 1;
+            const dataCity = data.filter((n) => n.Id === citis.value);
+            if (this.value != "") {
+                const dataWards = dataCity[0].Districts.filter(n => n.Id === this.value)[0].Wards;
+
+                for (const w of dataWards) {
+                    wards.options[wards.options.length] = new Option(w.Name, w.Id);
+                }
+            }
+        };
+    }
+</script>

@@ -235,6 +235,10 @@ module.exports.password_reset_post = async (req, res) => {
 
 }
 
+module.exports.change_password_get = (req, res) => {
+    res.render("change_password", { layout: "main.hbs" });
+}
+
 module.exports.logout_get = (req, res) => {
     res.cookie('jwt', '', { maxAge: 1 });
     res.redirect('/');
