@@ -1,14 +1,14 @@
 <div id="content" class="content">
     <!-- begin breadcrumb -->
     <ol class="breadcrumb pull-right">
-        <li class="breadcrumb-item"><a href="http://localhost/mars/">Dashboard</a></li>
-        <li class="breadcrumb-item active">Tenants</li>
+        <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+        <li class="breadcrumb-item active">Khách thuê</li>
     </ol>
     <!-- end breadcrumb -->
     <!-- begin page-header -->
     <h1 class="page-header">
-        <a href="http://localhost/mars/add_tenant">
-            <button type="button" class="btn btn-inverse"><i class="fa fa-plus"></i> Add Tenant</button>
+        <a href="#">
+            <button type="button" class="btn btn-inverse"><i class="fa fa-plus"></i>Thêm khách</button>
         </a>
     </h1>
     <!-- end page-header -->
@@ -22,14 +22,8 @@
                 <!-- begin panel-body -->
                 <div class="panel-body">
                     <div id="data-table-buttons_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
-                        <div class="dt-buttons btn-group"><a class="btn btn-default buttons-copy buttons-html5 btn-sm"
-                                tabindex="0" aria-controls="data-table-buttons"><span>Copy</span></a><a
-                                class="btn btn-default buttons-csv buttons-html5 btn-sm" tabindex="0"
-                                aria-controls="data-table-buttons"><span>CSV</span></a><a
-                                class="btn btn-default buttons-excel buttons-html5 btn-sm" tabindex="0"
-                                aria-controls="data-table-buttons"><span>Excel</span></a><a
-                                class="btn btn-default buttons-pdf buttons-html5 btn-sm" tabindex="0"
-                                aria-controls="data-table-buttons"><span>PDF</span></a><a
+                        <div class="dt-buttons btn-group"><a class="btn btn-default buttons-excel buttons-html5 btn-sm"
+                                tabindex="0" aria-controls="data-table-buttons"><span>Excel</span></a><a
                                 class="btn btn-default buttons-print btn-sm" tabindex="0"
                                 aria-controls="data-table-buttons"><span>Print</span></a></div>
                         <div id="data-table-buttons_filter" class="dataTables_filter"><label>Search:<input type="search"
@@ -92,8 +86,7 @@
                                 <tr role="row" class="odd">
                                     <td width="1%" class="sorting_1" tabindex="0">1</td>
                                     <td class="with-img">
-                                        <img src="http://localhost/mars/assets/img/tenant.png"
-                                            alt="Tenant image not found" class="img-rounded height-30">
+                                        <img src="#" alt="không thể load ảnh" class="img-rounded height-30">
                                     </td>
                                     <td>Thanh Trong</td>
                                     <td>
@@ -109,43 +102,7 @@
                                     <td style="">30 Mar, 2024</td>
                                     <td style="display: none;">
                                         Admin </td>
-                                    <td style="display: none;">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-white btn-xs">Action</button>
-                                            <button type="button"
-                                                class="btn btn-white btn-xs dropdown-toggle dropdown-toggle-split"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <span class="sr-only">Toggle Dropdown</span>
-                                            </button>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item" href="javascript:;"
-                                                    onclick="showAjaxModal('http://localhost/mars/modal/popup/modal_show_tenant_details/1');">
-                                                    Details </a>
-                                                <a class="dropdown-item" href="javascript:;"
-                                                    onclick="showAjaxModal('http://localhost/mars/modal/popup/modal_change_tenant_image/1');">
-                                                    Change Tenant Image </a>
-                                                <a class="dropdown-item" href="javascript:;"
-                                                    onclick="showAjaxModal('http://localhost/mars/modal/popup/modal_show_tenant_id_image/1');">
-                                                    Show ID Image </a>
-                                                <a class="dropdown-item" href="javascript:;"
-                                                    onclick="showAjaxModal('http://localhost/mars/modal/popup/modal_change_tenant_id_image/1');">
-                                                    Change ID Image </a>
-                                                <a class="dropdown-item" href="javascript:;"
-                                                    onclick="showAjaxModal('http://localhost/mars/modal/popup/modal_change_tenant_lease/1');">
-                                                    Lease Period </a>
-                                                <a class="dropdown-item" href="javascript:;"
-                                                    onclick="showAjaxModal('http://localhost/mars/modal/popup/modal_edit_tenant/1');">
-                                                    Edit </a>
-                                                <div class="dropdown-divider"></div>
-                                                <a class="dropdown-item" href="javascript:;"
-                                                    onclick="deactivate_modal('http://localhost/mars/tenants/deactivate/1');">
-                                                    Deactivate </a>
-                                                <a class="dropdown-item" href="javascript:;"
-                                                    onclick="confirm_modal('http://localhost/mars/tenants/remove/1');">
-                                                    Remove </a>
-                                            </div>
-                                        </div>
-                                    </td>
+
                                 </tr>
                             </tbody>
                         </table>
