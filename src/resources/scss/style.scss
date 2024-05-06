@@ -1191,22 +1191,7 @@ form label .btn, form label button {
 
 
 .card {
-  position: relative;
-  margin-bottom: 2rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: stretch !important;
-  -webkit-align-items: stretch !important;
-  -ms-flex-align: stretch !important;
-  align-items: stretch !important;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  box-shadow: 0 0 1.25rem rgba(31, 45, 61, 0.05);
+  
 }
 
 .card .card-title {
@@ -1698,4 +1683,3 @@ section {
   z-index: 1;
   background-color: #fff;
 }
-

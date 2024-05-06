@@ -18,26 +18,60 @@ var App = function () {
     function togglePageSidebar() {
         var navbarToggle = $('.navbar-toggle');
         var pageContainer = $('#page-container');
+        var sidebarContainer = $('#sidebar'); 
+        navbarToggle.addEventListener('click', function (event) {
+            event.stopPropagation(); // Ngăn sự kiện click từ navbarToggle lan sang document
+            // Kiểm tra kích thước màn hình
+            if (window.innerWidth <= 767) {
+                if(pageContainer.classList.contains('page-sidebar-minified')) {
+                    pageContainer.classList.remove('page-sidebar-minified');
+                }
+                var sidebarContainer = $('.page-with-wide-sidebar .sidebar');
+                sidebarContainer.style.left = '0px';
+               
+               
 
-        navbarToggle.addEventListener('click', function () {
-            pageContainer.classList.toggle('page-sidebar-minified');
-            var isMinified = pageContainer.classList.contains('page-sidebar-minified');
-            var hasSubItems = document.querySelectorAll('.has-sub');
-            if (isMinified) {
-                // Thêm event listener khi page-sidebar-minified được thêm vào
-                hasSubItems.forEach(function (item) {
-                    item.addEventListener('mouseover', mouseoverHandler);
-                    item.addEventListener('mouseleave', mouseleaveHandler);
-                });
+                // Kiểm tra xem phần tử được nhấp vào có phải là navbarToggle hay không
+               
+                if (!navbarToggle.contains(event.target)) {
+                    sidebarContainer.style.left = '-250px';
+                    console.log('test');
+                }
             } else {
-                // Loại bỏ event listener khi page-sidebar-minified được xóa đi
-                hasSubItems.forEach(function (item) {
-                    item.removeEventListener('mouseover', mouseoverHandler);
-                    item.removeEventListener('mouseleave', mouseleaveHandler);
-                });
+                pageContainer.classList.toggle('page-sidebar-minified');
+                var isMinified = pageContainer.classList.contains('page-sidebar-minified');
+                var hasSubItems = document.querySelectorAll('.has-sub');
+                if (isMinified) {
+                    // Thêm event listener khi page-sidebar-minified được thêm vào
+                    hasSubItems.forEach(function (item) {
+                        item.addEventListener('mouseover', mouseoverHandler);
+                        item.addEventListener('mouseleave', mouseleaveHandler);
+                    });
+                    
+                } else {
+                    // Loại bỏ event listener khi page-sidebar-minified được xóa đi
+                    hasSubItems.forEach(function (item) {
+                        item.removeEventListener('mouseover', mouseoverHandler);
+                        item.removeEventListener('mouseleave', mouseleaveHandler);
+                    });
+                }
             }
+                
+            
+           
 
         });
+
+        if (window.innerWidth <= 767) {
+            document.addEventListener('click', function(event) {
+                var isClickOutsideSidebar = !sidebarContainer.contains(event.target);
+                if (isClickOutsideSidebar) {
+                    sidebarContainer.style.left = '-250px'; // Đặt css cho sidebarContainer
+                }
+            });
+        }
+        
+         
         // Định nghĩa hàm xử lý sự kiện mouseover
         function mouseoverHandler() {
             this.querySelector('.float-sub-menu-container').style.display = 'block';
@@ -183,3 +217,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 });
+

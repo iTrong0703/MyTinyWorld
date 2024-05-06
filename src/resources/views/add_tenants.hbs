@@ -1,0 +1,172 @@
+<div id="content" class="content">
+    <!-- begin breadcrumb -->
+    <ol class="breadcrumb pull-right">
+        <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+        <li class="breadcrumb-item active">Thêm khách</li>
+    </ol>
+    <!-- end breadcrumb -->
+    <!-- begin page-header -->
+    <h1 class="page-header">
+        Thêm khách thuê </h1>
+    <!-- end page-header -->
+
+    <!-- begin row -->
+    <div class="row">
+        <!-- begin col-12 -->
+        <div class="col-lg-12 ui-sortable">
+            <!-- begin panel -->
+            <div class="panel panel-inverse">
+                <!-- begin panel-body -->
+                <div class="panel-body">
+                    <form action="#" method="post" data-parsley-validate="true" enctype="multipart/form-data"
+                        accept-charset="utf-8" novalidate="">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <label>Họ tên *</label>
+                                    <input value="" type="text" name="fullname" placeholder="Nhập họ và tên"
+                                        class="form-control" data-parsley-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label>SĐT *</label>
+                                    <input type="text" name="phone" placeholder="Nhập số điện thoại"
+                                        class="form-control" data-parsley-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label>Số CCCD</label>
+                                    <input name="cccd" type="text" placeholder="Nhập số căn cước công dân"
+                                        class="form-control">
+                                </div>
+                                {{!-- <div class="form-group">
+                                    <label>Tenant ID Image</label>
+                                    <br>
+                                    <img id="id-front-preview" width="90px"
+                                        src="https://mars.t1m9m.com/assets/img/tenant.png" class="media-object">
+                                    <img id="id-back-preview" width="90px"
+                                        src="https://mars.t1m9m.com/assets/img/tenant.png" class="media-object">
+                                    <br>
+                                    <br>
+                                    <span class="btn btn-primary fileinput-button">
+                                        <i class="fa fa-plus"></i>
+                                        <span>Add file front</span>
+                                        <input onchange="readIdFrontURL(this);" class="form-control" type="file"
+                                            name="id_front_image_link">
+                                    </span>
+                                    <span class="btn btn-primary fileinput-button">
+                                        <i class="fa fa-plus"></i>
+                                        <span>Add file back</span>
+                                        <input onchange="readIdBackURL(this);" class="form-control" type="file"
+                                            name="id_back_image_link">
+                                    </span>
+                                </div> --}}
+                                <div class="form-group">
+                                    <label>Địa chỉ thường trú</label>
+                                    <input name="address" type="text" placeholder="Nhập địa chỉ thường trú"
+                                        class="form-control">
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <label>Email (dùng để đăng nhập)</label>
+                                    <input type="email" name="email" placeholder="Nhập email" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Password (dùng để đăng nhập)</label>
+                                    <input type="text" name="password" id="password-indicator-visible"
+                                        class="form-control m-b-5" value="123456">
+                                </div>
+                                <div class="note note-primary m-b-15">
+                                    <span>Mật khẩu mặc định là: 123456</span>
+                                </div>
+                                <div class="form-group">
+                                    <label>Thời gian thuê</label>
+                                    <div class="input-group input-daterange">
+                                        <input type="text" class="form-control" name="lease_start"
+                                            placeholder="Ngày bắt đầu">
+                                        <span class="input-group-addon">đến</span>
+                                        <input type="text" class="form-control" name="lease_end" placeholder="Ngày kết thúc">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Phòng</label>
+                                    <select style="width: 100%"
+                                        class="form-control default-select2 select2-hidden-accessible" name="room_id"
+                                        tabindex="-1" aria-hidden="true">
+                                        <option value="">Chọn phòng</option>
+                                        <option value="1">Phòng 103</option>
+                                        <option value="2">Phòng 502</option>
+                                        <option value="3">Phòng 503</option>
+                                        <option value="4">Phòng 507</option>
+                                    </select><span class="select2 select2-container select2-container--default"
+                                        dir="ltr" style="width: 100%;"><span class="selection"><span
+                                                class="select2-selection select2-selection--single" role="combobox"
+                                                aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                                aria-labelledby="select2-room_id-cq-container"><span
+                                                    class="select2-selection__rendered"
+                                                    id="select2-room_id-cq-container" title="Select room">Select
+                                                    room</span><span class="select2-selection__arrow"
+                                                    role="presentation"><b
+                                                        role="presentation"></b></span></span></span><span
+                                            class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                </div>
+                                <div class="note note-primary m-b-15">
+                                    <span>Để thuê phòng bạn phải kích hoạt email</span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Chức vụ quản lý</label>
+                                    <select style="width: 100%"
+                                        class="form-control default-select2 select2-hidden-accessible"
+                                        data-parsley-required="true" name="status" tabindex="-1" aria-hidden="true">
+                                        <option value="">Có phải quản lý không ?</option>
+                                        <option value="1">Có</option>
+                                        <option value="0">Không</option>
+                                    </select><span class="select2 select2-container select2-container--default"
+                                        dir="ltr" style="width: 100%;"><span class="selection"><span
+                                                class="select2-selection select2-selection--single" role="combobox"
+                                                aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                                aria-labelledby="select2-status-p4-container"><span
+                                                    class="select2-selection__arrow" role="presentation"><b
+                                                        role="presentation"></b></span></span></span><span
+                                            class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                </div>
+                                <div class="note note-primary m-b-15">
+                                    <span>Nếu là khách thuê chọn "Không", là quản lý chọn "Có"</span>
+                                </div>
+                                {{!-- <div class="form-group">
+                                    <label>Emergency Person</label>
+                                    <input type="text" name="emergency_person"
+                                        placeholder="Enter emergency person's name" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Emergency Contact</label>
+                                    <input type="text" name="emergency_contact"
+                                        placeholder="Enter emergency person's mobile number" class="form-control">
+                                </div>
+                            </div> --}}
+                        </div>
+
+                        {{!-- <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <label>Extra Note</label>
+                                    <textarea style="resize: none" type="text" name="extra_note"
+                                        placeholder="Enter extra note" class="form-control"></textarea>
+                                </div>
+                            </div>
+                        </div> --}}
+
+                        <button type="submit" style="float: right;" class="mb-sm btn btn-primary btn-sm btn-info">Submit</button>
+                    </form>
+                </div>
+                <!-- end panel-body -->
+            </div>
+            <!-- end panel -->
+        </div>
+        <!-- end col-12 -->
+    </div>
+    <!-- end row -->
+</div>

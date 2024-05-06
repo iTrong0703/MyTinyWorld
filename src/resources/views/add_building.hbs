@@ -1,373 +1,700 @@
 <div id="content" class="content">
-    <!-- begin breadcrumb -->
-    <ol class="breadcrumb pull-right">
-        <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
-        <li class="breadcrumb-item active">Thêm nhà</li>
-    </ol>
-    <!-- end breadcrumb -->
-    <!-- begin page-header -->
-    <h1 class="page-header">Thêm nhà trọ mới</h1>
-    <!-- end page-header -->
+    <div class="container-fluid style-main-content" id="divSubContent" style="display: block;">
 
-    <!-- begin row -->
-    <div class="row">
-        <!-- begin col-12 -->
-        <div class="col-lg-12 ui-sortable">
-            <!-- begin panel -->
-            <div class="panel panel-inverse">
-                <!-- begin panel-body -->
-                <div class="panel-body">
-                    <form action="#" method="post" data-parsley-validate="true" enctype="multipart/form-data"
-                        accept-charset="utf-8" novalidate="">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6">
-                                <div class="form-group">
-                                    <label>Tên nhà *</label>
-                                    <input value="" type="text" name="name" placeholder="Nhập tên nhà" required
-                                        class="form-control" data-parsley-required="true">
-                                </div>
-                                <div class="form-group">
-                                    <label>Tỉnh *</label>
-                                    <select style="width: 100%"
-                                        class="form-control default-select2 select2-hidden-accessible" id="city"
-                                        name="id_type_id" tabindex="-1" aria-hidden="true">
-                                        <option value="">Chọn tỉnh thành</option>
 
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Quận huyện *</label>
-                                    <select style="width: 100%"
-                                        class="form-control default-select2 select2-hidden-accessible" id="district"
-                                        name="id_type_id" tabindex="-1" aria-hidden="true">
-                                        <option value="">Chọn quận huyện</option>
+        <div class="row page-titles">
+            <div class="col-12 col-sm-10 col-md-7 col-md-6 align-self-center p-l-0 centerX">
+                <h3 class="text-themecolor m-b-0 m-t-0 text-uppercase">Thêm mới nhà trọ</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-10 col-md-7 col-md-6 centerX">
+                <form id="f-building-crud" name="f-building-crud" method="POST"
+                    action="http://localhost:8080/buildings/create">
+                    <div class="card">
+                        <div class="card-body">
 
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Phường xã *</label>
-                                    <select style="width: 100%"
-                                        class="form-control default-select2 select2-hidden-accessible" id="ward"
-                                        name="id_type_id" tabindex="-1" aria-hidden="true">
-                                        <option value="">Chọn phường xã</option>
+                            <div class="form-group row m-b-6">
+                                <div class="col-12 m-b-5">
+                                    <ul class="nav nav-tabs customtab" role="tablist">
+                                        <li class="nav-item"> <a class="nav-link p-10 active" data-toggle="tab"
+                                                href="#tab01" role="tab" aria-selected="true">Tài chính</a> </li>
+                                        <li class="nav-item"> <a class="nav-link p-10" data-toggle="tab" href="#tab03"
+                                                role="tab" aria-selected="false">Thông tin phòng</a> </li>
 
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Địa chỉ *</label>
-                                    <input value="" type="text" name="#" placeholder="Nhập địa chỉ" required
-                                        class="form-control" data-parsley-required="true">
-                                </div>
-                                <div class="form-group">
-                                    <label>Link google map</label>
-                                    <input value="" type="text" name="#" placeholder="Nhập link google map nếu có"
-                                        class="form-control" data-parsley-required="true">
-                                </div>
-                                <div class="form-group">
-                                    <label>Chủ nhà</label>
-                                    <input value="" type="text" name="#" placeholder="" class="form-control"
-                                        data-parsley-required="true">
-                                </div>
-                                <div class="form-group">
-                                    <label>SĐT Chủ nhà</label>
-                                    <input value="" type="text" name="#" placeholder="Nhập số điện thoại chủ nhà"
-                                        class="form-control" data-parsley-required="true">
-                                </div>
-                                <div class="form-group">
-                                    <label>Quản lý</label>
-                                    <input value="" type="text" name="#" placeholder="" class="form-control"
-                                        data-parsley-required="true">
-                                </div>
-                                <div class="form-group">
-                                    <label>SĐT Quản lý</label>
-                                    <input value="" type="text" name="#" placeholder="Nhập số điện thoại quản lý"
-                                        class="form-control" data-parsley-required="true">
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-12 col-md-12">
-                                        <div class="form-group">
-                                            <label>Ghi chú</label>
-                                            <textarea style="resize: none" type="text" name="#"
-                                                placeholder="Nhập ghi chú nếu có" class="form-control"></textarea>
+
+                                        <li class="nav-item"> <a class="nav-link p-10" data-toggle="tab" href="#tab05"
+                                                role="tab" aria-selected="false">Thông tin in bill</a> </li>
+                                    </ul>
+                                    <!-- Tab panes -->
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab01" role="tabpanel">
+                                            <div class="row m-t-20 ">
+                                                <div class="col-12 ">
+
+                                                    <div class="row">
+                                                        <div class="col-12 custom-field m-b-16">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Tên
+                                                                nhà *</label>
+                                                            <input
+                                                                class="form-control form-control-sm custom-field__textbox text-uppercase text-color-dark-blue"
+                                                                type="text" id="house-name" name="buildingname" value=""
+                                                                autocomplete="off" maxlength="29"
+                                                                title="Tên nhà tối đa 29 ký tự">
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-12 custom-field m-b-16">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Địa
+                                                                chỉ *</label>
+                                                            <input
+                                                                class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                type="text" id="house-address" name="buildingadress"
+                                                                value="" autocomplete="off">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="row">
+                                                                <div class="col-12 custom-field m-b-16">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Tên
+                                                                        chủ nhà *</label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                        type="text" id="house-address" name="ownername"
+                                                                        value="" autocomplete="off">
+                                                                </div>
+                                                                <div class="col-12 custom-field m-b-16">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Số
+                                                                        điện thoại chủ nhà *</label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                        type="text" id="ownerphone"
+                                                                        name="house-owner-phone" value=""
+                                                                        autocomplete="off">
+
+                                                                </div>
+
+
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="row">
+                                                                <div class="col-12 custom-field m-b-16">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Tên
+                                                                        quản lý *</label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                        type="text" id="house-address"
+                                                                        name="managername" value="" autocomplete="off">
+                                                                </div>
+
+                                                                <div class="col-12 custom-field m-b-16">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Số
+                                                                        điện thoại quản lý *</label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                        type="text" id="dthoai-qly" name="managerphone"
+                                                                        value="" autocomplete="off">
+
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+
+
+                                                    <!-- ROOM INFO -->
+
+
+
+                                                    <div class="row">
+                                                        <div class="col-6 custom-field">
+                                                            <div class="row m-b-15">
+                                                                <div class="col-12">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Số
+                                                                        lượng phòng (< 50 phòng)</label>
+                                                                            <input
+                                                                                class="form-control form-control-sm custom-field__textbox text-right text-number text-color-dark-blue"
+                                                                                type="text" id="roomquantity"
+                                                                                name="roomquantity" autocomplete="off">
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-6 custom-field">
+                                                            <div class="row m-b-15">
+                                                                <div class="col-12">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Giá
+                                                                        phòng * </label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-right text-number text-color-dark-blue"
+                                                                        type="text" id="current-room-rate"
+                                                                        name="roomprice" autocomplete="off" value="">
+
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="row">
+                                                        <div class="col-6 custom-field">
+
+
+                                                        </div>
+                                                        <div class="col-12 custom-field">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Giá
+                                                                điện *</label>
+                                                            <input
+                                                                class="form-control form-control-sm custom-field__textbox text-number text-color-dark-blue"
+                                                                type="text" id="electricity-fee" name="electric"
+                                                                autocomplete="off" value="">
+
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-6 custom-field">
+                                                            <div class="row m-b-0">
+                                                                <div class="col-12">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Tính
+                                                                        theo</label>
+                                                                    <div class="custom-field">
+                                                                        <label
+                                                                            class="custom-control custom-radio d-inline-block m-r-10 m-b-0">
+                                                                            <input name="wayCollectWater" type="radio"
+                                                                                class="custom-control-input text-color-dark-blue"
+                                                                                value="ByNumber" checked="checked">
+                                                                            <span
+                                                                                class="custom-control-label p-t-5 text-color-dark-blue">Nước
+                                                                                chỉ số</span>
+                                                                        </label>
+                                                                        <label
+                                                                            class="custom-control custom-radio d-inline-block m-r-10 m-b-0">
+                                                                            <input name="wayCollectWater" type="radio"
+                                                                                class="custom-control-input text-color-dark-blue"
+                                                                                value="DepositAmount">
+                                                                            <span
+                                                                                class="custom-control-label p-t-5 text-color-dark-blue">Nước
+                                                                                khoán</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+
+                                                        </div>
+                                                        <div class="col-6 custom-field m-b-0">
+                                                            <div class="row m-b-15">
+                                                                <div class="col-12">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Giá
+                                                                        nước *</label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-number text-color-dark-blue"
+                                                                        type="text" id="water-fee" name="water"
+                                                                        autocomplete="off" value="">
+
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+
+
+                                                    {{!--
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <hr style="margin: 0 0 15px 0;">
+                                                        </div>
+                                                    </div> --}}
+                                                    <!-- THONG TIN CAC LOAI PHI -->
+
+                                                    <div class="row m-t-5 m-b-5">
+                                                        <div class="col-12">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Phí
+                                                                thang máy</label>
+                                                            <input
+                                                                class="form-control form-control-sm custom-field__textbox text-number text-color-dark-blue"
+                                                                type="text" id="generalservice"
+                                                                name="general-service-fee" autocomplete="off" value="">
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row m-t-5 m-b-5">
+                                                        <div class="col-12">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Dịch
+                                                                vụ chung</label>
+                                                            <input
+                                                                class="form-control form-control-sm custom-field__textbox text-number text-color-dark-blue"
+                                                                type="text" id="generalservice"
+                                                                name="general-service-fee" autocomplete="off" value="">
+
+                                                        </div>
+                                                    </div>
+
+
+                                                    <!-- END - THONG TIN CAC LOAI PHI -->
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <hr style="margin: 0 0 15px 0;">
+                                                        </div>
+                                                    </div>
+
+
+                                                    <!-- THONG TIN TK NGAN HANG KHI IN HD -->
+
+
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="tab-pane" id="tab03" role="tabpanel">
+                                            <div class="row m-t-20 ">
+                                                <div class="col-6 custom-field">
+                                                    <div class="row">
+                                                        <div class="col-12 custom-field m-b-16">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Loại
+                                                                phòng </label>
+                                                            <select
+                                                                class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                id="room-info-cooling-type" name="roomtypes">
+                                                                <option value=""></option>
+                                                                <option value="Studio">Phòng Studio</option>
+                                                                <option value="Duplex">Phòng Duplex</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="col-12 custom-field m-b-16">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Diện
+                                                                tích </label>
+                                                            <input
+                                                                class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                type="text" autocomplete="off" id="room-area"
+                                                                name="roomacreage" value="">
+
+                                                        </div>
+                                                        <div class="col-12 custom-field m-b-16">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Toilet
+                                                            </label>
+                                                            <select
+                                                                class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                id="optToilet" name="roomtoilet">
+                                                                <option value=""></option>
+                                                                <option value="0">Chung</option>
+                                                                <option value="1">Riêng</option>
+                                                            </select>
+
+                                                        </div>
+                                                        <div class="col-12 custom-field m-b-16">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Sân
+                                                                phơi </label>
+                                                            <select
+                                                                class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                id="optSanPhoi" name="dryingyard">
+                                                                <option value=""></option>
+                                                                <option value="0">Chung</option>
+                                                                <option value="1">Riêng</option>
+                                                            </select>
+
+                                                        </div>
+                                                        <div class="col-12 custom-field m-b-16">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Chổ
+                                                                để xe </label>
+                                                            <select
+                                                                class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                id="optNhaXe" name="optNhaXe">
+                                                                <option value="" selected="selected"></option>
+                                                                <option value="C">Chung</option>
+                                                                <option value="R">Trong phòng</option>
+                                                                <option value="OUT">Bãi ngoài</option>
+                                                            </select>
+
+                                                        </div>
+                                                        <div class="col-12 custom-field m-b-16">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Máy
+                                                                giặt </label>
+                                                            <select
+                                                                class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                id="may-giat" name="may-giat">
+                                                                <option value="" selected="selected"></option>
+                                                                <option value="R">Riêng</option>
+                                                                <option value="C">Chung</option>
+                                                                <option value="K">Không</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-12 custom-field m-b-16">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Loại
+                                                                khóa cổng </label>
+                                                            <select
+                                                                class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                id="optGateLockType" name="optGateLockType">
+                                                                <option value=""></option>
+                                                                <option value="Normal" selected="selected">Khóa thường
+                                                                </option>
+                                                                <option value="Fingerprint">Vân tay</option>
+                                                                <option value="Magnetic">Thẻ từ</option>
+                                                            </select>
+
+                                                        </div>
+                                                        <div class="col-12 custom-field m-b-16">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Giờ
+                                                                giấc </label>
+                                                            <select
+                                                                class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                id="optGhe" name="opentimes">
+                                                                <option value=""></option>
+                                                                <option value="0">Tự do</option>
+                                                                <option value="1">Theo qui định</option>
+                                                            </select>
+
+                                                        </div>
+                                                        <div class="col-12 custom-field m-b-16">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Cho
+                                                                nuôi thú cưng </label>
+                                                            <select
+                                                                class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                id="optPet" name="pet">
+                                                                <option value=""></option>
+                                                                <option value="0">Không</option>
+                                                                <option value="1">Có</option>
+                                                                <option value="2">Có (kèm điều kiện)</option>
+                                                            </select>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 custom-field">
+                                                    <div class="row">
+                                                        <div class="col-12 m-b-0">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    name="mlanh"><span
+                                                                    class="custom-control-label p-t-5 text-red ">Máy
+                                                                    lạnh</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-0 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    name="gitroi"><span
+                                                                    class="custom-control-label p-t-5 text-red ">Giếng
+                                                                    trời
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-0 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    name="optGac"><span
+                                                                    class="custom-control-label p-t-5 text-red ">Gác
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-0 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    name="optBep"><span
+                                                                    class="custom-control-label p-t-5 text-red ">Kệ bếp
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-0 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    name="optBonRuaChen"><span
+                                                                    class="custom-control-label p-t-5 text-red ">Bồn rửa
+                                                                    chén </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-0 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    name="optWindow"><span
+                                                                    class="custom-control-label p-t-5 text-red ">Cửa sổ
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-0 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    name="optBanCong"><span
+                                                                    class="custom-control-label p-t-5 text-red ">Ban
+                                                                    công
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-0 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    name="optTuLanh"><span
+                                                                    class="custom-control-label p-t-5 text-red ">Tủ lạnh
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-0 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    name="optTivi"><span
+                                                                    class="custom-control-label p-t-5 text-red ">Tivi
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-0 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    name="optElevator"><span
+                                                                    class="custom-control-label p-t-5 text-red ">Thang
+                                                                    máy
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-0 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    name="optNuocNong"><span
+                                                                    class="custom-control-label p-t-5 text-red ">Nước
+                                                                    nóng
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-0 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    name="optGiuong"><span
+                                                                    class="custom-control-label p-t-5 text-red ">Giường
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-0 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    name="optNem"><span
+                                                                    class="custom-control-label p-t-5 text-red ">Nệm
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-0 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    name="optTuQuanAo"><span
+                                                                    class="custom-control-label p-t-5 text-red ">Tủ quần
+                                                                    áo
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-0 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    name="optBan"><span
+                                                                    class="custom-control-label p-t-5 text-red ">Chung
+                                                                    chủ
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-10 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    name="optBVe"><span
+                                                                    class="custom-control-label p-t-5 text-red ">Bảo vệ
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 custom-field m-b-16">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Nội
+                                                                thất khác </label>
+                                                            <input
+                                                                class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                type="text" autocomplete="off" id="noi-that-khac"
+                                                                name="noi-that-khac" value="">
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+
+
+
+
+                                        </div>
+                                        <div class="tab-pane" id="tab05" role="tabpanel">
+                                            <div class="row m-t-20 ">
+                                                <div class="col-12 custom-field">
+                                                    <div class="row">
+                                                        <div class="col-12 custom-field centerX">
+                                                            <div class="row">
+                                                                <div class="col-12 m-b-15">
+                                                                    <span
+                                                                        class="text-uppercase text-decoration-underline text-color-dark-blue fw-700 ">Thông
+                                                                        tin chuyển khoản</span>
+                                                                </div>
+                                                                <div class="col-12 custom-field m-b-15">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-danger text-color-dark-blue">Số
+                                                                        tài khoản </label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                        type="text" id="bill-account-no"
+                                                                        name="bill-account-no" autocomplete="off"
+                                                                        value="">
+
+                                                                </div>
+                                                                <div class="col-12 custom-field m-b-15">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-danger text-color-dark-blue">Tên
+                                                                        tài khoản </label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                        type="text" id="bill-account-name"
+                                                                        name="bill-account-name" autocomplete="off"
+                                                                        value="">
+
+                                                                </div>
+                                                                <div class="col-12 custom-field m-b-15">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-danger text-color-dark-blue">Tại
+                                                                        ngân hàng </label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                        type="text" id="bill-bank-name"
+                                                                        name="bill-bank-name" autocomplete="off"
+                                                                        value="">
+
+                                                                </div>
+
+                                                                <div class="col-12 custom-field m-b-15">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-danger text-color-dark-blue">Nội
+                                                                        dung chuyển khoản </label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                        type="text" id="bill-content-transfer"
+                                                                        name="bill-content-transfer" autocomplete="off"
+                                                                        value="">
+
+                                                                </div>
+
+                                                                <div class="col-12 custom-field m-b-15">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-danger text-color-dark-blue">Thông
+                                                                        tin liên hệ </label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                        type="text" id="bill-contact-info"
+                                                                        name="bill-contact-info" autocomplete="off"
+                                                                        value="">
+
+                                                                </div>
+                                                                <div class="col-12 custom-field m-b-10">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Lưu
+                                                                        ý </label>
+                                                                    <textarea
+                                                                        class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                        id="bill-warning" name="bill-warning"
+                                                                        rows="4"></textarea>
+
+                                                                </div>
+
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+
                                 </div>
 
                             </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <hr style="margin: 0 0 10px 0;">
+                                </div>
+                            </div>
+                            <div class="form-group row m-b-6">
+                                <div class="col-6">
+                                    <button type="button" onclick="location.href='/buildings';" data-action="back"
+                                        title="Quay lại" class="btn btn-sm btn-outline-secondary">Quay lại</button>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <button type="submit" class="btn btn-sm btn-primary btnadd btn-ses"
+                                        title="Chấp nhận">Chấp
+                                        nhận</button>
+                                </div>
+                            </div>
 
-                            <div class="col-lg-6 col-md-6">
-                                <div class="form-group">
-                                    <label>Số lượng phòng</label>
-                                    <input value="" type="text" name="" placeholder="Nhập số lượng phòng"
-                                        class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label>Loại phòng</label>
-                                    <select style="width: 100%"
-                                        class="form-control default-select2 select2-hidden-accessible" name="#"
-                                        tabindex="-1" aria-hidden="true">
+                        </div>
+                    </div>
 
-                                        <option value=""></option>
-                                        <option value="PHONG">Phòng</option>
-                                        <option value="G-NAM">Giường Nam</option>
-                                        <option value="G-NU">Giường Nữ</option>
-                                        <option value="Studio">Phòng Studio</option>
-                                        <option value="1PN">1 Phòng ngủ</option>
-                                        <option value="2PN">2 Phòng ngủ</option>
-                                        <option value="3PN">3 Phòng ngủ</option>
-                                        <option value="Suite-1">Suite 1</option>
-                                        <option value="Superior">Superior</option>
-                                        <option value="Studio-Special">Studio Special</option>
-                                        <option value="MBang">Mặt bằng</option>
-                                        <option value="Penthouse">Penthouse</option>
-                                        <option value="Duplex">Duplex</option>
-                                        <option value="Sleepbox">Sleepbox</option>
-                                        <option value="Standard">Standard</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Vị trí</label>
-                                    <select style="width: 100%"
-                                        class="form-control default-select2 select2-hidden-accessible" name="#"
-                                        tabindex="-1" aria-hidden="true">
-                                        <option value=""></option>
-                                        <option value="HAM">Hầm</option>
-                                        <option value="TRET">Trệt</option>
-                                        <option value="LUNG">Tầng lửng</option>
-                                        <option value="LAU1">Lầu 1</option>
-                                        <option value="LAU2">Lầu 2</option>
-                                        <option value="LAU3">Lầu 3</option>
-                                        <option value="LAU4">Lầu 4</option>
-                                        <option value="LAU5">Lầu 5</option>
-                                        <option value="LAU6">Lầu 6</option>
-                                        <option value="LAU7">Lầu 7</option>
-                                        <option value="LAU8">Lầu 8</option>
-                                        <option value="LAU9">Lầu 9</option>
-                                        <option value="LAU10">Lầu 10</option>
-                                        <option value="LAU11">Lầu 11</option>
-                                        <option value="LAU12">Lầu 12</option>
-                                        <option value="LAU13">Lầu 13</option>
-                                        <option value="LAU14">Lầu 14</option>
-                                        <option value="LAU15">Lầu 15</option>
-                                        <option value="LAU16">Lầu 16</option>
-                                        <option value="LAU17">Lầu 17</option>
-                                        <option value="LAU18">Lầu 18</option>
-                                        <option value="LAU19">Lầu 19</option>
-                                        <option value="LAU20">Lầu 20</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Diện tích</label>
-                                    <input type="" name="" placeholder="Nhập diện tích phòng" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label>Toilet</label>
-                                    <select style="width: 100%"
-                                        class="form-control default-select2 select2-hidden-accessible" name="#"
-                                        tabindex="-1" aria-hidden="true">
-                                        <option value=""></option>
-                                        <option value="CHUNG">Chung</option>
-                                        <option value="RIENG">Riêng</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Sân phơi</label>
-                                    <select style="width: 100%"
-                                        class="form-control default-select2 select2-hidden-accessible" name="#"
-                                        tabindex="-1" aria-hidden="true">
-                                        <option value=""></option>
-                                        <option value="CHUNG">Chung</option>
-                                        <option value="RIENG">Riêng</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Chỗ để xe</label>
-                                    <select style="width: 100%"
-                                        class="form-control default-select2 select2-hidden-accessible" name="#"
-                                        tabindex="-1" aria-hidden="true">
-                                        <option value="" selected="selected"></option>
-                                        <option value="C">Chung</option>
-                                        <option value="R">Trong phòng</option>
-                                        <option value="OUT">Bãi ngoài</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Máy giặt</label>
-                                    <select style="width: 100%"
-                                        class="form-control default-select2 select2-hidden-accessible" name="#"
-                                        tabindex="-1" aria-hidden="true">
-                                        <option value="" selected="selected"></option>
-                                        <option value="R">Riêng</option>
-                                        <option value="C">Chung</option>
-                                        <option value="K">Không</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Loại khóa cổng</label>
-                                    <select style="width: 100%"
-                                        class="form-control default-select2 select2-hidden-accessible" name="#"
-                                        tabindex="-1" aria-hidden="true">
-                                        <option value=""></option>
-                                        <option value="Normal">Khóa thường</option>
-                                        <option value="Fingerprint">Vân tay</option>
-                                        <option value="Magnetic">Thẻ từ</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Giờ giấc</label>
-                                    <select style="width: 100%"
-                                        class="form-control default-select2 select2-hidden-accessible" name="#"
-                                        tabindex="-1" aria-hidden="true">
-                                        <option value=""></option>
-                                        <option value="Y">Tự do</option>
-                                        <option value="N">Theo qui định</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Cho nuôi thú cưng</label>
-                                    <select style="width: 100%"
-                                        class="form-control default-select2 select2-hidden-accessible" name="#"
-                                        tabindex="-1" aria-hidden="true">
-                                        <option value=""></option>
-                                        <option value="Y">Có</option>
-                                        <option value="N">Không</option>
-                                        <option value="Y-IF">Có (kèm điều kiện)</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Nội thất</label>
-                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
-                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
-                                            class="custom-control-label p-t-5 text-red ">Máy lạnh</span>
-                                    </label>
-                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
-                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
-                                            class="custom-control-label p-t-5 text-red ">Giếng trời</span>
-                                    </label>
-                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
-                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
-                                            class="custom-control-label p-t-5 text-red ">Gác</span>
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
-                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
-                                            class="custom-control-label p-t-5 text-red ">Kệ bếp</span>
-                                    </label>
-                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
-                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
-                                            class="custom-control-label p-t-5 text-red ">Bồn rửa chén</span>
-                                    </label>
-                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
-                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
-                                            class="custom-control-label p-t-5 text-red ">Cửa sổ</span>
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
-                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
-                                            class="custom-control-label p-t-5 text-red ">Ban công</span>
-                                    </label>
-                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
-                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
-                                            class="custom-control-label p-t-5 text-red ">Tủ lạnh</span>
-                                    </label>
-                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
-                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
-                                            class="custom-control-label p-t-5 text-red ">Tivi</span>
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
-                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
-                                            class="custom-control-label p-t-5 text-red ">Thang máy</span>
-                                    </label>
-                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
-                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
-                                            class="custom-control-label p-t-5 text-red ">Nước nóng</span>
-                                    </label>
-                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
-                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
-                                            class="custom-control-label p-t-5 text-red ">Giường</span>
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
-                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
-                                            class="custom-control-label p-t-5 text-red ">Nệm</span>
-                                    </label>
-                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
-                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
-                                            class="custom-control-label p-t-5 text-red ">Tủ quần áo</span>
-                                    </label>
-                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
-                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
-                                            class="custom-control-label p-t-5 text-red ">Chung chủ </span>
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
-                                        <input type="checkbox" class="custom-control-input" name="optBan"><span
-                                            class="custom-control-label p-t-5 text-red ">Bảo vệ</span>
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <label>Nội thất khác</label>
-                                    <input type="" name="" placeholder="Nhập tên loại nội thất khác"
-                                        class="form-control">
-                                </div>
 
-                                <button type="submit" class="mb-sm btn btn-primary">Thêm</button>
-                    </form>
-                </div>
-                <!-- end panel-body -->
+                </form>
+
+
             </div>
-            <!-- end panel -->
         </div>
-        <!-- end col-12 -->
+
     </div>
-    <!-- end row -->
+
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
-<script>
-    var citis = document.getElementById("city");
-    var districts = document.getElementById("district");
-    var wards = document.getElementById("ward");
-    var Parameter = {
-        url: "https://raw.githubusercontent.com/kenzouno1/DiaGioiHanhChinhVN/master/data.json",
-        method: "GET",
-        responseType: "application/json",
-    };
-    var promise = axios(Parameter);
-    promise.then(function (result) {
-        renderCity(result.data);
-    });
 
-    function renderCity(data) {
-        for (const x of data) {
-            citis.options[citis.options.length] = new Option(x.Name, x.Id);
-        }
-        citis.onchange = function () {
-            district.length = 1;
-            ward.length = 1;
-            if (this.value != "") {
-                const result = data.filter(n => n.Id === this.value);
-
-                for (const k of result[0].Districts) {
-                    district.options[district.options.length] = new Option(k.Name, k.Id);
-                }
-            }
-        };
-        district.onchange = function () {
-            ward.length = 1;
-            const dataCity = data.filter((n) => n.Id === citis.value);
-            if (this.value != "") {
-                const dataWards = dataCity[0].Districts.filter(n => n.Id === this.value)[0].Wards;
-
-                for (const w of dataWards) {
-                    wards.options[wards.options.length] = new Option(w.Name, w.Id);
-                }
-            }
-        };
-    }
-</script>
+<script src="../../public/js/building.js"></script>

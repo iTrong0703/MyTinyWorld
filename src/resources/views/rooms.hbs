@@ -8,294 +8,1161 @@
     <!-- begin page-header -->
     <h1 class="page-header">
         <a href="#">
-            <button type="button" class="btn btn-inverse"><i class="fa fa-plus"></i> Thêm Phòng</button>
+            <button type="button" class="btn btn-inverse"><i class="fa fa-plus"></i>Thêm Phòng</button>
         </a>
     </h1>
     <!-- end page-header -->
 
     <!-- begin row -->
     <div class="row">
-        <!-- begin col-12 -->
-        <div class="col-lg-12 ui-sortable">
-            <!-- begin panel -->
-            <div class="panel panel-inverse">
-                <!-- begin panel-body -->
-                <div class="panel-body">
-                    <div id="data-table-buttons_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
-                        <div class="dt-buttons btn-group"><a class="btn btn-default buttons-excel buttons-html5 btn-sm"
-                                tabindex="0" aria-controls="data-table-buttons"><span>Excel</span></a><a
-                                class="btn btn-default buttons-print btn-sm" tabindex="0"
-                                aria-controls="data-table-buttons"><span>Print</span></a></div>
-                        <div id="data-table-buttons_filter" class="dataTables_filter"><label>Search:<input type="search"
-                                    class="form-control input-sm" placeholder=""
-                                    aria-controls="data-table-buttons"></label></div>
-                        <div style="overflow-x: auto;">
-                            <table id="data-table-buttons"
-                                class="table table-striped table-bordered dataTable no-footer dtr-inline collapsed"
-                                role="grid" aria-describedby="data-table-buttons_info">
-                                <thead>
-                                    <tr role="row">
-                                        <th width="1%" class="sorting_asc" tabindex="0"
-                                            aria-controls="data-table-buttons" rowspan="1" colspan="1"
-                                            aria-sort="ascending" aria-label="#: activate to sort column descending"
-                                            style="width: 7.375px;">STT
-                                        </th>
-                                        <th width="1%" class="sorting_asc" tabindex="0"
-                                            aria-controls="data-table-buttons" rowspan="1" colspan="1"
-                                            aria-sort="ascending" aria-label="#: activate to sort column descending"
-                                            style="width: 7.375px;"> <input type="checkbox" class="Check-All"
-                                                data-check-all="" style="position: unset;left: 0px;opacity: 1;">
-                                        </th>
-                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-buttons"
-                                            rowspan="1" colspan="1"
-                                            aria-label="Number/Name: activate to sort column ascending"
-                                            style="width: 81.5px;">Chức năng</th>
-                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-buttons"
-                                            rowspan="1" colspan="1"
-                                            aria-label="Number/Name: activate to sort column ascending"
-                                            style="width: 81.5px;">Nhà trọ</th>
-                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-buttons"
-                                            rowspan="1" colspan="1"
-                                            aria-label="Number/Name: activate to sort column ascending"
-                                            style="width: 81.5px;">Phòng</th>
-                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-buttons"
-                                            rowspan="1" colspan="1"
-                                            aria-label="Status: activate to sort column ascending"
-                                            style="width: 47.2625px;">Giá Phòng</th>
-                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-buttons"
-                                            rowspan="1" colspan="1"
-                                            aria-label="Status: activate to sort column ascending"
-                                            style="width: 47.2625px;">Khách Hàng</th>
-                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-buttons"
-                                            rowspan="1" colspan="1"
-                                            aria-label="Daily Rent: activate to sort column ascending"
-                                            style="width: 56.65px;">Điện Thoại</th>
-                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-buttons"
-                                            rowspan="1" colspan="1"
-                                            aria-label="Monthly Rent: activate to sort column ascending"
-                                            style="width: 74.375px;">Hạn Đóng Tiền</th>
-                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-buttons"
-                                            rowspan="1" colspan="1"
-                                            aria-label="Monthly Rent: activate to sort column ascending"
-                                            style="width: 74.375px;">Tình Trạng Phòng</th>
-                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-buttons"
-                                            rowspan="1" colspan="1"
-                                            aria-label="Monthly Rent: activate to sort column ascending"
-                                            style="width: 74.375px;">Tình Trạng Thu Tiền</th>
-                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-buttons"
-                                            rowspan="1" colspan="1"
-                                            aria-label="Monthly Rent: activate to sort column ascending"
-                                            style="width: 74.375px;">Số Điện Cũ</th>
-                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-buttons"
-                                            rowspan="1" colspan="1"
-                                            aria-label="Monthly Rent: activate to sort column ascending"
-                                            style="width: 74.375px;">Số Điện Mới</th>
-                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-buttons"
-                                            rowspan="1" colspan="1"
-                                            aria-label="Monthly Rent: activate to sort column ascending"
-                                            style="width: 74.375px;">Tiền Điện</th>
-                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-buttons"
-                                            rowspan="1" colspan="1"
-                                            aria-label="Monthly Rent: activate to sort column ascending"
-                                            style="width: 74.375px;">Số Nước Cũ</th>
-                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-buttons"
-                                            rowspan="1" colspan="1"
-                                            aria-label="Monthly Rent: activate to sort column ascending"
-                                            style="width: 74.375px;">Số Nước Mới</th>
-                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-buttons"
-                                            rowspan="1" colspan="1"
-                                            aria-label="Monthly Rent: activate to sort column ascending"
-                                            style="width: 74.375px;">Tiền Nước</th>
-                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-buttons"
-                                            rowspan="1" colspan="1"
-                                            aria-label="Monthly Rent: activate to sort column ascending"
-                                            style="width: 74.375px;">Tiền Internet</th>
-                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-buttons"
-                                            rowspan="1" colspan="1"
-                                            aria-label="Monthly Rent: activate to sort column ascending"
-                                            style="width: 74.375px;">Tiền Máy Giặt</th>
-                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-buttons"
-                                            rowspan="1" colspan="1"
-                                            aria-label="Monthly Rent: activate to sort column ascending"
-                                            style="width: 74.375px;">Tiền Giữ Xe</th>
-                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-buttons"
-                                            rowspan="1" colspan="1"
-                                            aria-label="Monthly Rent: activate to sort column ascending"
-                                            style="width: 74.375px;">Phí Quản Lý</th>
-                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-buttons"
-                                            rowspan="1" colspan="1"
-                                            aria-label="Monthly Rent: activate to sort column ascending"
-                                            style="width: 74.375px;">Phí Khác</th>
-                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-buttons"
-                                            rowspan="1" colspan="1"
-                                            aria-label="Monthly Rent: activate to sort column ascending"
-                                            style="width: 74.375px;">Tổng Phí Dịch Vụ</th>
-                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-buttons"
-                                            rowspan="1" colspan="1"
-                                            aria-label="Monthly Rent: activate to sort column ascending"
-                                            style="width: 74.375px;">Tổng Tiền</th>
-                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-buttons"
-                                            rowspan="1" colspan="1"
-                                            aria-label="Monthly Rent: activate to sort column ascending"
-                                            style="width: 74.375px;">Công Nợ</th>
-                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-buttons"
-                                            rowspan="1" colspan="1"
-                                            aria-label="Monthly Rent: activate to sort column ascending"
-                                            style="width: 74.375px;">Tiền Cọc</th>
-                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-buttons"
-                                            rowspan="1" colspan="1"
-                                            aria-label="Monthly Rent: activate to sort column ascending"
-                                            style="width: 74.375px;">Ngày Kí Hợp Đồng</th>
-                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-buttons"
-                                            rowspan="1" colspan="1"
-                                            aria-label="Monthly Rent: activate to sort column ascending"
-                                            style="width: 74.375px;">Ngày Kết Thúc Hợp Đồng</th>
-                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="data-table-buttons"
-                                            rowspan="1" colspan="1"
-                                            aria-label="Monthly Rent: activate to sort column ascending"
-                                            style="width: 74.375px;">Ghi Chú</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
+        <div class="col-12">
+            <form id="f-room-sale" name="f-room-sale" method="post" enctype="multipart/form-data">
+                <div class="card">
+                    <div class="card-body p-l-2 p-r-2">
+                        <div class="form-group row m-b-6">
+                            <div class="col-12">
+                                <div class="row m-b-0">
+                                    <div class="col-12 col-md-6 m-t-5 m-b-10">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <label
+                                                    class="col-form-label custom-field__textbox--label text-color-dark-blue">Tỉnh/Thành
+                                                    phố </label>
+                                                <select
+                                                    class="form-control form-control-sm custom-field__textbox text-color-dark-blue select2-hidden-accessible"
+                                                    id="provincial-code" name="provincial-code"
+                                                    data-select2-id="provincial-code" tabindex="-1" aria-hidden="true">
+                                                    <option value=""></option>
 
 
-                                    <tr role="row" class="odd">
 
-                                        <td class="table-cell text-center" role="gridcell">1</td>
-                                        <td class="table-cell" style="text-align: center;" role="gridcell"><input
-                                                type="checkbox" class="custom-control-input Check-Item"
-                                                data-check-item="" style="position: unset;left: 0px;opacity: 1;"></td>
-                                        <td class="table-cell text-left" role="gridcell">
-                                            <i class="fa-solid fa-faucet" data-action="cap-nhat-dien-nuoc"
-                                                title="Cập nhật điện nước">
-                                            </i>
-                                            <i class="fa-solid fa-money-check-dollar" data-action="thanh-toan"
-                                                title="Thanh toán">
-                                            </i>
-                                            <i class="fa-solid fa-address-card" data-action="xem-hop-dong"
-                                                title="Xem hợp đồng">
-                                            </i>
-                                            <i class="fa-solid fa-pen-to-square" data-action="cap-nhat-thong-tin"
-                                                title="Cập nhật thông tin">
-                                            </i>
-                                            <i class="fa-regular fa-note-sticky" data-action="cap-nhat-ghi-chu"
-                                                title="Ghi chú">
-                                            </i>
-                                            <i class="mdi mdi-cloud-upload fs-25 text-muted d-none"
-                                                data-action="edit-log" title="Upload hợp đồng giấy">
-                                            </i>
-                                            <i class="mdi mdi-lock-outline fs-25 text-danger c-pointer"
-                                                data-action="secret-code-bill" title="Mật khẩu xem bill">
-                                            </i>
-                                            <i class="fa-solid fa-user-check" title="Xác nhận thanh toán">
-                                            </i>
-                                        </td>
-                                        <td class="table-cell text-left" role="gridcell">125/51/1 BÙI ĐÌNH TUÝ</td>
-                                        <td class="table-cell text-left" role="gridcell">101</td>
-                                        <td class="table-cell text-right" role="gridcell">6,200,000</td>
-                                        <td class="table-cell text-left" role="gridcell">TRƯƠNG PHẠM MINH TRANG</td>
-                                        <td class="table-cell text-left" role="gridcell">0366677128</td>
-                                        <td class="table-cell text-center" role="gridcell">01/04/2024</td>
-                                        <td class="table-cell text-left" role="gridcell"><span
-                                                class="badge badge-primary">Phòng Đang Thuê</span></td>
-                                        <td class="table-cell text-left" role="gridcell"><span
-                                                class="badge badge-danger">Chưa thu tiền</span></td>
-                                        <td class="table-cell text-right" role="gridcell">4,179</td>
-                                        <td class="table-cell text-right" role="gridcell">4,179</td>
-                                        <td class="table-cell text-right" role="gridcell">0</td>
-                                        <td class="table-cell text-right" role="gridcell">0</td>
-                                        <td class="table-cell text-right" role="gridcell">0</td>
-                                        <td class="table-cell text-right" role="gridcell">100,000</td>
-                                        <td class="table-cell text-right" role="gridcell">0</td>
-                                        <td class="table-cell text-right" role="gridcell">20,000</td>
-                                        <td class="table-cell text-right" role="gridcell">150,000</td>
-                                        <td class="table-cell text-right" role="gridcell">160,000</td>
-                                        <td class="table-cell text-right" role="gridcell">0</td>
-                                        <td class="table-cell text-right" role="gridcell">310,000</td>
-                                        <td class="table-cell text-right" role="gridcell">48,078,000</td>
-                                        <td class="table-cell text-right" role="gridcell">48,078,000</td>
-                                        <td class="table-cell text-right" role="gridcell">6,200,000</td>
-                                        <td class="table-cell text-center" role="gridcell">01/09/2023</td>
-                                        <td class="table-cell text-center" role="gridcell">28/02/2024</td>
-                                        <td class="table-cell text-left" role="gridcell"></td>
+                                                </select>
 
-                                    </tr>
-                                    <tr role="row" class="odd">
+                                            </div>
+                                            <div class="col-4">
+                                                <label
+                                                    class="col-form-label custom-field__textbox--label text-color-dark-blue">Quận/Huyện
+                                                </label>
+                                                <select
+                                                    class="form-control form-control-sm custom-field__textbox text-color-dark-blue select2-hidden-accessible"
+                                                    id="district-code" name="district-code"
+                                                    data-select2-id="district-code" tabindex="-1" aria-hidden="true">
+                                                    <option value="" data-select2-id="21"></option>
 
-                                        <td class="table-cell text-center" role="gridcell">1</td>
-                                        <td class="table-cell" style="text-align: center;" role="gridcell"><input
-                                                type="checkbox" class="custom-control-input Check-Item"
-                                                data-check-item="" style="position: unset;left: 0px;opacity: 1;"></td>
-                                        <td class="table-cell text-left" role="gridcell"><i
-                                                class="mdi mdi-table-edit fs-25 text-info c-pointer"
-                                                data-action="cap-nhat-dien-nuoc" title="Cập nhật điện nước"></i><i
-                                                class="mdi mdi-cash-usd fs-28 text-info c-pointer"
-                                                data-action="thanh-toan" title="Thanh toán"></i><i
-                                                class="mdi mdi-newspaper fs-25 text-info c-pointer"
-                                                data-action="xem-hop-dong" title="Xem hợp đồng"></i><i
-                                                class="mdi mdi-pencil fs-25 text-warning c-pointer"
-                                                data-action="cap-nhat-thong-tin" title="Cập nhật thông tin"></i><i
-                                                class="mdi mdi-tooltip-text fs-25 text-warning c-pointer"
-                                                data-action="cap-nhat-ghi-chu" title="Ghi chú"></i><i
-                                                class="mdi mdi-cloud-upload fs-25 text-muted d-none"
-                                                data-action="edit-log" title="Upload hợp đồng giấy"></i><i
-                                                class="mdi mdi-lock-outline fs-25 text-danger c-pointer"
-                                                data-action="secret-code-bill" title="Mật khẩu xem bill"></i><i
-                                                class="mdi mdi-account-check fs-25 text-muted"
-                                                title="Xác nhận thanh toán"></i></td>
-                                        <td class="table-cell text-left" role="gridcell">125/51/1 BÙI ĐÌNH TUÝ</td>
-                                        <td class="table-cell text-left" role="gridcell">101</td>
-                                        <td class="table-cell text-right" role="gridcell">6,200,000</td>
-                                        <td class="table-cell text-left" role="gridcell">TRƯƠNG PHẠM MINH TRANG</td>
-                                        <td class="table-cell text-left" role="gridcell">0366677128</td>
-                                        <td class="table-cell text-center" role="gridcell">01/04/2024</td>
-                                        <td class="table-cell text-left" role="gridcell"><span
-                                                class="badge badge-warning">Sắp trả phòng</span></td>
-                                        <td class="table-cell text-left" role="gridcell"><span
-                                                class="badge badge-success">Đã thu tiền</span></td>
-                                        <td class="table-cell text-right" role="gridcell">4,179</td>
-                                        <td class="table-cell text-right" role="gridcell">4,179</td>
-                                        <td class="table-cell text-right" role="gridcell">0</td>
-                                        <td class="table-cell text-right" role="gridcell">0</td>
-                                        <td class="table-cell text-right" role="gridcell">0</td>
-                                        <td class="table-cell text-right" role="gridcell">100,000</td>
-                                        <td class="table-cell text-right" role="gridcell">0</td>
-                                        <td class="table-cell text-right" role="gridcell">20,000</td>
-                                        <td class="table-cell text-right" role="gridcell">150,000</td>
-                                        <td class="table-cell text-right" role="gridcell">160,000</td>
-                                        <td class="table-cell text-right" role="gridcell">0</td>
-                                        <td class="table-cell text-right" role="gridcell">310,000</td>
-                                        <td class="table-cell text-right" role="gridcell">48,078,000</td>
-                                        <td class="table-cell text-right" role="gridcell">48,078,000</td>
-                                        <td class="table-cell text-right" role="gridcell">6,200,000</td>
-                                        <td class="table-cell text-center" role="gridcell">01/09/2023</td>
-                                        <td class="table-cell text-center" role="gridcell">28/02/2024</td>
-                                        <td class="table-cell text-left" role="gridcell"></td>
+                                                </select>
 
-                                    </tr>
-                                </tbody>
-                            </table>
+                                            </div>
+                                            <div class="col-4 ">
+                                                <label
+                                                    class="col-form-label custom-field__textbox--label text-color-dark-blue">Phường/Xã</label>
+                                                <select
+                                                    class="form-control form-control-sm custom-field__textbox text-color-dark-blue select2-hidden-accessible"
+                                                    id="ward-code" name="ward-code" data-select2-id="ward-code"
+                                                    tabindex="-1" aria-hidden="true">
+                                                    <option value="" data-select2-id="22"></option>
+                                                </select>
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="col-12 col-md-6 m-t-5 m-b-10">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label
+                                                    class="col-form-label custom-field__textbox--label text-color-dark-blue">Nhà</label>
+                                                <select
+                                                    class="form-control form-control-sm custom-field__textbox text-color-dark-blue select2-hidden-accessible"
+                                                    id="house-id" name="house-id" style="width:100%;"
+                                                    data-select2-id="house-id" tabindex="-1"
+                                                    aria-hidden="true"></select>
+
+                                            </div>
+                                            <div class="col-6">
+                                                <label
+                                                    class="col-form-label custom-field__textbox--label text-color-dark-blue">Trạng
+                                                    thái
+                                                    phòng</label>
+                                                <select
+                                                    class="form-control form-control-sm custom-field__textbox text-color-dark-blue select2-hidden-accessible"
+                                                    id="allow-sale" name="allow-sale" data-select2-id="allow-sale"
+                                                    tabindex="-1" aria-hidden="true">
+                                                    <option value="ALL">Tất cả</option>
+                                                    <option value="Y" data-select2-id="17">Phòng
+                                                        được bán</option>
+                                                    <option value="N">Phòng không được bán</option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+                                        <div class="row ">
+                                            <div class="col-12 m-t-10 ">
+                                                <button class="btn btn-sm btn-info float-right" data-action="search"
+                                                    type="button" title="Tìm kiếm">Tìm kiếm</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
                         </div>
-                        <div class="dataTables_info" id="data-table-buttons_info" role="status" aria-live="polite">
-                            Showing 1 to 2 of 2 entries</div>
-                        <div class="dataTables_paginate paging_simple_numbers" id="data-table-buttons_paginate">
-                            <ul class="pagination">
-                                <li class="paginate_button previous disabled" id="data-table-buttons_previous"><a
-                                        href="#" aria-controls="data-table-buttons" data-dt-idx="0"
-                                        tabindex="0">Previous</a></li>
-                                <li class="paginate_button active"><a href="#" aria-controls="data-table-buttons"
-                                        data-dt-idx="1" tabindex="0">1</a></li>
-                                <li class="paginate_button next disabled" id="data-table-buttons_next"><a href="#"
-                                        aria-controls="data-table-buttons" data-dt-idx="2" tabindex="0">Next</a></li>
-                            </ul>
+                        <div class="form-group m-b-5 m-t-7" id="scrollpagination">
+                            <div id="content" class="row">
+                                <div class="col-md-6 col-lg-6 col-xlg-4 m-b-10 content-room"
+                                    data-key="63dcc5c2511ff4797a397b6b" is-process="Y"
+                                    data-house_key="63dcc5c2511ff4797a397b62">
+                                    <div class="card card-body p-2 m-b-10" style="min-height: 200px; ">
+                                        <div class="row">
+
+
+
+
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <p style="margin-bottom: 0;overflow: hidden;text-overflow: ellipsis;line-height: 12px; "
+                                                        class="text-color-room-caretaker text-center fs-13 p-t-5 p-b-5">
+                                                        <span class="span-house" style="color: #176ca7;">Phòng 103</span>
+                                                        <span class="span-house" style="color: #176ca7;"> - </span>
+                                                        <span class="span-house" style="color: #176ca7;">47/2/43 BÙI
+                                                            ĐÌNH TUÝ</span>
+                                                    </p>
+                                                </div>
+
+                                                <div class="">
+                                                    <div class="small text-center " style="width: 100% !important;">
+                                                        <i class="mdi mdi-arrow-right-thick "></i><span
+                                                            class="span-address ">47/2/43 BÙI ĐÌNH TUÝ, Phường 24,
+                                                            Quận Bình Thạnh, Thành phố Hồ Chí Minh</span>&nbsp;
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+
+                                                    <div class="row">
+                                                        <div class="col-6 col-lg-6 small">
+                                                            <div style="white-space: nowrap;"><span>Điện:
+                                                                </span><span class="fw-700">4,000</span><span
+                                                                    class="fw-700">/kWh</span></div>
+                                                            <div style="white-space: nowrap;"><span>Nước:
+                                                                </span><span class="fw-700">100,000</span><span
+                                                                    class="fw-700">/ng</span></div>
+                                                            <div style="white-space: nowrap;"><span>Xe: </span><span
+                                                                    class="fw-700">100,000</span><span
+                                                                    class="fw-700">/xe</span></div>
+                                                            <div style="white-space: normal;"><span>Quản lý:
+                                                                </span><span class="fw-700">0</span><span
+                                                                    class="fw-700">/ng</span></div>
+                                                        </div>
+                                                        <div class="col-6 col-lg-6 small">
+                                                            <div style="white-space: nowrap;"><span>Wifi:
+                                                                </span><span class="fw-700">Miễn phí</span></div>
+                                                            <div style="white-space: nowrap;"><span>M.giặt:
+                                                                </span><span class="fw-700">20,000</span><span
+                                                                    class="fw-700">đ/lần</span></div>
+                                                            <div style="white-space: nowrap;"><span>Thẻ:
+                                                                </span><span class="fw-700">0</span><span
+                                                                    class="fw-700">/ng</span></div>
+                                                            <div style="white-space: normal;"><span>Phí DV:
+                                                                </span><span class="fw-700">200,000</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div style="margin-bottom: 0;"
+                                                    class="text-color-room-live text-left fs-11">
+
+
+                                                    <span class="fs-10 c-pointer" data-sub-action="del-sale">Phòng được
+                                                        bán</span>
+                                                    <span><i class="mdi mdi-checkbox-marked-outline fs-15 text-info c-pointer"
+                                                            data-sub-action="del-sale" title="Xóa bán phòng"></i></span>
+
+                                                    <span class="fs-10 c-pointer text-success"
+                                                        data-sub-action="edit-room-info"><i
+                                                            class="mdi mdi-pencil c-pointer"></i>Edit phòng</span>
+
+
+                                                    <span class="fs-10 c-pointer" data-sub-action="edit-house-name"><i
+                                                            class="mdi mdi-home c-pointer"></i>Xem nhà</span>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row div-noi-that">
+                                            <div class="col-12">
+                                                <hr>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Phòng: </span><span class="fw-800">Phòng thường</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Vị trí: </span><span class="fw-800">Lầu 1</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+                                                        <span>Diện tích: </span><span class="fw-800">28m2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Toilet: </span><span class="fw-800">Riêng</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Để xe: </span><span class="fw-800">Chung</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+                                                        <span>Sân phơi: </span><span class="fw-800">Chung</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-4 small p-r-0">
+                                                        <span>Khóa cổng: </span><span class="fw-800">Khóa thường</span>
+                                                    </div>
+                                                    <div class="col-8 small p-0">
+                                                        <span>Giờ giấc: </span><span class="fw-800">Tự do</span>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-4 small p-r-0">
+                                                        <span>SL xe: </span><span class="fw-800">3</span>
+                                                    </div>
+                                                    <div class="col-8 small p-0">
+                                                        <span>SL người: </span><span class="fw-800">3</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-4 small p-r-0">
+                                                        <span>Cọc giữ chổ: </span><span class="fw-800">2,000,000</span>
+                                                    </div>
+                                                    <div class="col-4 small p-0">
+                                                        <span>Hẹn bổ sung cọc: </span><span class="fw-800">5ngay</span>
+                                                    </div>
+                                                    <div class="col-4 small">
+                                                        <span>Hẹn dọn vào: </span><span class="fw-800">7ngay</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <hr>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Gác: </span>
+                                                        <span class="text-info fw-800">✔</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Cửa sổ: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+                                                        <span>Ban công: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Tủ lạnh: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Tivi: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+                                                        <span>Máy giặt: </span><span class="fw-800">Chung</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Kệ bếp: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Bồn rửa chén: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+                                                        <span>Nước nóng: </span>
+                                                        <span class="text-info fw-800">✔</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Giường: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Nệm: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+                                                        <span>Tủ quần áo: </span>
+                                                        <span class="text-info fw-800">✔</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Chung chủ: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Thang máy: </span>
+                                                        <span class="text-info fw-800">✔</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+                                                        <span>Bảo vệ: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Máy lạnh: </span>
+                                                        <span class="text-info fw-800">✔</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Giếng trời: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 small ">
+                                                        <span>Nuôi thú cưng: </span><span class="fw-800">Không</span>
+                                                    </div>
+                                                </div>
+
+
+
+                                                <div class="row">
+                                                    <div class="col-12 small ">
+                                                        <span>Ghi chú: </span>
+                                                        <p class="fw-800"
+                                                            style="white-space: pre-line;line-height: 12px;">HĐ 6-12 tháng,
+                                                            HĐ 6 tháng cọc 1 tháng
+                                                            HĐ 12 tháng cọc 1 tháng rưỡi
+                                                            30/8 trống</p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xlg-4 m-b-10 content-room"
+                                    data-key="63dcc5c2511ff4797a397b8e" is-process="Y"
+                                    data-house_key="63dcc5c2511ff4797a397b62">
+                                    <div class="card card-body p-2 m-b-10" style="min-height: 200px; ">
+                                        <div class="row">
+
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <p style="margin-bottom: 0;overflow: hidden;text-overflow: ellipsis;line-height: 12px; "
+                                                        class="text-color-room-caretaker text-center fs-13 p-t-5 p-b-5">
+                                                        <span class="span-house" style="color: #176ca7;">Phòng 502</span>
+                                                        <span class="span-house" style="color: #176ca7;"> - </span>
+                                                        <span class="span-house" style="color: #176ca7;">47/2/43 BÙI
+                                                            ĐÌNH TUÝ</span>
+
+                                                    </p>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="small text-center " style="width: 90% !important;">
+                                                        <i class="mdi mdi-arrow-right-thick"></i><span
+                                                            class="span-address">47/2/43 BÙI ĐÌNH TUÝ, Phường 24,
+                                                            Quận Bình Thạnh, Thành phố Hồ Chí Minh</span>&nbsp;
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+
+                                                    <div class="row">
+                                                        <div class="col-6 col-lg-6 small">
+                                                            <div style="white-space: nowrap;"><span>Điện:
+                                                                </span><span class="fw-700">4,000</span><span
+                                                                    class="fw-700">/kWh</span></div>
+                                                            <div style="white-space: nowrap;"><span>Nước:
+                                                                </span><span class="fw-700">100,000</span><span
+                                                                    class="fw-700">/ng</span></div>
+                                                            <div style="white-space: nowrap;"><span>Xe: </span><span
+                                                                    class="fw-700">100,000</span><span
+                                                                    class="fw-700">/xe</span></div>
+                                                            <div style="white-space: normal;"><span>Quản lý:
+                                                                </span><span class="fw-700">0</span><span
+                                                                    class="fw-700">/ph</span></div>
+                                                        </div>
+                                                        <div class="col-6 col-lg-6 small">
+                                                            <div style="white-space: nowrap;"><span>Wifi:
+                                                                </span><span class="fw-700">Miễn phí</span></div>
+                                                            <div style="white-space: nowrap;"><span>M.giặt:
+                                                                </span><span class="fw-700">20,000</span><span
+                                                                    class="fw-700">đ/lần</span></div>
+                                                            <div style="white-space: nowrap;"><span>Thẻ:
+                                                                </span><span class="fw-700">0</span><span
+                                                                    class="fw-700">/ng</span></div>
+                                                            <div style="white-space: normal;"><span>Phí DV:
+                                                                </span><span class="fw-700">200,000</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div style="margin-bottom: 0;"
+                                                    class="text-color-room-live text-left fs-11">
+
+
+                                                    <span class="fs-10 c-pointer" data-sub-action="del-sale">Phòng được
+                                                        bán</span>
+                                                    <span><i class="mdi mdi-checkbox-marked-outline fs-15 text-info c-pointer"
+                                                            data-sub-action="del-sale" title="Xóa bán phòng"></i></span>
+
+                                                    <span class="fs-10 c-pointer text-success"
+                                                        data-sub-action="edit-room-info"><i
+                                                            class="mdi mdi-pencil c-pointer"></i>Edit phòng</span>
+
+
+                                                    <span class="fs-10 c-pointer" data-sub-action="edit-house-name"><i
+                                                            class="mdi mdi-home c-pointer"></i>Xem nhà</span>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row div-noi-that">
+                                            <div class="col-12">
+                                                <hr>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Phòng: </span><span class="fw-800">Phòng thường</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Vị trí: </span><span class="fw-800">Lầu 5</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+                                                        <span>Diện tích: </span><span class="fw-800">28m2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Toilet: </span><span class="fw-800">Riêng</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Để xe: </span><span class="fw-800">Chung</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+                                                        <span>Sân phơi: </span><span class="fw-800">Chung</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-4 small p-r-0">
+                                                        <span>Khóa cổng: </span><span class="fw-800">Khóa thường</span>
+                                                    </div>
+                                                    <div class="col-8 small p-0">
+                                                        <span>Giờ giấc: </span><span class="fw-800">Tự do</span>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-4 small p-r-0">
+                                                        <span>SL xe: </span><span class="fw-800">3</span>
+                                                    </div>
+                                                    <div class="col-8 small p-0">
+                                                        <span>SL người: </span><span class="fw-800">3</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-4 small p-r-0">
+                                                        <span>Cọc giữ chổ: </span><span class="fw-800">2,000,000</span>
+                                                    </div>
+                                                    <div class="col-4 small p-0">
+                                                        <span>Hẹn bổ sung cọc: </span><span class="fw-800">5ngay</span>
+                                                    </div>
+                                                    <div class="col-4 small">
+                                                        <span>Hẹn dọn vào: </span><span class="fw-800">7ngay</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <hr>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Gác: </span>
+                                                        <span class="text-info fw-800">✔</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Cửa sổ: </span>
+                                                        <span class="text-info fw-800">✔</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+                                                        <span>Ban công: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Tủ lạnh: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Tivi: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+                                                        <span>Máy giặt: </span><span class="fw-800">Chung</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Kệ bếp: </span>
+                                                        <span class="text-info fw-800">✔</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Bồn rửa chén: </span>
+                                                        <span class="text-info fw-800">✔</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+                                                        <span>Nước nóng: </span>
+                                                        <span class="text-info fw-800">✔</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Giường: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Nệm: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+                                                        <span>Tủ quần áo: </span>
+                                                        <span class="text-info fw-800">✔</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Chung chủ: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Thang máy: </span>
+                                                        <span class="text-info fw-800">✔</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+                                                        <span>Bảo vệ: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Máy lạnh: </span>
+                                                        <span class="text-info fw-800">✔</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Giếng trời: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 small ">
+                                                        <span>Nuôi thú cưng: </span><span class="fw-800">Không</span>
+                                                    </div>
+                                                </div>
+
+
+
+                                                <div class="row">
+                                                    <div class="col-12 small ">
+                                                        <span>Ghi chú: </span>
+                                                        <p class="fw-800"
+                                                            style="white-space: pre-line;line-height: 12px;">HĐ 6-12 tháng,
+                                                            HĐ 6 tháng cọc 1 tháng
+                                                            HĐ 12 tháng cọc 1 tháng rưỡi</p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xlg-4 m-b-10 content-room"
+                                    data-key="63dcc5c2511ff4797a397b8f" is-process="Y"
+                                    data-house_key="63dcc5c2511ff4797a397b62">
+                                    <div class="card card-body p-2 m-b-10" style="min-height: 200px; ">
+                                        <div class="row">
+
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <p style="margin-bottom: 0;overflow: hidden;text-overflow: ellipsis;line-height: 12px; "
+                                                        class="text-color-room-caretaker text-center fs-13 p-t-5 p-b-5">
+                                                        <span class="span-house" style="color: #176ca7;">Phòng 503</span>
+                                                        <span class="span-house" style="color: #176ca7;"> - </span>
+                                                        <span class="span-house" style="color: #176ca7;">47/2/43 BÙI
+                                                            ĐÌNH TUÝ</span>
+
+                                                    </p>
+                                                </div>
+
+
+
+                                                <div class="col-12">
+                                                    <div class="small text-center " style="width: 90% !important;">
+                                                        <i class="mdi mdi-arrow-right-thick"></i><span
+                                                            class="span-address">47/2/43 BÙI ĐÌNH TUÝ, Phường 24,
+                                                            Quận Bình Thạnh, Thành phố Hồ Chí Minh</span>&nbsp;
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+
+                                                    <div class="row">
+                                                        <div class="col-6 col-lg-6 small">
+                                                            <div style="white-space: nowrap;"><span>Điện:
+                                                                </span><span class="fw-700">4,000</span><span
+                                                                    class="fw-700">/kWh</span></div>
+                                                            <div style="white-space: nowrap;"><span>Nước:
+                                                                </span><span class="fw-700">100,000</span><span
+                                                                    class="fw-700">/ng</span></div>
+                                                            <div style="white-space: nowrap;"><span>Xe: </span><span
+                                                                    class="fw-700">100,000</span><span
+                                                                    class="fw-700">/xe</span></div>
+                                                            <div style="white-space: normal;"><span>Quản lý:
+                                                                </span><span class="fw-700">0</span><span
+                                                                    class="fw-700">/ph</span></div>
+                                                        </div>
+                                                        <div class="col-6 col-lg-6 small">
+                                                            <div style="white-space: nowrap;"><span>Wifi:
+                                                                </span><span class="fw-700">Miễn phí</span></div>
+                                                            <div style="white-space: nowrap;"><span>M.giặt:
+                                                                </span><span class="fw-700">20,000</span><span
+                                                                    class="fw-700">đ/lần</span></div>
+                                                            <div style="white-space: nowrap;"><span>Thẻ:
+                                                                </span><span class="fw-700">0</span><span
+                                                                    class="fw-700">/ng</span></div>
+                                                            <div style="white-space: normal;"><span>Phí DV:
+                                                                </span><span class="fw-700">200,000</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div style="margin-bottom: 0;"
+                                                    class="text-color-room-live text-left fs-11">
+
+
+                                                    <span class="fs-10 c-pointer" data-sub-action="del-sale">Phòng được
+                                                        bán</span>
+                                                    <span><i class="mdi mdi-checkbox-marked-outline fs-15 text-info c-pointer"
+                                                            data-sub-action="del-sale" title="Xóa bán phòng"></i></span>
+
+                                                    <span class="fs-10 c-pointer text-success"
+                                                        data-sub-action="edit-room-info"><i
+                                                            class="mdi mdi-pencil c-pointer"></i>Edit phòng</span>
+
+
+                                                    <span class="fs-10 c-pointer" data-sub-action="edit-house-name"><i
+                                                            class="mdi mdi-home c-pointer"></i>Xem nhà</span>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row div-noi-that">
+                                            <div class="col-12">
+                                                <hr>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Phòng: </span><span class="fw-800">Phòng thường</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Vị trí: </span><span class="fw-800">Lầu 5</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+                                                        <span>Diện tích: </span><span class="fw-800">28m2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Toilet: </span><span class="fw-800">Riêng</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Để xe: </span><span class="fw-800">Chung</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+                                                        <span>Sân phơi: </span><span class="fw-800">Chung</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-4 small p-r-0">
+                                                        <span>Khóa cổng: </span><span class="fw-800">Khóa thường</span>
+                                                    </div>
+                                                    <div class="col-8 small p-0">
+                                                        <span>Giờ giấc: </span><span class="fw-800">Tự do</span>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-4 small p-r-0">
+                                                        <span>SL xe: </span><span class="fw-800">3</span>
+                                                    </div>
+                                                    <div class="col-8 small p-0">
+                                                        <span>SL người: </span><span class="fw-800">3</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-4 small p-r-0">
+                                                        <span>Cọc giữ chổ: </span><span class="fw-800">2,000,000</span>
+                                                    </div>
+                                                    <div class="col-4 small p-0">
+                                                        <span>Hẹn bổ sung cọc: </span><span class="fw-800">5ngay</span>
+                                                    </div>
+                                                    <div class="col-4 small">
+                                                        <span>Hẹn dọn vào: </span><span class="fw-800">7ngay</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <hr>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Gác: </span>
+                                                        <span class="text-info fw-800">✔</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Cửa sổ: </span>
+                                                        <span class="text-info fw-800">✔</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+                                                        <span>Ban công: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Tủ lạnh: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Tivi: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+                                                        <span>Máy giặt: </span><span class="fw-800">Chung</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Kệ bếp: </span>
+                                                        <span class="text-info fw-800">✔</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Bồn rửa chén: </span>
+                                                        <span class="text-info fw-800">✔</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+                                                        <span>Nước nóng: </span>
+                                                        <span class="text-info fw-800">✔</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Giường: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Nệm: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+                                                        <span>Tủ quần áo: </span>
+                                                        <span class="text-info fw-800">✔</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Chung chủ: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Thang máy: </span>
+                                                        <span class="text-info fw-800">✔</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+                                                        <span>Bảo vệ: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Máy lạnh: </span>
+                                                        <span class="text-info fw-800">✔</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Giếng trời: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 small ">
+                                                        <span>Nuôi thú cưng: </span><span class="fw-800">Không</span>
+                                                    </div>
+                                                </div>
+
+
+
+                                                <div class="row">
+                                                    <div class="col-12 small ">
+                                                        <span>Ghi chú: </span>
+                                                        <p class="fw-800"
+                                                            style="white-space: pre-line;line-height: 12px;">HĐ 6-12 tháng,
+                                                            HĐ 6 tháng cọc 1 tháng
+                                                            HĐ 12 tháng cọc 1 tháng rưỡi</p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xlg-4 m-b-10 content-room"
+                                    data-key="63dcc5c2511ff4797a397b93" is-process="Y"
+                                    data-house_key="63dcc5c2511ff4797a397b62">
+                                    <div class="card card-body p-2 m-b-10" style="min-height: 200px; ">
+                                        <div class="row">
+
+
+
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <p style="margin-bottom: 0;overflow: hidden;text-overflow: ellipsis;line-height: 12px; "
+                                                        class="text-color-room-caretaker text-center fs-13 p-t-5 p-b-5">
+                                                        <span class="span-house" style="color: #176ca7;">Phòng 507</span>
+                                                        <span class="span-house" style="color: #176ca7;"> - </span>
+                                                        <span class="span-house" style="color: #176ca7;">47/2/43 BÙI
+                                                            ĐÌNH TUÝ</span>
+
+                                                    </p>
+                                                </div>
+
+
+                                                <div class="col-12">
+                                                    <div class="small text-center " style="width: 90% !important;">
+                                                        <i class="mdi mdi-arrow-right-thick"></i><span
+                                                            class="span-address">47/2/43 BÙI ĐÌNH TUÝ, Phường 24,
+                                                            Quận Bình Thạnh, Thành phố Hồ Chí Minh</span>&nbsp;
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+
+                                                    <div class="row">
+                                                        <div class="col-6 col-lg-6 small">
+                                                            <div style="white-space: nowrap;"><span>Điện:
+                                                                </span><span class="fw-700">4,000</span><span
+                                                                    class="fw-700">/kWh</span></div>
+                                                            <div style="white-space: nowrap;"><span>Nước:
+                                                                </span><span class="fw-700">100,000</span><span
+                                                                    class="fw-700">/ng</span></div>
+                                                            <div style="white-space: nowrap;"><span>Xe: </span><span
+                                                                    class="fw-700">100,000</span><span
+                                                                    class="fw-700">/xe</span></div>
+                                                            <div style="white-space: normal;"><span>Quản lý:
+                                                                </span><span class="fw-700">0</span><span
+                                                                    class="fw-700">/ng</span></div>
+                                                        </div>
+                                                        <div class="col-6 col-lg-6 small">
+                                                            <div style="white-space: nowrap;"><span>Wifi:
+                                                                </span><span class="fw-700">Miễn phí</span></div>
+                                                            <div style="white-space: nowrap;"><span>M.giặt:
+                                                                </span><span class="fw-700">20,000</span><span
+                                                                    class="fw-700">đ/lần</span></div>
+                                                            <div style="white-space: nowrap;"><span>Thẻ:
+                                                                </span><span class="fw-700">0</span><span
+                                                                    class="fw-700">/ng</span></div>
+                                                            <div style="white-space: normal;"><span>Phí DV:
+                                                                </span><span class="fw-700">200,000</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div style="margin-bottom: 0;"
+                                                    class="text-color-room-live text-left fs-11">
+
+
+                                                    <span class="fs-10 c-pointer" data-sub-action="del-sale">Phòng được
+                                                        bán</span>
+                                                    <span><i class="mdi mdi-checkbox-marked-outline fs-15 text-info c-pointer"
+                                                            data-sub-action="del-sale" title="Xóa bán phòng"></i></span>
+
+                                                    <span class="fs-10 c-pointer text-success"
+                                                        data-sub-action="edit-room-info"><i
+                                                            class="mdi mdi-pencil c-pointer"></i>Edit phòng</span>
+
+
+                                                    <span class="fs-10 c-pointer" data-sub-action="edit-house-name"><i
+                                                            class="mdi mdi-home c-pointer"></i>Xem nhà</span>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row div-noi-that">
+                                            <div class="col-12">
+                                                <hr>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Phòng: </span><span class="fw-800">Phòng thường</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Vị trí: </span><span class="fw-800">Lầu 5</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+                                                        <span>Diện tích: </span><span class="fw-800">28m2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Toilet: </span><span class="fw-800">Riêng</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Để xe: </span><span class="fw-800">Chung</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+                                                        <span>Sân phơi: </span><span class="fw-800">Chung</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-4 small p-r-0">
+                                                        <span>Khóa cổng: </span><span class="fw-800">Khóa thường</span>
+                                                    </div>
+                                                    <div class="col-8 small p-0">
+                                                        <span>Giờ giấc: </span><span class="fw-800">Tự do</span>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-4 small p-r-0">
+                                                        <span>SL xe: </span><span class="fw-800">3</span>
+                                                    </div>
+                                                    <div class="col-8 small p-0">
+                                                        <span>SL người: </span><span class="fw-800">3</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-4 small p-r-0">
+                                                        <span>Cọc giữ chổ: </span><span class="fw-800">2,000,000</span>
+                                                    </div>
+                                                    <div class="col-4 small p-0">
+                                                        <span>Hẹn bổ sung cọc: </span><span class="fw-800">5ngay</span>
+                                                    </div>
+                                                    <div class="col-4 small">
+                                                        <span>Hẹn dọn vào: </span><span class="fw-800">7ngay</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <hr>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Gác: </span>
+                                                        <span class="text-info fw-800">✔</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Cửa sổ: </span>
+                                                        <span class="text-info fw-800">✔</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+                                                        <span>Ban công: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Tủ lạnh: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Tivi: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+                                                        <span>Máy giặt: </span><span class="fw-800">Chung</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Kệ bếp: </span>
+                                                        <span class="text-info fw-800">✔</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Bồn rửa chén: </span>
+                                                        <span class="text-info fw-800">✔</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+                                                        <span>Nước nóng: </span>
+                                                        <span class="text-info fw-800">✔</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Giường: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Nệm: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+                                                        <span>Tủ quần áo: </span>
+                                                        <span class="text-info fw-800">✔</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Chung chủ: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Thang máy: </span>
+                                                        <span class="text-info fw-800">✔</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+                                                        <span>Bảo vệ: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4 small ">
+                                                        <span>Máy lạnh: </span>
+                                                        <span class="text-info fw-800">✔</span>
+                                                    </div>
+                                                    <div class="col-4 small p-r-2 p-l-2">
+                                                        <span>Giếng trời: </span>
+                                                        <span class="c-red fw-800">✘</span>
+                                                    </div>
+                                                    <div class="col-4 small ">
+
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 small ">
+                                                        <span>Nuôi thú cưng: </span><span class="fw-800">Không</span>
+                                                    </div>
+                                                </div>
+
+
+
+                                                <div class="row">
+                                                    <div class="col-12 small ">
+                                                        <span>Ghi chú: </span>
+                                                        <p class="fw-800"
+                                                            style="white-space: pre-line;line-height: 12px;">HĐ 6-12 tháng,
+                                                            HĐ 6 tháng cọc 1 tháng
+                                                            HĐ 12 tháng cọc 1 tháng rưỡi
+                                                            30/8 trống</p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+
                         </div>
+
                     </div>
                 </div>
-                <!-- end panel-body -->
-            </div>
-            <!-- end panel -->
+            </form>
+
         </div>
-        <!-- end col-12 -->
     </div>
     <!-- end row -->
 </div>

@@ -4645,19 +4645,6 @@ blockquote-reverse, blockquote.pull-right {
 
 /* 4.36 Component - Bootstrap 4 - Cards (Added in V3.0) */
 
-.card {
-	position: relative;
-	display: block;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-webkit-flex-direction: column;
-	  -ms-flex-direction: column;
-		  flex-direction: column;
-	background-color: #fff;
-	border: none;
-	border-radius: 4px;
-	margin-bottom: 15px;
-}
 .card-accordion .card + .card {
 	margin-top: -10px;
 }	
@@ -11287,4 +11274,11 @@ a.text-blue-grey:focus {
 }
 .underline {
     border-bottom: 1px solid #e2e7eb !important;
+}
+
+.centerX {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
 }

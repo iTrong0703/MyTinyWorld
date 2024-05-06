@@ -4,6 +4,10 @@ class TenantController {
         res.render('tenants');
     }
 
+    getAddTenants(req, res) {
+        res.render('add_tenants');
+    }
+
 }
 
 module.exports = new TenantController; 
