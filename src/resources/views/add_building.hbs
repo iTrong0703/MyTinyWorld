@@ -9,8 +9,7 @@
         </div>
         <div class="row">
             <div class="col-12 col-sm-10 col-md-7 col-md-6 centerX">
-                <form id="f-building-crud" name="f-building-crud" method="POST"
-                    action="http://localhost:8080/buildings/create">
+                <form id="f-building-crud" name="f-building-crud" method="post" action="http://localhost:8080/buildings/create">
                     <div class="card">
                         <div class="card-body">
 
@@ -38,7 +37,7 @@
                                                                 class="col-form-label custom-field__textbox--label text-color-dark-blue">Tên
                                                                 nhà *</label>
                                                             <input
-                                                                class="form-control form-control-sm custom-field__textbox text-uppercase text-color-dark-blue"
+                                                                class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
                                                                 type="text" id="house-name" name="buildingname" value=""
                                                                 autocomplete="off" maxlength="29"
                                                                 title="Tên nhà tối đa 29 ký tự">
@@ -76,7 +75,7 @@
                                                                     <input
                                                                         class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
                                                                         type="text" id="ownerphone"
-                                                                        name="house-owner-phone" value=""
+                                                                        name="ownerphonenumber" value=""
                                                                         autocomplete="off">
 
                                                                 </div>
@@ -103,7 +102,7 @@
                                                                         điện thoại quản lý *</label>
                                                                     <input
                                                                         class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
-                                                                        type="text" id="dthoai-qly" name="managerphone"
+                                                                        type="text" id="dthoai-qly" name="managerphonenumber"
                                                                         value="" autocomplete="off">
 
                                                                 </div>
@@ -155,10 +154,21 @@
 
                                                     <div class="row">
                                                         <div class="col-6 custom-field">
+                                                            <div class="row m-b-15">
+                                                                <div class="col-12">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Giá
+                                                                        cọc * </label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-right text-number text-color-dark-blue"
+                                                                        type="text" id="current-room-rate"
+                                                                        name="roomdeposit" autocomplete="off" value="">
 
+                                                                </div>
+                                                            </div>
 
                                                         </div>
-                                                        <div class="col-12 custom-field">
+                                                        <div class="col-6 custom-field">
                                                             <label
                                                                 class="col-form-label custom-field__textbox--label text-color-dark-blue">Giá
                                                                 điện *</label>
@@ -230,19 +240,39 @@
                                                         </div>
                                                     </div> --}}
                                                     <!-- THONG TIN CAC LOAI PHI -->
+                                                    <div class="row">
+                                                        <div class="col-6 custom-field">
+                                                            <div class="row m-b-15">
+                                                                <div class="col-12">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Phí gửi xe</label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-number text-color-dark-blue"
+                                                                        type="text" id="generalservice"
+                                                                        name="motobike" autocomplete="off" value="">
 
-                                                    <div class="row m-t-5 m-b-5">
-                                                        <div class="col-12">
-                                                            <label
-                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Phí
-                                                                thang máy</label>
-                                                            <input
-                                                                class="form-control form-control-sm custom-field__textbox text-number text-color-dark-blue"
-                                                                type="text" id="generalservice"
-                                                                name="general-service-fee" autocomplete="off" value="">
-
+                                                                </div>
+                                                            </div>
                                                         </div>
+                                                        <div class="col-6 custom-field">
+                                                            <div class="row m-b-15">
+                                                                <div class="col-12">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Phí
+                                                                        thang máy</label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-number text-color-dark-blue"
+                                                                        type="text" id="generalservice"
+                                                                        name="elevator" autocomplete="off" value="">
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                            
                                                     </div>
+
+
+                                                    
 
                                                     <div class="row m-t-5 m-b-5">
                                                         <div class="col-12">
@@ -252,7 +282,7 @@
                                                             <input
                                                                 class="form-control form-control-sm custom-field__textbox text-number text-color-dark-blue"
                                                                 type="text" id="generalservice"
-                                                                name="general-service-fee" autocomplete="off" value="">
+                                                                name="generalservice" autocomplete="off" value="">
 
                                                         </div>
                                                     </div>
@@ -406,7 +436,7 @@
                                                             <label
                                                                 class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
                                                                 <input type="checkbox" class="custom-control-input"
-                                                                    name="mlanh"><span
+                                                                    name="maylanh"><span
                                                                     class="custom-control-label p-t-5 text-red ">Máy
                                                                     lạnh</span>
                                                             </label>
@@ -415,7 +445,7 @@
                                                             <label
                                                                 class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
                                                                 <input type="checkbox" class="custom-control-input"
-                                                                    name="gitroi"><span
+                                                                    name="giengtroi"><span
                                                                     class="custom-control-label p-t-5 text-red ">Giếng
                                                                     trời
                                                                 </span>
@@ -425,7 +455,7 @@
                                                             <label
                                                                 class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
                                                                 <input type="checkbox" class="custom-control-input"
-                                                                    name="optGac"><span
+                                                                    name="gac"><span
                                                                     class="custom-control-label p-t-5 text-red ">Gác
                                                                 </span>
                                                             </label>
@@ -434,7 +464,7 @@
                                                             <label
                                                                 class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
                                                                 <input type="checkbox" class="custom-control-input"
-                                                                    name="optBep"><span
+                                                                    name="kebep"><span
                                                                     class="custom-control-label p-t-5 text-red ">Kệ bếp
                                                                 </span>
                                                             </label>
@@ -443,7 +473,7 @@
                                                             <label
                                                                 class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
                                                                 <input type="checkbox" class="custom-control-input"
-                                                                    name="optBonRuaChen"><span
+                                                                    name="bonruachen"><span
                                                                     class="custom-control-label p-t-5 text-red ">Bồn rửa
                                                                     chén </span>
                                                             </label>
@@ -452,7 +482,7 @@
                                                             <label
                                                                 class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
                                                                 <input type="checkbox" class="custom-control-input"
-                                                                    name="optWindow"><span
+                                                                    name="cuaso"><span
                                                                     class="custom-control-label p-t-5 text-red ">Cửa sổ
                                                                 </span>
                                                             </label>
@@ -461,7 +491,7 @@
                                                             <label
                                                                 class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
                                                                 <input type="checkbox" class="custom-control-input"
-                                                                    name="optBanCong"><span
+                                                                    name="bancong"><span
                                                                     class="custom-control-label p-t-5 text-red ">Ban
                                                                     công
                                                                 </span>
@@ -471,7 +501,7 @@
                                                             <label
                                                                 class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
                                                                 <input type="checkbox" class="custom-control-input"
-                                                                    name="optTuLanh"><span
+                                                                    name="tulanh"><span
                                                                     class="custom-control-label p-t-5 text-red ">Tủ lạnh
                                                                 </span>
                                                             </label>
@@ -480,7 +510,7 @@
                                                             <label
                                                                 class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
                                                                 <input type="checkbox" class="custom-control-input"
-                                                                    name="optTivi"><span
+                                                                    name="tivi"><span
                                                                     class="custom-control-label p-t-5 text-red ">Tivi
                                                                 </span>
                                                             </label>
@@ -489,7 +519,7 @@
                                                             <label
                                                                 class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
                                                                 <input type="checkbox" class="custom-control-input"
-                                                                    name="optElevator"><span
+                                                                    name="thangmay"><span
                                                                     class="custom-control-label p-t-5 text-red ">Thang
                                                                     máy
                                                                 </span>
@@ -499,7 +529,7 @@
                                                             <label
                                                                 class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
                                                                 <input type="checkbox" class="custom-control-input"
-                                                                    name="optNuocNong"><span
+                                                                    name="nuocnong"><span
                                                                     class="custom-control-label p-t-5 text-red ">Nước
                                                                     nóng
                                                                 </span>
@@ -509,7 +539,7 @@
                                                             <label
                                                                 class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
                                                                 <input type="checkbox" class="custom-control-input"
-                                                                    name="optGiuong"><span
+                                                                    name="giuong"><span
                                                                     class="custom-control-label p-t-5 text-red ">Giường
                                                                 </span>
                                                             </label>
@@ -518,7 +548,7 @@
                                                             <label
                                                                 class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
                                                                 <input type="checkbox" class="custom-control-input"
-                                                                    name="optNem"><span
+                                                                    name="nem"><span
                                                                     class="custom-control-label p-t-5 text-red ">Nệm
                                                                 </span>
                                                             </label>
@@ -527,7 +557,7 @@
                                                             <label
                                                                 class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
                                                                 <input type="checkbox" class="custom-control-input"
-                                                                    name="optTuQuanAo"><span
+                                                                    name="tuquanao"><span
                                                                     class="custom-control-label p-t-5 text-red ">Tủ quần
                                                                     áo
                                                                 </span>
@@ -537,7 +567,7 @@
                                                             <label
                                                                 class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
                                                                 <input type="checkbox" class="custom-control-input"
-                                                                    name="optBan"><span
+                                                                    name="chungchu"><span
                                                                     class="custom-control-label p-t-5 text-red ">Chung
                                                                     chủ
                                                                 </span>
@@ -547,7 +577,7 @@
                                                             <label
                                                                 class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
                                                                 <input type="checkbox" class="custom-control-input"
-                                                                    name="optBVe"><span
+                                                                    name="baove"><span
                                                                     class="custom-control-label p-t-5 text-red ">Bảo vệ
                                                                 </span>
                                                             </label>
@@ -592,7 +622,7 @@
                                                                     <input
                                                                         class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
                                                                         type="text" id="bill-account-no"
-                                                                        name="bill-account-no" autocomplete="off"
+                                                                        name="accountnumber" autocomplete="off"
                                                                         value="">
 
                                                                 </div>
@@ -603,7 +633,7 @@
                                                                     <input
                                                                         class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
                                                                         type="text" id="bill-account-name"
-                                                                        name="bill-account-name" autocomplete="off"
+                                                                        name="accountname" autocomplete="off"
                                                                         value="">
 
                                                                 </div>
@@ -614,7 +644,7 @@
                                                                     <input
                                                                         class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
                                                                         type="text" id="bill-bank-name"
-                                                                        name="bill-bank-name" autocomplete="off"
+                                                                        name="bankname" autocomplete="off"
                                                                         value="">
 
                                                                 </div>
@@ -626,29 +656,19 @@
                                                                     <input
                                                                         class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
                                                                         type="text" id="bill-content-transfer"
-                                                                        name="bill-content-transfer" autocomplete="off"
+                                                                        name="tranfercontent" autocomplete="off"
                                                                         value="">
 
                                                                 </div>
 
-                                                                <div class="col-12 custom-field m-b-15">
-                                                                    <label
-                                                                        class="col-form-label custom-field__textbox--label text-danger text-color-dark-blue">Thông
-                                                                        tin liên hệ </label>
-                                                                    <input
-                                                                        class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
-                                                                        type="text" id="bill-contact-info"
-                                                                        name="bill-contact-info" autocomplete="off"
-                                                                        value="">
-
-                                                                </div>
+                                                                
                                                                 <div class="col-12 custom-field m-b-10">
                                                                     <label
                                                                         class="col-form-label custom-field__textbox--label text-color-dark-blue">Lưu
                                                                         ý </label>
                                                                     <textarea
                                                                         class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
-                                                                        id="bill-warning" name="bill-warning"
+                                                                        id="bill-warning" name="note"
                                                                         rows="4"></textarea>
 
                                                                 </div>
@@ -697,4 +717,6 @@
 
 </div>
 
-<script src="../../public/js/building.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="/js/building.js"></script>

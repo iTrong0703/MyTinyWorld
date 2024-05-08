@@ -1,0 +1,193 @@
+<div id="content" class="content">
+    <!-- begin breadcrumb -->
+    <ol class="breadcrumb pull-right">
+        <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+        <li class="breadcrumb-item active">Khiếu nại</li>
+    </ol>
+    <!-- end breadcrumb -->
+    <!-- begin page-header -->
+    <h1 class="page-header">
+        <a href="#">
+            <button type="button" class="btn btn-inverse"><i class="fa fa-plus"></i>Thêm khiếu nại</button>
+        </a>
+    </h1>
+    <!-- end page-header -->
+
+    <!-- begin row -->
+    <div class="row">
+        <!-- begin col-12 -->
+        <div class="col-md-12 ui-sortable">
+            <!-- begin panel -->
+            <div class="panel panel-inverse">
+                <div class="panel-body">
+                    <div id="data-table-buttons_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                        <div class="dt-buttons btn-group">
+                            <a class="btn btn-default buttons-excel buttons-html5 btn-sm" tabindex="0"
+                                aria-controls="data-table-buttons"><span>Excel</span></a>
+                            <a class="btn btn-default buttons-print btn-sm" tabindex="0"
+                                aria-controls="data-table-buttons"><span>Print</span></a>
+                        </div>
+                        
+                        <table id="data-table-buttons"
+                            class="table table-striped table-bordered dataTable no-footer dtr-inline" role="grid"
+                            aria-describedby="data-table-buttons_info">
+                            <thead>
+                                <tr role="row">
+                                    <th class="sorting_asc" tabindex="0" aria-controls="data-table-buttons" rowspan="1"
+                                        colspan="1" aria-sort="ascending"
+                                        aria-label="#: activate to sort column descending" style="width: 7.375px;">#
+                                    </th>
+                                    <th class="sorting" tabindex="0" aria-controls="data-table-buttons" rowspan="1"
+                                        colspan="1" aria-label="Complaint Number: activate to sort column ascending"
+                                        style="width: 83.9625px;">Mã khiếu nại</th>
+                                    <th class="sorting" tabindex="0" aria-controls="data-table-buttons" rowspan="1"
+                                        colspan="1" aria-label="Title: activate to sort column ascending"
+                                        style="width: 84.625px;">Tiêu đề</th>
+                                    <th class="sorting" tabindex="0" aria-controls="data-table-buttons" rowspan="1"
+                                        colspan="1" aria-label="Status: activate to sort column ascending"
+                                        style="width: 34.9px;">Trạng thái</th>
+                                    <th class="sorting" tabindex="0" aria-controls="data-table-buttons" rowspan="1"
+                                        colspan="1" aria-label="Total Messages: activate to sort column ascending"
+                                        style="width: 65.0625px;">Nội dung</th>
+                                    <th class="sorting" tabindex="0" aria-controls="data-table-buttons" rowspan="1"
+                                        colspan="1" aria-label="Tenant: activate to sort column ascending"
+                                        style="width: 44.65px;">Khách thuê</th>
+                                    <th class="sorting" tabindex="0" aria-controls="data-table-buttons" rowspan="1"
+                                        colspan="1" aria-label="Created On: activate to sort column ascending"
+                                        style="width: 49.925px;">Tạo lúc</th>
+                                    <th class="sorting" tabindex="0" aria-controls="data-table-buttons" rowspan="1"
+                                        colspan="1" aria-label="Created By: activate to sort column ascending"
+                                        style="width: 49.275px;">Tạo bởi</th>
+                                    <th class="sorting" tabindex="0" aria-controls="data-table-buttons" rowspan="1"
+                                        colspan="1" aria-label="Updated On: activate to sort column ascending"
+                                        style="width: 53.8125px;">Trả lời lúc</th>
+                                    <th class="sorting" tabindex="0" aria-controls="data-table-buttons" rowspan="1"
+                                        colspan="1" aria-label="Updated By: activate to sort column ascending"
+                                        style="width: 53.1625px;">Trả lời bởi</th>
+                                    <th class="sorting" tabindex="0" aria-controls="data-table-buttons" rowspan="1"
+                                        colspan="1" aria-label="Options: activate to sort column ascending"
+                                        style="width: 96.65px;">Chức năng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr role="row" class="odd">
+                                    <td class="sorting_1" tabindex="0">1</td>
+                                    <td>01</td>
+                                    <td>
+                                        Máy giặt có vấn đề
+                                    </td>
+                                    <td>
+                                        <span class="badge badge-warning">Mở</span>
+                                    </td>
+                                    <td>Máy giặt số 2 không xả nước</td>
+                                    <td style="">
+                                        Thanh Trọng </td>
+                                    <td style="">25/04/2024</td>
+                                    <td style="">
+                                        Thanh Trọng </td>
+                                    <td style="">07/05/2024</td>
+                                    <td style="">
+                                        Admin </td>
+                                    <td style="">
+                                        <a href="" onclick="answerComplaint(event);" class="btn btn-primary btn-xs">
+                                            <i class="fa fa-comment"></i> Trả lời </a>
+                                        <a href="" onclick="confirmClose(event);" class="btn btn-warning btn-xs">
+                                            <i class="fa fa-times"></i> Đóng </a>
+                                    </td>
+                                </tr>
+                                <tr role="row" class="even">
+                                    <td class="sorting_1" tabindex="0">2</td>
+                                    <td>02</td>
+                                    <td>
+                                        Nhà vệ sinh tắt nước
+                                    </td>
+                                    <td>
+                                        <span class="badge badge-primary">Đóng</span>
+                                    </td>
+                                    <td>Nhà vệ sinh phòng A6 bị tắt nước</td>
+                                    <td style="">
+                                        Thanh Trọng </td>
+                                    <td style="">04/05/2024</td>
+                                    <td style="">
+                                        Thanh Trọng </td>
+                                    <td style="">04/05/2024</td>
+                                    <td style="">
+                                        Admin </td>
+                                    <td style="">
+                                        <a href="" onclick="confirmDelete(event);" class="btn btn-danger btn-xs">
+                                            <i class="fa fa-trash"></i> Xóa </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- end panel -->
+            </div>
+            <!-- end col-12 -->
+        </div>
+        <!-- end row -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function confirmDelete(event) {
+            event.preventDefault();
+            Swal.fire({
+                title: "Bạn muốn xóa chứ?",
+                text: "Bạn sẽ không thể khôi phục sao khi xóa!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Có, hãy xóa!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: "Đã xóa!",
+                        text: "Đã xóa thành công",
+                        icon: "success"
+                    });
+                }
+            });
+        };
+        function confirmClose(event) {
+            event.preventDefault();
+            Swal.fire({
+                title: "Bạn muốn đóng khiếu nại này chứ?",
+                text: "Bạn sẽ không thể trả lời khiếu nại được nữa",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Có, hãy đóng!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: "Đã đóng!",
+                        text: "Khiếu nại đã đóng!",
+                        icon: "success"
+                    });
+                }
+            });
+        };
+        async function answerComplaint(event) {
+            event.preventDefault();
+            const { value: text } = await Swal.fire({
+                input: "textarea",
+                inputLabel: "Trả lời khiếu nại",
+                inputPlaceholder: "Nhập nội dung ở đây",
+                inputAttributes: {
+                    "aria-label": "Nhập nội dung ở đây"
+                },
+                showCancelButton: true
+            });
+            if (text) {
+                Swal.fire({
+                        title: "Đã phản hồi!",
+                        text: "Khiếu nại đã được phản hồi!",
+                        icon: "success"
+                    });
+            }
+        };
+    </script>

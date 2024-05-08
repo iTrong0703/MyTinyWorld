@@ -1744,6 +1744,7 @@ table.dataTable thead .sorting_desc_disabled:after,
 }
 
 .content {
+    min-height: 100vh;
     margin-left: 220px;
     padding: 25px 30px;
 }

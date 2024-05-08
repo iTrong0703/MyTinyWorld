@@ -7,6 +7,7 @@ section {
   background-color: #fff;
 }
 
+
 section .page-content {
   padding: 0;
 }
@@ -425,13 +426,14 @@ a:not(.btn):not(.badge):not(.btn):not([href]):not([tabindex]) {
     FOOTER
 -----------------------------------------------------------------*/
 #footer {
+  bottom: 0;
   display: block;
   position: relative;
-  background-color: #f9f9fa;
   font-size: 14px;
   line-height: 32px;
   font-weight: 400;
   font-family: inherit;
+  
 }
 
 #footer a:not(.btn):not(:hover) {

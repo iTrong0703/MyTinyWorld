@@ -5,6 +5,7 @@ const roomRouter = require('./roomRouter');
 const buildingRouter = require('./buildingRouter');
 const tenantRouter = require('./tenantRouter');
 const invoiceRouter = require('./invoiceRouter');
+const complaintRouter = require('./complaintRouter');
 const { checkUser } = require('../middlewares/authMiddleware');
 
 function route(app) {
@@ -16,6 +17,8 @@ function route(app) {
 
     app.use('/tenants', tenantRouter);
     app.use('/invoice', invoiceRouter);
+
+    app.use('/complaints', complaintRouter);
     app.use(authRouter);
 
 }

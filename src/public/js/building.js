@@ -1,8 +1,7 @@
+
 document.getElementById("f-building-crud").addEventListener("submit", function (event) {
-    console.log("123123213123213123");
     // Ngăn chặn hành vi mặc định của form
     event.preventDefault();
-
     // Thu thập dữ liệu từ form
     const formData = new FormData(this);
 
@@ -19,8 +18,15 @@ document.getElementById("f-building-crud").addEventListener("submit", function (
         .then(data => {
             // Xử lý kết quả từ server nếu cần
             console.log("Dữ liệu được gửi thành công:", data);
+            
+            Swal.fire({
+                title: data.message,
+                text: "Bấm ok để tiếp tục",
+                icon: "success"
+              });
         })
         .catch(error => {
             console.error("Lỗi:", error);
+            alert("Đã xảy ra lỗi khi gửi dữ liệu lên server");
         });
 });
