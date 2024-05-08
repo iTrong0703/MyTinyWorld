@@ -9,7 +9,7 @@
         </div>
         <div class="row">
             <div class="col-12 col-sm-10 col-md-7 col-md-6 centerX">
-                <form id="f-building-crud" name="f-building-crud" method="post" action="http://localhost:8080/buildings/create">
+                <form id="f-building-crud" name="f-building-crud" >
                     <div class="card">
                         <div class="card-body">
 
@@ -38,7 +38,7 @@
                                                                 nhà *</label>
                                                             <input
                                                                 class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
-                                                                type="text" id="house-name" name="buildingname" value=""
+                                                                type="text" id="house-name" name="buildingname" 
                                                                 autocomplete="off" maxlength="29"
                                                                 title="Tên nhà tối đa 29 ký tự">
 
@@ -697,7 +697,7 @@
                                         title="Quay lại" class="btn btn-sm btn-outline-secondary">Quay lại</button>
                                 </div>
                                 <div class="col-6 text-right">
-                                    <button type="submit" class="btn btn-sm btn-primary btnadd btn-ses"
+                                    <button id="btnSubmit" class="btn btn-sm btn-primary btnadd btn-ses" type="submit"
                                         title="Chấp nhận">Chấp
                                         nhận</button>
                                 </div>

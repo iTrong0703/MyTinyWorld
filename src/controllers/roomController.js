@@ -1,7 +1,7 @@
 class RoomController {
     // GET /news
     index(req, res) {
-        res.render('rooms');
+        res.render('rooms_table');
     }
 
 }
