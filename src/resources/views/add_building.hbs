@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@22.0.2/build/css/intlTelInput.css">
 <div id="content" class="content">
     <div class="container-fluid style-main-content" id="divSubContent" style="display: block;">
 
@@ -38,7 +39,8 @@
                                                                 nhà *</label>
                                                             <input
                                                                 class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
-                                                                type="text" id="house-name" name="buildingname" 
+                                                                type="text" id="house-name" name="buildingname"
+                                                                required="true"
                                                                 autocomplete="off" maxlength="29"
                                                                 title="Tên nhà tối đa 29 ký tự">
 
@@ -52,6 +54,7 @@
                                                                 chỉ *</label>
                                                             <input
                                                                 class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                required="true"
                                                                 type="text" id="house-address" name="buildingadress"
                                                                 value="" autocomplete="off">
                                                         </div>
@@ -65,7 +68,7 @@
                                                                         chủ nhà *</label>
                                                                     <input
                                                                         class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
-                                                                        type="text" id="house-address" name="ownername"
+                                                                        type="text" id="house-address" name="ownername" required="true"
                                                                         value="" autocomplete="off">
                                                                 </div>
                                                                 <div class="col-12 custom-field m-b-16">
@@ -74,10 +77,21 @@
                                                                         điện thoại chủ nhà *</label>
                                                                     <input
                                                                         class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
-                                                                        type="text" id="ownerphone"
+                                                                        type="text" id="ownerphone" required="true"
                                                                         name="ownerphonenumber" value=""
                                                                         autocomplete="off">
-
+                                                                    {{!-- for phone validate! Delete with cautious! --}}
+                                                                    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@22.0.2/build/js/intlTelInput.min.js"></script>
+                                                                    {{!-- phone validate --}}
+                                                                    <script>
+                                                                        const input = document.querySelector("#ownerphone");
+                                                                        window.intlTelInput(input, {
+                                                                            initialCountry: "vn",
+                                                                            onlyCountries: ["vn", "us", "ru", "jp"],
+                                                                            strictMode: true,
+                                                                            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@22.0.2/build/js/utils.js",
+                                                                        });
+                                                                    </script>
                                                                 </div>
 
 
@@ -92,7 +106,7 @@
                                                                         quản lý *</label>
                                                                     <input
                                                                         class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
-                                                                        type="text" id="house-address"
+                                                                        type="text" id="house-address" required="true"
                                                                         name="managername" value="" autocomplete="off">
                                                                 </div>
 
@@ -102,9 +116,18 @@
                                                                         điện thoại quản lý *</label>
                                                                     <input
                                                                         class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
-                                                                        type="text" id="dthoai-qly" name="managerphonenumber"
+                                                                        type="text" id="dthoai-qly" name="managerphonenumber" required="true"
                                                                         value="" autocomplete="off">
-
+                                                                    {{!-- phone validate --}}
+                                                                    <script>
+                                                                        const input1 = document.querySelector("#dthoai-qly");
+                                                                        window.intlTelInput(input1, {
+                                                                            initialCountry: "vn",
+                                                                            onlyCountries: ["vn", "us", "ru", "jp"],
+                                                                            strictMode: true,
+                                                                            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@22.0.2/build/js/utils.js",
+                                                                        });
+                                                                    </script>
                                                                 </div>
 
                                                             </div>
@@ -127,9 +150,27 @@
                                                                         class="col-form-label custom-field__textbox--label text-color-dark-blue">Số
                                                                         lượng phòng (< 50 phòng)</label>
                                                                             <input
-                                                                                class="form-control form-control-sm custom-field__textbox text-right text-number text-color-dark-blue"
-                                                                                type="text" id="roomquantity"
+                                                                                 min="0" max="50"
+                                                                                class="equipCatValidation form-control form-control-sm custom-field__textbox text-right text-number text-color-dark-blue"
+                                                                                type="number" id="roomquantity"
                                                                                 name="roomquantity" autocomplete="off">
+                                                                                {{!-- Khong cho vuot qua max value la 50 dong thoi khong cho gia tri am --}}
+                                                                                <script>
+                                                                                    function createValidator(element) {
+                                                                                        return function() {
+                                                                                            var min = parseInt(element.getAttribute("min")) || 0;
+                                                                                            var max = parseInt(element.getAttribute("max")) || 0;
+
+                                                                                            var value = parseInt(element.value) || min;
+                                                                                            element.value = value; // make sure we got an int
+
+                                                                                                if (value < min) element.value = min;
+                                                                                                if (value > max) element.value = max;
+                                                                                            }
+                                                                                        }
+
+                                                                                        var elm = document.body.querySelector("#roomquantity");
+                                                                                        elm.onkeyup = createValidator(elm);</script>
                                                                 </div>
                                                             </div>
 
@@ -143,6 +184,7 @@
                                                                     <input
                                                                         class="form-control form-control-sm custom-field__textbox text-right text-number text-color-dark-blue"
                                                                         type="text" id="current-room-rate"
+                                                                        required="true"
                                                                         name="roomprice" autocomplete="off" value="">
 
                                                                 </div>
@@ -162,6 +204,7 @@
                                                                     <input
                                                                         class="form-control form-control-sm custom-field__textbox text-right text-number text-color-dark-blue"
                                                                         type="text" id="current-room-rate"
+                                                                        required="true"
                                                                         name="roomdeposit" autocomplete="off" value="">
 
                                                                 </div>
@@ -175,6 +218,7 @@
                                                             <input
                                                                 class="form-control form-control-sm custom-field__textbox text-number text-color-dark-blue"
                                                                 type="text" id="electricity-fee" name="electric"
+                                                                required="true"
                                                                 autocomplete="off" value="">
 
 
@@ -223,6 +267,7 @@
                                                                     <input
                                                                         class="form-control form-control-sm custom-field__textbox text-number text-color-dark-blue"
                                                                         type="text" id="water-fee" name="water"
+                                                                        required="true"
                                                                         autocomplete="off" value="">
 
                                                                 </div>
@@ -720,3 +765,4 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script src="/js/building.js"></script>
+
