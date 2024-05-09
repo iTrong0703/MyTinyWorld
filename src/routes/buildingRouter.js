@@ -6,6 +6,6 @@ const router = Router();
 
 router.get('/', buildingController.index);
 router.get('/add_building', buildingController.getAddBuilding);
-
+router.get('/getbuilding', buildingController.getBuilding);
 
 module.exports = router;
