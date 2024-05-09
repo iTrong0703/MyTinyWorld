@@ -29,7 +29,7 @@ class BuildingController {
         console.log(buildings);
         res.render('building', { buildings });
       })
-      .catch((err) => res.status(500).send(e.message));
+      .catch((err) => res.status(500).send(err.message));
   }
 
   getAddBuilding(req, res) {

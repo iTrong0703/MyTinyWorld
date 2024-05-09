@@ -1,0 +1,195 @@
+<div id="content" class="content">
+    <!-- begin breadcrumb -->
+    <ol class="breadcrumb pull-right">
+        <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+        <li class="breadcrumb-item active">Thêm nhân viên</li>
+    </ol>
+    <!-- end breadcrumb -->
+    <!-- begin page-header -->
+    <h1 class="page-header">
+        Thêm nhân viên </h1>
+    <!-- end page-header -->
+
+    <!-- begin row -->
+    <div class="row">
+        <!-- begin col-12 -->
+        <div class="col-lg-6 offset-lg-3 ui-sortable">
+            <!-- begin panel -->
+            <div class="panel panel-inverse">
+                <!-- begin panel-body -->
+                <div class="panel-body">
+                    <form data-parsley-validate="true" accept-charset="utf-8" novalidate="">
+                        <div class="form-group">
+                            <label>Tên nhân viên *</label>
+                            <input type="text" name="name" placeholder="Nhập tên nhân viên" class="form-control"
+                                data-parsley-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label>Chức vụ</label>
+                            <input type="text" name="role" placeholder="Nhập chức vụ của nhân viên"
+                                class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Email (dùng để đăng nhập)</label>
+                            <input type="email" name="email" placeholder="Nhập email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Mật khẩu (dùng để đăng nhập)</label>
+                            <input type="text" name="password" id="password-indicator-visible"
+                                class="form-control m-b-5">
+                        </div>
+                </div>
+                <div class="note note-primary m-b-15">
+                    <span>Mật khẩu mặc định là: 123456</span>
+                </div>
+                <div class="form-group">
+                    <label>Số điện thoại *</label>
+                    <input type="text" name="mobile_number" placeholder="Nhập số điện thoại" class="form-control"
+                        data-parsley-required="true">
+                </div>
+                <div class="form-group">
+                    <label>Phân quyền *</label>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="checkbox checkbox-css">
+                                <input type="checkbox" id="1" value="1" name="permission[]"
+                                    data-parsley-multiple="permission">
+                                <label for="1">Trang chủ</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="checkbox checkbox-css">
+                                <input type="checkbox" id="2" value="2" name="permission[]"
+                                    data-parsley-multiple="permission">
+                                <label for="2">Phòng</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="checkbox checkbox-css">
+                                <input type="checkbox" id="3" value="3" name="permission[]"
+                                    data-parsley-multiple="permission">
+                                <label for="3">Khách thuê</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="checkbox checkbox-css">
+                                <input type="checkbox" id="4" value="4" name="permission[]"
+                                    data-parsley-multiple="permission">
+                                <label for="4">Utility Bills</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="checkbox checkbox-css">
+                                <input type="checkbox" id="5" value="5" name="permission[]"
+                                    data-parsley-multiple="permission">
+                                <label for="5">Expenses</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="checkbox checkbox-css">
+                                <input type="checkbox" id="6" value="6" name="permission[]"
+                                    data-parsley-multiple="permission">
+                                <label for="6">Staff</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="checkbox checkbox-css">
+                                <input type="checkbox" id="7" value="7" name="permission[]"
+                                    data-parsley-multiple="permission">
+                                <label for="7">Staff Payroll</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="checkbox checkbox-css">
+                                <input type="checkbox" id="8" value="8" name="permission[]"
+                                    data-parsley-multiple="permission">
+                                <label for="8">Generate Invoice</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="checkbox checkbox-css">
+                                <input type="checkbox" id="9" value="9" name="permission[]"
+                                    data-parsley-multiple="permission">
+                                <label for="9">Invoices</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="checkbox checkbox-css">
+                                <input type="checkbox" id="10" value="10" name="permission[]"
+                                    data-parsley-multiple="permission">
+                                <label for="10">Account</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="checkbox checkbox-css">
+                                <input type="checkbox" id="11" value="11" name="permission[]"
+                                    data-parsley-multiple="permission">
+                                <label for="11">Settings</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="checkbox checkbox-css">
+                                <input type="checkbox" id="12" value="12" name="permission[]"
+                                    data-parsley-multiple="permission">
+                                <label for="12">Notices</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="checkbox checkbox-css">
+                                <input type="checkbox" id="13" value="13" name="permission[]"
+                                    data-parsley-multiple="permission">
+                                <label for="13">Complaints</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="checkbox checkbox-css">
+                                <input type="checkbox" id="14" value="14" name="permission[]"
+                                    data-parsley-multiple="permission">
+                                <label for="14">Lease Monitor</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="checkbox checkbox-css">
+                                <input type="checkbox" id="15" value="15" name="permission[]"
+                                    data-parsley-multiple="permission">
+                                <label for="15">Reports</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="checkbox checkbox-css">
+                                <input type="checkbox" id="16" value="16" name="permission[]"
+                                    data-parsley-multiple="permission">
+                                <label for="16">Inventory</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="checkbox checkbox-css">
+                                <input type="checkbox" id="17" value="17" name="permission[]"
+                                    data-parsley-multiple="permission">
+                                <label for="17">Cleaning</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <button type="submit" class="mb-sm btn btn-primary">Xác nhận</button>
+                </form>
+            </div>
+            <!-- end panel-body -->
+        </div>
+        <!-- end panel -->
+    </div>
+    <!-- end col-12 -->
+</div>
+<!-- end row -->
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    Swal.fire({
+        title: "Đang phát triển!!!",
+        text: "Tính năng này vẫn đang trong giai đoạn phát triển",
+        icon: "warning"
+    });
+</script>
