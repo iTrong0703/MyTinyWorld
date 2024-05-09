@@ -1,239 +1,293 @@
-<div id="content" class="content">
-    <!-- begin breadcrumb -->
-    <ol class="breadcrumb pull-right">
-        <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
-        <li class="breadcrumb-item active">Nhà</li>
-    </ol>
-    <!-- end breadcrumb -->
-    <!-- begin page-header -->
-    <h1 class="page-header">
-        <a href="/buildings/add_building">
-            <button type="button" class="btn btn-inverse"><i class="fa fa-plus"></i> Thêm nhà</button>
-        </a>
-    </h1>
-    <!-- end page-header -->
+<div id='content' class='content'>
+  <!-- begin breadcrumb -->
+  <ol class='breadcrumb pull-right'>
+    <li class='breadcrumb-item'><a href='/'>Trang chủ</a></li>
+    <li class='breadcrumb-item active'>Nhà</li>
+  </ol>
+  <!-- end breadcrumb -->
+  <!-- begin page-header -->
+  <h1 class='page-header'>
+    <a href='/buildings/add_building'>
+      <button type='button' class='btn btn-inverse'><i class='fa fa-plus'></i>
+        Thêm nhà</button>
+    </a>
+  </h1>
+  <!-- end page-header -->
 
-    <!-- begin row -->
-    <div class="row">
-        <!-- begin col-12 -->
-        <div class="col-lg-12 ui-sortable">
-            <!-- begin panel -->
-            <div class="panel panel-inverse">
-                <!-- begin panel-body -->
-                <div class="panel-body">
-                    <form id="f-houses" name="f-houses" method="post" enctype="multipart/form-data">
-                        <div class="row">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="form-group d-flex">
-                                        <div class="mr-2">
-                                            <label for="city">Tỉnh *</label>
-                                            <select style="width: 100%"
-                                                class="form-control default-select2 select2-hidden-accessible" id="city"
-                                                name="city">
-                                                <option value="">Chọn tỉnh thành</option>
-                                            </select>
-                                        </div>
-                                        <div class="mr-2">
-                                            <label for="district">Quận huyện *</label>
-                                            <select style="width: 100%"
-                                                class="form-control default-select2 select2-hidden-accessible"
-                                                id="district" name="district">
-                                                <option value="">Chọn quận huyện</option>
-                                            </select>
-                                        </div>
-                                        <div>
-                                            <label for="ward">Phường xã *</label>
-                                            <select style="width: 100%"
-                                                class="form-control default-select2 select2-hidden-accessible" id="ward"
-                                                name="ward">
-                                                <option value="">Chọn phường xã</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+  <!-- begin row -->
+  <div class='row'>
+    <!-- begin col-12 -->
+    <div class='col-lg-12 ui-sortable'>
+      <!-- begin panel -->
+      <div class='panel panel-inverse'>
+        <!-- begin panel-body -->
+        <div class='panel-body'>
+          <form
+            id='f-houses'
+            name='f-houses'
+            method='post'
+            enctype='multipart/form-data'
+          >
+            <div class='row'>
+              <div class='row'>
+                <div class='col-12'>
+                  <div class='form-group d-flex'>
+                    <div class='mr-2'>
+                      <label for='city'>Tỉnh *</label>
+                      <select
+                        style='width: 100%'
+                        class='form-control default-select2 select2-hidden-accessible'
+                        id='dropdown-city'
+                        name='city'
+                      >
+                        <option value=''>Chọn tỉnh thành</option>
+                      </select>
+                    </div>
+                    <div class='mr-2'>
+                      <label for='district'>Quận huyện *</label>
+                      <select
+                        style='width: 100%'
+                        class='form-control default-select2 select2-hidden-accessible'
+                        id='dropdown-district'
+                        name='district'
+                      >
+                        <option value=''>Chọn quận huyện</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label for='ward'>Phường xã *</label>
+                      <select
+                        style='width: 100%'
+                        class='form-control default-select2 select2-hidden-accessible'
+                        id='dropdown-ward'
+                        name='ward'
+                      >
+                        <option value=''>Chọn phường xã</option>
+                      </select>
 
+                    </div>
+                    <div>
+                      <label for='ward'>Nhà</label>
+                      <select
+                        style='width: 100%'
+                        class='form-control default-select2 select2-hidden-accessible'
+                        id='dropdown-building'
+                        name='building'
+                      >
+                        <option value=''>Chọn Nhà</option>
+                      </select>
 
-
-                            <div class="col-12 col-md-6 m-b-0 ">
-
-                                <button type="button" title="Tìm kiếm" data-action="search"
-                                    class="btn btn-sm btn-primary m-b-10">Tìm kiếm</button>
-                            </div>
-                        </div>
-
-
-                        <div class="row">
-                            <div class="col-12">
-                                <hr style="margin: 0 0 0px 0;">
-                            </div>
-                        </div>
-
-
-
-
-                        <div class="form-group m-b-5 m-t-7" id="scrollpagination">
-                            <div id="content" class="row data-houses m-t-15">
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 m-b-5 "
-                                    data-house="63dca8eb511ff4797a397879" data-rightsale="">
-                                    <div class="card card-inverse border-0 bd house-info m-b-10"
-                                        style="border: solid #ff0000 2px !important">
-                                        <div class="card-body p-0" style="position: relative;">
-                                            <div class="align-items-center house-title cur-p">
-                                                <div class="col-12 text-center p-t-5 p-b-5 p-l-0 p-r-0 text-white"
-                                                    style="background: #007bff !important;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
-                                                    <span class="text-color-room-available mb-0 "><span
-                                                            class="fs-13 text-white  ">125/51/1 BÙI ĐÌNH
-                                                            TUÝ</span></span>
-                                                </div>
-                                            </div>
-                                            <div class="row card-content__wrap mT-0 cur-p house-content p-l-5 p-r-5">
-                                                <div class="col-12 card-content__item"> <span
-                                                        class="card-content__remain mT-3 mB-3 float-left text-info fs-12 text-color-dark-blue fw-700">Tổng
-                                                        phòng</span> <span
-                                                        class="font-light fs-12 fw-700 text-right d-block my-2 card-content__remain mT-3 mB-3 float-right text-info text-color-dark-blue fw-700">39</span>
-                                                </div>
-                                                <div class="col-12 card-content__item"> <span
-                                                        class="card-content__remain mT-3 mB-3 float-left fs-12 text-danger fw-700">Phòng
-                                                        không bán</span> <span
-                                                        class="font-light fs-12 fw-700 text-right d-block my-2 card-content__remain mT-3 mB-3 float-right text-danger fw-700">35</span>
-                                                </div>
-                                                <div class="col-12 card-content__item"> <span
-                                                        class="card-content__remain mT-3 mB-3 float-left text-success fs-12 fw-700">Phòng
-                                                        bán</span> <span
-                                                        class="font-light fs-12 fw-700 text-right d-block my-2 card-content__remain mT-3 mB-3 float-right text-success fw-700">4</span>
-                                                </div>
-                                                <div class="col-12 card-content__item" style="height: 72px;">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 m-b-5 " data-house="" data-rightsale="">
-                                    <div class="card card-inverse border-0 bd house-info m-b-10"
-                                        style="border: solid #ff0000 2px !important">
-                                        <div class="card-body p-0" style="position: relative;">
-                                            <div class="align-items-center house-title cur-p">
-                                                <div class="col-12 text-center p-t-5 p-b-5 p-l-0 p-r-0 text-white"
-                                                    style="background: #007bff !important;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
-                                                    <span class="text-color-room-available mb-0 "><span
-                                                            class="fs-13 text-white  ">217/9/23 BÙI ĐÌNH
-                                                            TUÝ</span></span>
-                                                </div>
-                                            </div>
-                                            <div class="row card-content__wrap mT-0 cur-p house-content p-l-5 p-r-5">
-                                                <div class="col-12 card-content__item"> <span
-                                                        class="card-content__remain mT-3 mB-3 float-left text-info fs-12 text-color-dark-blue fw-700">Tổng
-                                                        phòng</span> <span
-                                                        class="font-light fs-12 fw-700 text-right d-block my-2 card-content__remain mT-3 mB-3 float-right text-info text-color-dark-blue fw-700">114</span>
-                                                </div>
-                                                <div class="col-12 card-content__item"> <span
-                                                        class="card-content__remain mT-3 mB-3 float-left fs-12 text-danger fw-700">Phòng
-                                                        không bán</span> <span
-                                                        class="font-light fs-12 fw-700 text-right d-block my-2 card-content__remain mT-3 mB-3 float-right text-danger fw-700">104</span>
-                                                </div>
-                                                <div class="col-12 card-content__item"> <span
-                                                        class="card-content__remain mT-3 mB-3 float-left text-success fs-12 fw-700">Phòng
-                                                        bán</span> <span
-                                                        class="font-light fs-12 fw-700 text-right d-block my-2 card-content__remain mT-3 mB-3 float-right text-success fw-700">10</span>
-                                                </div>
-                                                <div class="col-12 card-content__item" style="height: 72px;">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 m-b-5 " data-house="" data-rightsale="">
-                                    <div class="card card-inverse border-0 bd house-info m-b-10"
-                                        style="border: solid #ff0000 2px !important">
-                                        <div class="card-body p-0" style="position: relative;">
-                                            <div class="align-items-center house-title cur-p">
-                                                <div class="col-12 text-center p-t-5 p-b-5 p-l-0 p-r-0 text-white"
-                                                    style="background: #007bff !important;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
-                                                    <span class="text-color-room-available mb-0 "><span
-                                                            class="fs-13 text-white  ">217/102/18 BÙI ĐÌNH
-                                                            TUÝ</span></span>
-                                                </div>
-                                            </div>
-                                            <div class="row card-content__wrap mT-0 cur-p house-content p-l-5 p-r-5">
-                                                <div class="col-12 card-content__item"> <span
-                                                        class="card-content__remain mT-3 mB-3 float-left text-info fs-12 text-color-dark-blue fw-700">Tổng
-                                                        phòng</span> <span
-                                                        class="font-light fs-12 fw-700 text-right d-block my-2 card-content__remain mT-3 mB-3 float-right text-info text-color-dark-blue fw-700">74</span>
-                                                </div>
-                                                <div class="col-12 card-content__item"> <span
-                                                        class="card-content__remain mT-3 mB-3 float-left fs-12 text-danger fw-700">Phòng
-                                                        không bán</span> <span
-                                                        class="font-light fs-12 fw-700 text-right d-block my-2 card-content__remain mT-3 mB-3 float-right text-danger fw-700">69</span>
-                                                </div>
-                                                <div class="col-12 card-content__item"> <span
-                                                        class="card-content__remain mT-3 mB-3 float-left text-success fs-12 fw-700">Phòng
-                                                        bán</span> <span
-                                                        class="font-light fs-12 fw-700 text-right d-block my-2 card-content__remain mT-3 mB-3 float-right text-success fw-700">5</span>
-                                                </div>
-                                                <div class="col-12 card-content__item" style="height: 72px;">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-
-                    </form>
+                    </div>
+                  </div>
                 </div>
-                <!-- end panel-body -->
+              </div>
+
+              <div class='col-12 col-md-6 m-b-0'>
+
+                <button
+                  type='button'
+                  title='Tìm kiếm'
+                  data-action='search'
+                  class='btn btn-sm btn-primary m-b-10'
+                >Tìm kiếm</button>
+              </div>
             </div>
-            <!-- end panel -->
+
+            <div class='row'>
+              <div class='col-12'>
+                <hr style='margin: 0 0 0px 0;' />
+              </div>
+            </div>
+
+            <div class='form-group m-b-5 m-t-7' id='scrollpagination'>
+              <div id='content' class='row data-houses m-t-15'>
+                <div
+                  class='col-12 col-sm-6 col-md-6 col-lg-4 m-b-5'
+                  data-house='63dca8eb511ff4797a397879'
+                  data-rightsale=''
+                >
+                  <div
+                    class='card card-inverse border-0 bd house-info m-b-10'
+                    style='border: solid #ff0000 2px !important'
+                  >
+                    <div class='card-body p-0' style='position: relative;'>
+                      <div class='align-items-center house-title cur-p'>
+                        <div
+                          class='col-12 text-center p-t-5 p-b-5 p-l-0 p-r-0 text-white'
+                          style='background: #007bff !important;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;'
+                        >
+                          <span class='text-color-room-available mb-0'><span
+                              class='fs-13 text-white'
+                            >125/51/1 BÙI ĐÌNH TUÝ</span></span>
+                        </div>
+                      </div>
+                      <div
+                        class='row card-content__wrap mT-0 cur-p house-content p-l-5 p-r-5'
+                      >
+                        <div class='col-12 card-content__item'>
+                          <span
+                            class='card-content__remain mT-3 mB-3 float-left text-info fs-12 text-color-dark-blue fw-700'
+                          >Tổng phòng</span>
+                          <span
+                            class='font-light fs-12 fw-700 text-right d-block my-2 card-content__remain mT-3 mB-3 float-right text-info text-color-dark-blue fw-700'
+                          >39</span>
+                        </div>
+                        <div class='col-12 card-content__item'>
+                          <span
+                            class='card-content__remain mT-3 mB-3 float-left fs-12 text-danger fw-700'
+                          >Phòng không bán</span>
+                          <span
+                            class='font-light fs-12 fw-700 text-right d-block my-2 card-content__remain mT-3 mB-3 float-right text-danger fw-700'
+                          >35</span>
+                        </div>
+                        <div class='col-12 card-content__item'>
+                          <span
+                            class='card-content__remain mT-3 mB-3 float-left text-success fs-12 fw-700'
+                          >Phòng bán</span>
+                          <span
+                            class='font-light fs-12 fw-700 text-right d-block my-2 card-content__remain mT-3 mB-3 float-right text-success fw-700'
+                          >4</span>
+                        </div>
+                        <div
+                          class='col-12 card-content__item'
+                          style='height: 72px;'
+                        >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class='col-12 col-sm-6 col-md-6 col-lg-4 m-b-5'
+                  data-house=''
+                  data-rightsale=''
+                >
+                  <div
+                    class='card card-inverse border-0 bd house-info m-b-10'
+                    style='border: solid #ff0000 2px !important'
+                  >
+                    <div class='card-body p-0' style='position: relative;'>
+                      <div class='align-items-center house-title cur-p'>
+                        <div
+                          class='col-12 text-center p-t-5 p-b-5 p-l-0 p-r-0 text-white'
+                          style='background: #007bff !important;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;'
+                        >
+                          <span class='text-color-room-available mb-0'><span
+                              class='fs-13 text-white'
+                            >217/9/23 BÙI ĐÌNH TUÝ</span></span>
+                        </div>
+                      </div>
+                      <div
+                        class='row card-content__wrap mT-0 cur-p house-content p-l-5 p-r-5'
+                      >
+                        <div class='col-12 card-content__item'>
+                          <span
+                            class='card-content__remain mT-3 mB-3 float-left text-info fs-12 text-color-dark-blue fw-700'
+                          >Tổng phòng</span>
+                          <span
+                            class='font-light fs-12 fw-700 text-right d-block my-2 card-content__remain mT-3 mB-3 float-right text-info text-color-dark-blue fw-700'
+                          >114</span>
+                        </div>
+                        <div class='col-12 card-content__item'>
+                          <span
+                            class='card-content__remain mT-3 mB-3 float-left fs-12 text-danger fw-700'
+                          >Phòng không bán</span>
+                          <span
+                            class='font-light fs-12 fw-700 text-right d-block my-2 card-content__remain mT-3 mB-3 float-right text-danger fw-700'
+                          >104</span>
+                        </div>
+                        <div class='col-12 card-content__item'>
+                          <span
+                            class='card-content__remain mT-3 mB-3 float-left text-success fs-12 fw-700'
+                          >Phòng bán</span>
+                          <span
+                            class='font-light fs-12 fw-700 text-right d-block my-2 card-content__remain mT-3 mB-3 float-right text-success fw-700'
+                          >10</span>
+                        </div>
+                        <div
+                          class='col-12 card-content__item'
+                          style='height: 72px;'
+                        >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class='col-12 col-sm-6 col-md-6 col-lg-4 m-b-5'
+                  data-house=''
+                  data-rightsale=''
+                >
+                  <div
+                    class='card card-inverse border-0 bd house-info m-b-10'
+                    style='border: solid #ff0000 2px !important'
+                  >
+                    <div class='card-body p-0' style='position: relative;'>
+                      <div class='align-items-center house-title cur-p'>
+                        <div
+                          class='col-12 text-center p-t-5 p-b-5 p-l-0 p-r-0 text-white'
+                          style='background: #007bff !important;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;'
+                        >
+                          <span class='text-color-room-available mb-0'><span
+                              class='fs-13 text-white'
+                            >217/102/18 BÙI ĐÌNH TUÝ</span></span>
+                        </div>
+                      </div>
+                      <div
+                        class='row card-content__wrap mT-0 cur-p house-content p-l-5 p-r-5'
+                      >
+                        <div class='col-12 card-content__item'>
+                          <span
+                            class='card-content__remain mT-3 mB-3 float-left text-info fs-12 text-color-dark-blue fw-700'
+                          >Tổng phòng</span>
+                          <span
+                            class='font-light fs-12 fw-700 text-right d-block my-2 card-content__remain mT-3 mB-3 float-right text-info text-color-dark-blue fw-700'
+                          >74</span>
+                        </div>
+                        <div class='col-12 card-content__item'>
+                          <span
+                            class='card-content__remain mT-3 mB-3 float-left fs-12 text-danger fw-700'
+                          >Phòng không bán</span>
+                          <span
+                            class='font-light fs-12 fw-700 text-right d-block my-2 card-content__remain mT-3 mB-3 float-right text-danger fw-700'
+                          >69</span>
+                        </div>
+                        <div class='col-12 card-content__item'>
+                          <span
+                            class='card-content__remain mT-3 mB-3 float-left text-success fs-12 fw-700'
+                          >Phòng bán</span>
+                          <span
+                            class='font-light fs-12 fw-700 text-right d-block my-2 card-content__remain mT-3 mB-3 float-right text-success fw-700'
+                          >5</span>
+                        </div>
+                        <div
+                          class='col-12 card-content__item'
+                          style='height: 72px;'
+                        >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </form>
         </div>
-        <!-- end col-12 -->
+        <!-- end panel-body -->
+      </div>
+      <!-- end panel -->
     </div>
-    <!-- end row -->
+    <!-- end col-12 -->
+  </div>
+  <!-- end row -->
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+<script
+  src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js'
+></script>
 <script>
-    var citis = document.getElementById("city");
-    var districts = document.getElementById("district");
-    var wards = document.getElementById("ward");
-    var Parameter = {
-        url: "https://raw.githubusercontent.com/kenzouno1/DiaGioiHanhChinhVN/master/data.json",
-        method: "GET",
-        responseType: "application/json",
-    };
-    var promise = axios(Parameter);
-    promise.then(function (result) {
-        renderCity(result.data);
-    });
 
-    function renderCity(data) {
-        for (const x of data) {
-            citis.options[citis.options.length] = new Option(x.Name, x.Id);
-        }
-        citis.onchange = function () {
-            district.length = 1;
-            ward.length = 1;
-            if (this.value != "") {
-                const result = data.filter(n => n.Id === this.value);
-
-                for (const k of result[0].Districts) {
-                    district.options[district.options.length] = new Option(k.Name, k.Id);
-                }
-            }
-        };
-        district.onchange = function () {
-            ward.length = 1;
-            const dataCity = data.filter((n) => n.Id === citis.value);
-            if (this.value != "") {
-                const dataWards = dataCity[0].Districts.filter(n => n.Id === this.value)[0].Wards;
-
-                for (const w of dataWards) {
-                    wards.options[wards.options.length] = new Option(w.Name, w.Id);
-                }
-            }
-        };
-    }
 </script>
+
+<script src='/js/buildinglist.js'></script>
