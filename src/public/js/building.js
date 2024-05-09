@@ -32,6 +32,11 @@ document.getElementById("f-building-crud").addEventListener("submit", async func
             title: data.message,
             text: "Bấm ok để tiếp tục",
             icon: "success"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                console.log(result);
+                window.location.href = "/buildings"; // Chuyển hướng về trang chủ
+            }
         });
     })
     .catch(error => {

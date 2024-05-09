@@ -6,7 +6,7 @@
     </ol>
     <!-- end breadcrumb -->
     <!-- begin page-header -->
-    <h1 class="page-header">Xin Chào!!!<small>02 April, 2024</small></h1>
+    <h1 class="page-header">Xin Chào!!!<small id="current-date"></small></h1>
     <!-- end page-header -->
 
     <!-- begin row -->
@@ -315,3 +315,22 @@
 
 
 {{!-- end content --}}
+
+<!-- CDN moment.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<!-- Tải gói ngôn ngữ tiếng Việt của moment.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/vi.min.js"></script>
+
+<script>
+    //cập nhật ngày tháng
+    function updateDate() {
+        //lấy ngày tháng hiện tại và định dạng nó
+        const currentDate = moment().locale('vi').format('DD MMMM, YYYY');
+
+        // Hiển thị ngày tháng 
+        document.getElementById('current-date').textContent = currentDate;
+    }
+
+    updateDate();
+    setInterval(updateDate, 3600000); // cập nhật lại sau 1 giờ
+</script>

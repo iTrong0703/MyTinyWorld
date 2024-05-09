@@ -5,7 +5,7 @@ const complaintController = require('../controllers/complaintController');
 const router = Router();
 
 router.get('/', complaintController.index);
-// router.get('/add_complaint', complaintController.getAddBuilding);
+router.get('/add_complaint', complaintController.getAddComplaint);
 
 
 module.exports = router;
