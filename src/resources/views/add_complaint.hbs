@@ -1,0 +1,81 @@
+<div id="content" class="content">
+    <!-- begin breadcrumb -->
+    <ol class="breadcrumb pull-right">
+        <li class="breadcrumb-item"><a href="/">Trang chur</a></li>
+        <li class="breadcrumb-item active">Thêm khiếu nại</li>
+    </ol>
+    <!-- end breadcrumb -->
+    <!-- begin page-header -->
+    <h1 class="page-header">
+    Thêm khiếu nại    </h1>
+    <!-- end page-header -->
+
+    <!-- begin row -->
+    <div class="row">
+        <!-- begin col-12 -->
+        <div class="col-lg-6 offset-lg-3 ui-sortable">
+            <!-- begin panel -->
+            <div class="panel panel-inverse">
+                <!-- begin panel-body -->
+                <div class="panel-body">
+                    <form data-parsley-validate="true" enctype="multipart/form-data" accept-charset="utf-8" novalidate="">
+                                            <div class="form-group">
+                            <label>Tên khách hàng *</label>
+                            <div>
+                                <input type="text" name="subject" placeholder="Nhập tên người gửi khiếu nại" class="form-control" data-parsley-required="true">
+                            </div>
+                        </div>
+                                        <div class="form-group">
+                        <label>Tiêu đề *</label>
+                        <input type="text" name="subject" placeholder="Nhập chủ đề khiếu nại" class="form-control" data-parsley-required="true">
+                    </div>
+                    <div class="form-group">
+                        <label>Cung cấp ảnh (PDF/JPEG/PNG)</label>
+                        <br>
+                        <span class="btn btn-primary fileinput-button">
+                            <i class="fa fa-plus"></i>
+                            <span>Ảnh 1</span>
+                            <input class="form-control" type="file" name="complaint_picture_1">
+                        </span>
+                        <br>
+                        <br>
+                        <span class="btn btn-primary fileinput-button">
+                            <i class="fa fa-plus"></i>
+                            <span>Ảnh 2</span>
+                            <input class="form-control" type="file" name="complaint_picture_2">
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label>Cung cấp video (MP4)</label>
+                        <br>
+                        <span class="btn btn-primary fileinput-button">
+                            <i class="fa fa-plus"></i>
+                            <span>Thêm video</span>
+                            <input class="form-control" type="file" name="complaint_video">
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label>Nội dung</label>
+                        <textarea rows="10" style="resize: none" type="text" name="content" placeholder="Nhập nội dung chi tiết khiếu nại" class="form-control"></textarea>
+                    </div>                    
+
+                    <div class="form-group row m-b-6">
+                                <div class="col-6">
+                                    <button type="button" onclick="location.href='/complaints';" data-action="back"
+                                        title="Quay lại" class="btn btn-sm btn-outline-secondary">Quay lại</button>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <button id="btnSubmit" class="btn btn-sm btn-primary btnadd btn-ses" type="button" onclick="location.href='/complaints';"
+                                        title="Chấp nhận">Chấp
+                                        nhận</button>
+                                </div>
+                            </div>
+                    </form>                </div>
+                <!-- end panel-body -->
+            </div>
+            <!-- end panel -->
+        </div>
+        <!-- end col-12 -->
+    </div>
+    <!-- end row -->
+</div>

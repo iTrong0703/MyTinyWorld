@@ -7,7 +7,7 @@
     <!-- end breadcrumb -->
     <!-- begin page-header -->
     <h1 class="page-header">
-        <a href="#">
+        <a href="/complaints/add_complaint">
             <button type="button" class="btn btn-inverse"><i class="fa fa-plus"></i>Thêm khiếu nại</button>
         </a>
     </h1>
@@ -131,6 +131,11 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
+        Swal.fire({
+  title: "Đang phát triển!!!",
+  text: "Tính năng này vẫn đang trong giai đoạn phát triển",
+  icon: "warning"
+});
         function confirmDelete(event) {
             event.preventDefault();
             Swal.fire({
