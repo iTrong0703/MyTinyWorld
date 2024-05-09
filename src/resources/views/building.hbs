@@ -92,7 +92,7 @@
 
             <div class='form-group m-b-5 m-t-7' id='scrollpagination'>
               <div id='content' class='row data-houses m-t-15'>
-                {{this.name}}
+                {{#each buildings}}
                 {{!-- Start card --}}
                 <div
                   class='col-12 col-sm-6 col-md-6 col-lg-4 m-b-5'
@@ -111,7 +111,7 @@
                         >
                           <span class='text-color-room-available mb-0'><span
                               class='fs-13 text-white'
-                            >217/9/23 BÙI ĐÌNH TUÝ</span></span>
+                            >{{ buildingname }}</span></span>
                         </div>
                       </div>
                       <div
@@ -123,23 +123,23 @@
                           >Tổng phòng</span>
                           <span
                             class='font-light fs-12 fw-700 text-right d-block my-2 card-content__remain mT-3 mB-3 float-right text-info text-color-dark-blue fw-700'
-                          >114</span>
+                          >{{ roomquantity }}</span>
                         </div>
                         <div class='col-12 card-content__item'>
                           <span
                             class='card-content__remain mT-3 mB-3 float-left fs-12 text-danger fw-700'
-                          >Phòng không bán</span>
+                          >Phòng đang thuê</span>
                           <span
                             class='font-light fs-12 fw-700 text-right d-block my-2 card-content__remain mT-3 mB-3 float-right text-danger fw-700'
-                          >104</span>
+                          >0</span>
                         </div>
                         <div class='col-12 card-content__item'>
                           <span
                             class='card-content__remain mT-3 mB-3 float-left text-success fs-12 fw-700'
-                          >Phòng bán</span>
+                          >Phòng chưa thuê</span>
                           <span
                             class='font-light fs-12 fw-700 text-right d-block my-2 card-content__remain mT-3 mB-3 float-right text-success fw-700'
-                          >10</span>
+                          > {{ roomquantity }}</span>
                         </div>
                         <div
                           class='col-12 card-content__item'
@@ -151,7 +151,7 @@
                   </div>
                 </div>
                 {{!-- End Card --}}
-                
+                {{/each}}
             </div>
 
           </form>

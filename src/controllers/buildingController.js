@@ -1,18 +1,35 @@
 const axios = require('axios');
 class BuildingController {
   // GET /news
+  // async index(req, res) {
+  //   var param = {
+  //     url: 'http://localhost:8080/buildings/getall',
+  //     method: 'GET',
+  //     responseType: 'application/json',
+  //   };
+  //   var promise = axios(param);
+  //   promise.then(function (result) {
+  //     const buildings = result.data;
+  //     // console.log(buildings);
+  //     console.log(buildings);
+  //     res.render('building', { buildings: buildings });
+  //   });
+  // }
+
   index(req, res) {
-    var param = {
-      url: 'http://localhost:8080/buildings/getall',
-      method: 'GET',
-      responseType: 'application/json',
-    };
-    var promise = axios(param);
-    promise.then(function (result) {
-      // var buildings = result.data.data;
-      // console.log(buildings);
-      res.render('building', result);
-    });
+    fetch(`http://localhost:8080/buildings/getall`, {
+      method: 'get',
+      headers: {
+        Accept: 'application/json',
+      },
+    })
+      .then((res) => res.json())
+      .then((json) => {
+        const buildings = json.data.result;
+        console.log(buildings);
+        res.render('building', { buildings });
+      })
+      .catch((err) => res.status(500).send(e.message));
   }
 
   getAddBuilding(req, res) {

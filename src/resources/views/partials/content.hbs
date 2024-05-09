@@ -1,9 +1,60 @@
 <div>
-    {{#each cards}}
-        {{> cardPartial name=name refno=refno amount=amount}}
-    {{/each}}   
+  {{#each result}}
+    <div
+      class='col-12 col-sm-6 col-md-6 col-lg-4 m-b-5'
+      data-house=''
+      data-rightsale=''
+    >
+      <div
+        class='card card-inverse border-0 bd house-info m-b-10'
+        style='border: solid #ff0000 2px !important'
+      >
+        <div class='card-body p-0' style='position: relative;'>
+          <div class='align-items-center house-title cur-p'>
+            <div
+              class='col-12 text-center p-t-5 p-b-5 p-l-0 p-r-0 text-white'
+              style='background: #007bff !important;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;'
+            >
+              <span class='text-color-room-available mb-0'><span
+                  class='fs-13 text-white'
+                > {buildings.buildingname} </span></span>
+            </div>
+          </div>
+          <div
+            class='row card-content__wrap mT-0 cur-p house-content p-l-5 p-r-5'
+          >
+            <div class='col-12 card-content__item'>
+              <span
+                class='card-content__remain mT-3 mB-3 float-left text-info fs-12 text-color-dark-blue fw-700'
+              >Tổng phòng</span>
+              <span
+                class='font-light fs-12 fw-700 text-right d-block my-2 card-content__remain mT-3 mB-3 float-right text-info text-color-dark-blue fw-700'
+              >114</span>
+            </div>
+            <div class='col-12 card-content__item'>
+              <span
+                class='card-content__remain mT-3 mB-3 float-left fs-12 text-danger fw-700'
+              >Phòng không bán</span>
+              <span
+                class='font-light fs-12 fw-700 text-right d-block my-2 card-content__remain mT-3 mB-3 float-right text-danger fw-700'
+              >104</span>
+            </div>
+            <div class='col-12 card-content__item'>
+              <span
+                class='card-content__remain mT-3 mB-3 float-left text-success fs-12 fw-700'
+              >Phòng bán</span>
+              <span
+                class='font-light fs-12 fw-700 text-right d-block my-2 card-content__remain mT-3 mB-3 float-right text-success fw-700'
+              >10</span>
+            </div>
+            <div class='col-12 card-content__item' style='height: 72px;'>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/each}}
 </div>
-
 
 <script
   src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js'
