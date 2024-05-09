@@ -1,7 +1,18 @@
+const axios = require('axios');
 class BuildingController {
   // GET /news
   index(req, res) {
-    res.render('building');
+    var param = {
+      url: 'http://localhost:8080/buildings/getall',
+      method: 'GET',
+      responseType: 'application/json',
+    };
+    var promise = axios(param);
+    promise.then(function (result) {
+      // var buildings = result.data.data;
+      // console.log(buildings);
+      res.render('building', result);
+    });
   }
 
   getAddBuilding(req, res) {
