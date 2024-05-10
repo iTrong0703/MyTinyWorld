@@ -17,7 +17,14 @@ class BuildingController {
   // }
 
   index(req, res) {
-    fetch(`http://localhost:8080/buildings/getall`, {
+    const url = new URL('http://localhost:8080/buildings/getall');
+    const add_params = { ownername: 'kha', };
+    const new_params = new URLSearchParams([
+      ...Array.from(url.searchParams.entries()), ... Object.entries(add_params),
+    ]).toString();
+    const urlParam = new URL(`${url.origin}${url.pathname}?${new_params}`);
+
+    fetch(urlParam, {
       method: 'get',
       headers: {
         Accept: 'application/json',
