@@ -1,20 +1,5 @@
 const axios = require('axios');
 class BuildingController {
-  // GET /news
-  // async index(req, res) {
-  //   var param = {
-  //     url: 'http://localhost:8080/buildings/getall',
-  //     method: 'GET',
-  //     responseType: 'application/json',
-  //   };
-  //   var promise = axios(param);
-  //   promise.then(function (result) {
-  //     const buildings = result.data;
-  //     // console.log(buildings);
-  //     console.log(buildings);
-  //     res.render('building', { buildings: buildings });
-  //   });
-  // }
 
   index(req, res) {
     const url = new URL('http://localhost:8080/buildings/getall');
