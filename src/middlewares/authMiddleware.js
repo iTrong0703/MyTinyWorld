@@ -16,7 +16,7 @@ const requireAuth = (req, res, next) => {
                 const user = await User.findById(decodedToken.id);
                 if (!user.isVerified) {
                     res.render('authen/verifyEmail', { layout: 'authen.hbs', title: "Email chưa xác thực!!!" });
-                } else {
+                } else {    
                     // Người dùng đã xác thực email, tiếp tục
                     next();
                 }

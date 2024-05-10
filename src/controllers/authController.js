@@ -91,12 +91,12 @@ module.exports.verify_get = async (req, res) => {
 
 
 module.exports.signup_post = async (req, res) => {
-    const { email, password } = req.body;
+    const { email, managername ,password } = req.body;
 
     try {
-        const user = await User.create({ email, password });
+        const user = await User.create({ email, managername, password });
         const token = createToken(user._id);
-
+      
         // Gửi email xác thực
         const mailOptions = {
             from: process.env.MAIL_USERNAME,
@@ -140,9 +140,13 @@ module.exports.signin_post = async (req, res) => {
                 layout: 'authen.hbs', title: "Email chưa xác thực!!!", description: "Vui lòng xác thực email bằng cách nhấn vào đường link được gửi trong email của bạn!!!"
             });
         }
-
+        
+        const managerName = await user.managername;
         const token = createToken(user._id);
+
+        
         res.cookie('jwt', token, { httpOnly: true, maxAge: maxAge * 1000 });
+        res.cookie('managerName', managerName, { httpOnly: true }); 
         res.redirect('/');
         // res.status(200).json({ user: user._id });
 
@@ -153,7 +157,11 @@ module.exports.signin_post = async (req, res) => {
     }
 
 }
-
+// const cookieData = {
+        //     jwt: token,
+        //     managername: user.managername,
+        // };
+        // const cookieString = JSON.stringify(cookieData);
 module.exports.password_reset_get = (req, res) => {
     const { email, token } = req.query;
     if (!email || !token) {

@@ -2,8 +2,10 @@ const axios = require('axios');
 class BuildingController {
 
   index(req, res) {
+    const managerName = req.cookies.managerName;
+    console.log(managerName);
     const url = new URL('http://localhost:8080/buildings/getall');
-    const add_params = { ownername: 'kha', };
+    const add_params = { managername: managerName, };
     const new_params = new URLSearchParams([
       ...Array.from(url.searchParams.entries()), ... Object.entries(add_params),
     ]).toString();

@@ -6,19 +6,23 @@
                 <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
                     <div class="card shadow-lg">
                         <div class="card-body py-5 px-sm-5">
-                            <h3>Register New Account</h3>
-                            <p>Create an account by entering the information below. If you are a returning customer
-                                please login at the top of the page.</p>
+                            <h3>Đăng ký tài khoản</h3>
+                            <p>Đăng ký một tài khoản mới</p>
                             <form id="form1" class="form-validate mt-5" action="/signup" method="POST">
-                                <div class="h5 mb-4">Account details</div>
+                                <div class="h5 mb-4">Thông tin tài khoản</div>
                                 <div class="row">
                                     <div class="form-group col-md-6">
-                                        <label for="email">Email address</label>
+                                        <label for="email">Email (dùng để đăng nhập)</label>
                                         <input type="email" class="form-control" name="email"
-                                            placeholder="Enter your email" required="">
+                                            placeholder="Nhập email của bạn" required="">
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="password">Password</label>
+                                        <label >Tên bạn (hoặc tên quản lý)</label>
+                                        <input type="text" class="form-control" name="managername"
+                                            placeholder="Nhập tên của bạn hoặc người quản lý" required="">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="password">Mật khẩu</label>
                                         <div class="input-group ">
                                             <input class="form-control" name="password" id="password"
                                                 placeholder="Enter password" type="text" required="">
@@ -29,10 +33,10 @@
                                     </div>
                                 </div>
 
-                                <button type="submit" class="btn m-t-30 mt-3">Submit</button>
+                                <button type="submit" class="btn m-t-30 mt-3">Chấp nhận</button>
                             </form>
-                            <div class="mt-4"><small>Already have an acocunt?</small> <a href="/signin"
-                                    class="small fw-bold">Sign in</a>
+                            <div class="mt-4"><small>Đã có tài khoản?</small> <a href="/signin"
+                                    class="small fw-bold">Đăng nhập</a>
                             </div>
                         </div>
                     </div>
