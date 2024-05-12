@@ -95,14 +95,10 @@
                 {{#each buildings}}
                 {{!-- Start card --}}
                 <div
-                  class='col-12 col-sm-6 col-md-6 col-lg-4 m-b-5'
-                  data-house=''
-                  data-rightsale=''
-                >
+                  class='col-12 col-sm-6 col-md-6 col-lg-4 m-b-5 roomCard' id="roomCard" buildingname="{{ buildingname }}">
                   <div
                     class='card card-inverse border-0 bd house-info m-b-10'
-                    style='border: solid #ff0000 2px !important'
-                  >
+                    style='border: solid #ff0000 2px !important'>
                     <div class='card-body p-0' style='position: relative;'>
                       <div class='align-items-center house-title cur-p'>
                         <div
@@ -166,4 +162,5 @@
 </div>
 
 
-<script src='/js/buildinglist.js'></script>
+{{!-- <script src='/js/buildinglist.js'></script> --}}
+<script src='/js/addLink.js'></script>

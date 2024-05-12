@@ -1,651 +1,189 @@
 <div id='content' class='content'>
-  <!-- begin breadcrumb -->
-  <ol class='breadcrumb pull-right'>
-    <li class='breadcrumb-item'><a href='/'>Trang chủ</a></li>
-    <li class='breadcrumb-item active'>Phòng</li>
-  </ol>
-  <!-- end breadcrumb -->
-  <!-- begin page-header -->
-  <h1 class='page-header'>
-    <a href='#'>
-      <button type='button' class='btn btn-inverse'><i class='fa fa-plus'></i>
-        Thêm Phòng</button>
-    </a>
-  </h1>
-  <!-- end page-header -->
+    <!-- begin breadcrumb -->
+    <ol class='breadcrumb pull-right'>
+        <li class='breadcrumb-item'><a href='/'>Trang chủ</a></li>
+        <li class='breadcrumb-item active'>Phòng</li>
+    </ol>
+    <!-- end breadcrumb -->
+    <!-- begin page-header -->
+    <h1 class='page-header'>
+        <a href='#'>
+            <button type='button' class='btn btn-inverse'><i class='fa fa-plus'></i>
+                Thêm Phòng</button>
+        </a>
+    </h1>
+    <!-- end page-header -->
 
-  <!-- begin row -->
-  <div class='row'>
-    <!-- begin col-12 -->
-    <div class='col-lg-12 ui-sortable'>
-      <!-- begin panel -->
-      <div class='panel panel-inverse'>
-        <!-- begin panel-body -->
-        <div class='panel-body'>
-          <div
-            id='data-table-buttons_wrapper'
-            class='dataTables_wrapper form-inline dt-bootstrap no-footer'
-          >
-            <div class='dt-buttons btn-group'><a
-                class='btn btn-default buttons-excel buttons-html5 btn-sm'
-                tabindex='0'
-                aria-controls='data-table-buttons'
-              ><span>Excel</span></a><a
-                class='btn btn-default buttons-print btn-sm'
-                tabindex='0'
-                aria-controls='data-table-buttons'
-              ><span>Print</span></a></div>
-            <div id='data-table-buttons_filter' class='dataTables_filter'>
-              <label>Search:<input
-                  type='search'
-                  class='form-control input-sm'
-                  placeholder=''
-                  aria-controls='data-table-buttons'
-                /></label>
+    <!-- begin row -->
+    <div class='row'>
+        <!-- begin col-12 -->
+        <div class='col-lg-12 ui-sortable'>
+            <!-- begin panel -->
+            <div class='panel panel-inverse'>
+                <!-- begin panel-body -->
+                <div class='panel-body'>
+                    <div id='data-table-buttons_wrapper' class='dataTables_wrapper form-inline dt-bootstrap no-footer'>
+                        <div class='dt-buttons btn-group'><a class='btn btn-default buttons-excel buttons-html5 btn-sm'
+                                tabindex='0' aria-controls='data-table-buttons'><span>Excel</span></a><a
+                                class='btn btn-default buttons-print btn-sm' tabindex='0'
+                                aria-controls='data-table-buttons'><span>Print</span></a></div>
+                        <div id='data-table-buttons_filter' class='dataTables_filter'>
+                            <label>Search:<input type='search' class='form-control input-sm' placeholder=''
+                                    aria-controls='data-table-buttons' /></label>
+                        </div>
+                        <div>
+                            <label for='ward'>Nhà</label>
+                            <select style='width: 30%' class='form-control default-select2 select2-hidden-accessible'
+                                id='dropdown-building' name='building'>
+                                <option value=''>Pick building</option>
+                            </select>
+                        </div>
+
+                        <div style='overflow-x: auto;'>
+                            <table id='data-table-buttons'
+                                class='table table-striped table-bordered dataTable no-footer dtr-inline collapsed'
+                                role='grid' aria-describedby='data-table-buttons_info'>
+                                <thead>
+                                    <tr role='row'>
+                                        <th class='text-nowrap sorting' tabindex='0' aria-controls='data-table-buttons'
+                                            rowspan='1' colspan='1'
+                                            aria-label='Number/Name: activate to sort column ascending'
+                                            style='width: 81.5px;'>Chức năng</th>
+                                        <th class='text-nowrap sorting' tabindex='0' aria-controls='data-table-buttons'
+                                            rowspan='1' colspan='1'
+                                            aria-label='Number/Name: activate to sort column ascending'
+                                            style='width: 81.5px;'>Nhà trọ</th>
+                                        <th class='text-nowrap sorting' tabindex='0' aria-controls='data-table-buttons'
+                                            rowspan='1' colspan='1'
+                                            aria-label='Number/Name: activate to sort column ascending'
+                                            style='width: 81.5px;'>Phòng</th>
+                                        <th class='text-nowrap sorting' tabindex='0' aria-controls='data-table-buttons'
+                                            rowspan='1' colspan='1'
+                                            aria-label='Status: activate to sort column ascending'
+                                            style='width: 47.2625px;'>Giá Phòng</th>
+                                        <th class='text-nowrap sorting' tabindex='0' aria-controls='data-table-buttons'
+                                            rowspan='1' colspan='1'
+                                            aria-label='Status: activate to sort column ascending'
+                                            style='width: 47.2625px;'>Khách Hàng</th>
+                                        <th class='text-nowrap sorting' tabindex='0' aria-controls='data-table-buttons'
+                                            rowspan='1' colspan='1'
+                                            aria-label='Daily Rent: activate to sort column ascending'
+                                            style='width: 56.65px;'>Điện Thoại</th>
+                                        <th class='text-nowrap sorting' tabindex='0' aria-controls='data-table-buttons'
+                                            rowspan='1' colspan='1'
+                                            style='width: 74.375px;'>Tình Trạng Phòng</th>
+                                        <th class='text-nowrap sorting' tabindex='0' aria-controls='data-table-buttons'
+                                            rowspan='1' colspan='1'
+                                            style='width: 74.375px;'>Tình Trạng Thu Tiền</th>
+                                        <th class='text-nowrap sorting' tabindex='0' aria-controls='data-table-buttons'
+                                            rowspan='1' colspan='1'
+                                            style='width: 74.375px;'>Hạn Đóng Tiền</th>
+                                        <th class='text-nowrap sorting' tabindex='0' aria-controls='data-table-buttons'
+                                            rowspan='1' colspan='1'
+                                            style='width: 74.375px;'>Số Điện Cũ</th>
+                                        <th class='text-nowrap sorting' tabindex='0' aria-controls='data-table-buttons'
+                                            rowspan='1' colspan='1'
+                                            style='width: 74.375px;'>Số Điện Mới</th>
+                                        <th class='text-nowrap sorting' tabindex='0' aria-controls='data-table-buttons'
+                                            rowspan='1' colspan='1'
+                                            style='width: 74.375px;'>Tiền Điện</th>
+                                        <th class='text-nowrap sorting' tabindex='0' aria-controls='data-table-buttons'
+                                            rowspan='1' colspan='1'
+                                            style='width: 74.375px;'>Số Nước Cũ</th>
+                                        <th class='text-nowrap sorting' tabindex='0' aria-controls='data-table-buttons'
+                                            rowspan='1' colspan='1'
+                                            style='width: 74.375px;'>Số Nước Mới</th>
+                                        <th class='text-nowrap sorting' tabindex='0' aria-controls='data-table-buttons'
+                                            rowspan='1' colspan='1'
+                                            style='width: 74.375px;'>Tiền Nước</th>
+                                        <th class='text-nowrap sorting' tabindex='0' aria-controls='data-table-buttons'
+                                            rowspan='1' colspan='1'
+                                            style='width: 74.375px;'>Phí Giữ Xe</th>
+                                        <th class='text-nowrap sorting' tabindex='0' aria-controls='data-table-buttons'
+                                            rowspan='1' colspan='1'
+                                            style='width: 74.375px;'>Phí Thang Máy</th>
+                                        
+                                        <th class='text-nowrap sorting' tabindex='0' aria-controls='data-table-buttons'
+                                            rowspan='1' colspan='1'
+                                            style='width: 74.375px;'>Tổng Phí Dịch Vụ Chung</th>
+                                        <th class='text-nowrap sorting' tabindex='0' aria-controls='data-table-buttons'
+                                            rowspan='1' colspan='1'
+                                            style='width: 74.375px;'>Tiền Cọc</th>
+                                        <th class='text-nowrap sorting' tabindex='0' aria-controls='data-table-buttons'
+                                            rowspan='1' colspan='1'
+                                            style='width: 74.375px;'>Công Nợ</th>
+                                        <th class='text-nowrap sorting' tabindex='0' aria-controls='data-table-buttons'
+                                            rowspan='1' colspan='1'
+                                            style='width: 74.375px;'>Tổng Tiền</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{#each rooms }}
+                                    <tr role='row' class='odd'>
+                                        
+                                        <td class='table-cell text-left' role='gridcell'>
+                                            <i class='fa-solid fa-faucet' data-action='cap-nhat-dien-nuoc'
+                                                title='Cập nhật điện nước' onclick="window.location.href = 'http://localhost:3000/rooms/edit_invoice?buildingname={{../buildingName}}'">
+                                            </i>
+                                            {{!-- <i class='fa-solid fa-money-check-dollar' data-action='thanh-toan'
+                                                title='Thanh toán'>
+                                            </i>
+                                            <i class='fa-solid fa-address-card' data-action='xem-hop-dong'
+                                                title='Xem hợp đồng'>
+                                            </i> --}}
+                                            <i class='fa-solid fa-pen-to-square' data-action='cap-nhat-thong-tin' 
+                                                title='Cập nhật thông tin' onclick="window.location.href = 'http://localhost:3000/rooms/edit_room?buildingname={{../buildingName}}&roomindex={{roomindex}}'"> 
+                                            </i>
+                                            {{!-- <i class='fa-regular fa-note-sticky' data-action='cap-nhat-ghi-chu'
+                                                title='Ghi chú'>
+                                            </i>
+                                            <i class='mdi mdi-cloud-upload fs-25 text-muted d-none'
+                                                data-action='edit-log' title='Upload hợp đồng giấy'>
+                                            </i>
+                                            <i class='mdi mdi-lock-outline fs-25 text-danger c-pointer'
+                                                data-action='secret-code-bill' title='Mật khẩu xem bill'>
+                                            </i>
+                                            <i class='fa-solid fa-user-check' title='Xác nhận thanh toán'>
+                                            </i> --}}
+                                        </td>
+                                        <td class='table-cell text-left' role='gridcell'>{{../buildingName}}</td>
+                                        <td class='table-cell text-left' role='gridcell'>{{ roomindex }}</td>
+                                        <td class='table-cell text-right' role='gridcell'>{{ roomprice }}</td>
+                                        <td class='table-cell text-left' role='gridcell'></td>
+                                        <td class='table-cell text-left' role='gridcell'></td>
+                                        <td class='table-cell text-left' role='gridcell'><span
+                                                class='badge badge-warning'>Phòng Trống</span></td>
+                                        <td class='table-cell text-left' role='gridcell'><span
+                                                class='badge badge-danger'>Chưa thu tiền</span></td>
+                                        <td class='table-cell text-right' role='gridcell'>0</td><!--Số Điện Cũ-->
+                                        <td class='table-cell text-right' role='gridcell'>0</td> <!--Số Điện Mới-->
+                                        <td class='table-cell text-right' role='gridcell'>{{ electric }}</td><!--Tiền điện-->
+                                        <td class='table-cell text-right' role='gridcell'>0</td><!--Số nước cũ-->
+                                        <td class='table-cell text-right' role='gridcell'>0</td><!--Số nước mới-->
+                                        <td class='table-cell text-right' role='gridcell'>{{ water }}</td><!--tiền nước-->
+                                        <td class='table-cell text-right' role='gridcell'>20,000</td>
+                                        <td class='table-cell text-right' role='gridcell'>150,000</td>
+                                        <td class='table-cell text-right' role='gridcell'>160,000</td>
+                                        <td class='table-cell text-right' role='gridcell'>0</td>
+                                        <td class='table-cell text-right' role='gridcell'>310,000</td>
+                                        <td class='table-cell text-left' role='gridcell'></td>
+
+                                    </tr>
+                                    {{/each}} 
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-            <div>
-              <label for='ward'>Nhà</label>
-              <select
-                style='width: 30%'
-                class='form-control default-select2 select2-hidden-accessible'
-                id='dropdown-building'
-                name='building'
-              >
-                <option value=''>Pick building</option>
-              </select>
-            </div>
-
-            <div style='overflow-x: auto;'>
-              <table
-                id='data-table-buttons'
-                class='table table-striped table-bordered dataTable no-footer dtr-inline collapsed'
-                role='grid'
-                aria-describedby='data-table-buttons_info'
-              >
-                <thead>
-                  <tr role='row'>
-                    <th
-                      width='1%'
-                      class='sorting_asc'
-                      tabindex='0'
-                      aria-controls='data-table-buttons'
-                      rowspan='1'
-                      colspan='1'
-                      aria-sort='ascending'
-                      aria-label='#: activate to sort column descending'
-                      style='width: 7.375px;'
-                    >STT
-                    </th>
-                    <th
-                      width='1%'
-                      class='sorting_asc'
-                      tabindex='0'
-                      aria-controls='data-table-buttons'
-                      rowspan='1'
-                      colspan='1'
-                      aria-sort='ascending'
-                      aria-label='#: activate to sort column descending'
-                      style='width: 7.375px;'
-                    >
-                      <input
-                        type='checkbox'
-                        class='Check-All'
-                        data-check-all=''
-                        style='position: unset;left: 0px;opacity: 1;'
-                      />
-                    </th>
-                    <th
-                      class='text-nowrap sorting'
-                      tabindex='0'
-                      aria-controls='data-table-buttons'
-                      rowspan='1'
-                      colspan='1'
-                      aria-label='Number/Name: activate to sort column ascending'
-                      style='width: 81.5px;'
-                    >Chức năng</th>
-                    <th
-                      class='text-nowrap sorting'
-                      tabindex='0'
-                      aria-controls='data-table-buttons'
-                      rowspan='1'
-                      colspan='1'
-                      aria-label='Number/Name: activate to sort column ascending'
-                      style='width: 81.5px;'
-                    >Nhà trọ</th>
-                    <th
-                      class='text-nowrap sorting'
-                      tabindex='0'
-                      aria-controls='data-table-buttons'
-                      rowspan='1'
-                      colspan='1'
-                      aria-label='Number/Name: activate to sort column ascending'
-                      style='width: 81.5px;'
-                    >Phòng</th>
-                    <th
-                      class='text-nowrap sorting'
-                      tabindex='0'
-                      aria-controls='data-table-buttons'
-                      rowspan='1'
-                      colspan='1'
-                      aria-label='Status: activate to sort column ascending'
-                      style='width: 47.2625px;'
-                    >Giá Phòng</th>
-                    <th
-                      class='text-nowrap sorting'
-                      tabindex='0'
-                      aria-controls='data-table-buttons'
-                      rowspan='1'
-                      colspan='1'
-                      aria-label='Status: activate to sort column ascending'
-                      style='width: 47.2625px;'
-                    >Khách Hàng</th>
-                    <th
-                      class='text-nowrap sorting'
-                      tabindex='0'
-                      aria-controls='data-table-buttons'
-                      rowspan='1'
-                      colspan='1'
-                      aria-label='Daily Rent: activate to sort column ascending'
-                      style='width: 56.65px;'
-                    >Điện Thoại</th>
-                    <th
-                      class='text-nowrap sorting'
-                      tabindex='0'
-                      aria-controls='data-table-buttons'
-                      rowspan='1'
-                      colspan='1'
-                      aria-label='Monthly Rent: activate to sort column ascending'
-                      style='width: 74.375px;'
-                    >Hạn Đóng Tiền</th>
-                    <th
-                      class='text-nowrap sorting'
-                      tabindex='0'
-                      aria-controls='data-table-buttons'
-                      rowspan='1'
-                      colspan='1'
-                      aria-label='Monthly Rent: activate to sort column ascending'
-                      style='width: 74.375px;'
-                    >Tình Trạng Phòng</th>
-                    <th
-                      class='text-nowrap sorting'
-                      tabindex='0'
-                      aria-controls='data-table-buttons'
-                      rowspan='1'
-                      colspan='1'
-                      aria-label='Monthly Rent: activate to sort column ascending'
-                      style='width: 74.375px;'
-                    >Tình Trạng Thu Tiền</th>
-                    <th
-                      class='text-nowrap sorting'
-                      tabindex='0'
-                      aria-controls='data-table-buttons'
-                      rowspan='1'
-                      colspan='1'
-                      aria-label='Monthly Rent: activate to sort column ascending'
-                      style='width: 74.375px;'
-                    >Số Điện Cũ</th>
-                    <th
-                      class='text-nowrap sorting'
-                      tabindex='0'
-                      aria-controls='data-table-buttons'
-                      rowspan='1'
-                      colspan='1'
-                      aria-label='Monthly Rent: activate to sort column ascending'
-                      style='width: 74.375px;'
-                    >Số Điện Mới</th>
-                    <th
-                      class='text-nowrap sorting'
-                      tabindex='0'
-                      aria-controls='data-table-buttons'
-                      rowspan='1'
-                      colspan='1'
-                      aria-label='Monthly Rent: activate to sort column ascending'
-                      style='width: 74.375px;'
-                    >Tiền Điện</th>
-                    <th
-                      class='text-nowrap sorting'
-                      tabindex='0'
-                      aria-controls='data-table-buttons'
-                      rowspan='1'
-                      colspan='1'
-                      aria-label='Monthly Rent: activate to sort column ascending'
-                      style='width: 74.375px;'
-                    >Số Nước Cũ</th>
-                    <th
-                      class='text-nowrap sorting'
-                      tabindex='0'
-                      aria-controls='data-table-buttons'
-                      rowspan='1'
-                      colspan='1'
-                      aria-label='Monthly Rent: activate to sort column ascending'
-                      style='width: 74.375px;'
-                    >Số Nước Mới</th>
-                    <th
-                      class='text-nowrap sorting'
-                      tabindex='0'
-                      aria-controls='data-table-buttons'
-                      rowspan='1'
-                      colspan='1'
-                      aria-label='Monthly Rent: activate to sort column ascending'
-                      style='width: 74.375px;'
-                    >Tiền Nước</th>
-                    <th
-                      class='text-nowrap sorting'
-                      tabindex='0'
-                      aria-controls='data-table-buttons'
-                      rowspan='1'
-                      colspan='1'
-                      aria-label='Monthly Rent: activate to sort column ascending'
-                      style='width: 74.375px;'
-                    >Tiền Internet</th>
-                    <th
-                      class='text-nowrap sorting'
-                      tabindex='0'
-                      aria-controls='data-table-buttons'
-                      rowspan='1'
-                      colspan='1'
-                      aria-label='Monthly Rent: activate to sort column ascending'
-                      style='width: 74.375px;'
-                    >Tiền Máy Giặt</th>
-                    <th
-                      class='text-nowrap sorting'
-                      tabindex='0'
-                      aria-controls='data-table-buttons'
-                      rowspan='1'
-                      colspan='1'
-                      aria-label='Monthly Rent: activate to sort column ascending'
-                      style='width: 74.375px;'
-                    >Tiền Giữ Xe</th>
-                    <th
-                      class='text-nowrap sorting'
-                      tabindex='0'
-                      aria-controls='data-table-buttons'
-                      rowspan='1'
-                      colspan='1'
-                      aria-label='Monthly Rent: activate to sort column ascending'
-                      style='width: 74.375px;'
-                    >Phí Quản Lý</th>
-                    <th
-                      class='text-nowrap sorting'
-                      tabindex='0'
-                      aria-controls='data-table-buttons'
-                      rowspan='1'
-                      colspan='1'
-                      aria-label='Monthly Rent: activate to sort column ascending'
-                      style='width: 74.375px;'
-                    >Phí Khác</th>
-                    <th
-                      class='text-nowrap sorting'
-                      tabindex='0'
-                      aria-controls='data-table-buttons'
-                      rowspan='1'
-                      colspan='1'
-                      aria-label='Monthly Rent: activate to sort column ascending'
-                      style='width: 74.375px;'
-                    >Tổng Phí Dịch Vụ</th>
-                    <th
-                      class='text-nowrap sorting'
-                      tabindex='0'
-                      aria-controls='data-table-buttons'
-                      rowspan='1'
-                      colspan='1'
-                      aria-label='Monthly Rent: activate to sort column ascending'
-                      style='width: 74.375px;'
-                    >Tổng Tiền</th>
-                    <th
-                      class='text-nowrap sorting'
-                      tabindex='0'
-                      aria-controls='data-table-buttons'
-                      rowspan='1'
-                      colspan='1'
-                      aria-label='Monthly Rent: activate to sort column ascending'
-                      style='width: 74.375px;'
-                    >Công Nợ</th>
-                    <th
-                      class='text-nowrap sorting'
-                      tabindex='0'
-                      aria-controls='data-table-buttons'
-                      rowspan='1'
-                      colspan='1'
-                      aria-label='Monthly Rent: activate to sort column ascending'
-                      style='width: 74.375px;'
-                    >Tiền Cọc</th>
-                    <th
-                      class='text-nowrap sorting'
-                      tabindex='0'
-                      aria-controls='data-table-buttons'
-                      rowspan='1'
-                      colspan='1'
-                      aria-label='Monthly Rent: activate to sort column ascending'
-                      style='width: 74.375px;'
-                    >Ngày Kí Hợp Đồng</th>
-                    <th
-                      class='text-nowrap sorting'
-                      tabindex='0'
-                      aria-controls='data-table-buttons'
-                      rowspan='1'
-                      colspan='1'
-                      aria-label='Monthly Rent: activate to sort column ascending'
-                      style='width: 74.375px;'
-                    >Ngày Kết Thúc Hợp Đồng</th>
-                    <th
-                      class='text-nowrap sorting'
-                      tabindex='0'
-                      aria-controls='data-table-buttons'
-                      rowspan='1'
-                      colspan='1'
-                      aria-label='Monthly Rent: activate to sort column ascending'
-                      style='width: 74.375px;'
-                    >Ghi Chú</th>
-                  </tr>
-                </thead>
-                <tbody>
-
-                  <tr role='row' class='odd'>
-
-                    <td class='table-cell text-center' role='gridcell'>1</td>
-                    <td
-                      class='table-cell'
-                      style='text-align: center;'
-                      role='gridcell'
-                    ><input
-                        type='checkbox'
-                        class='custom-control-input Check-Item'
-                        data-check-item=''
-                        style='position: unset;left: 0px;opacity: 1;'
-                      /></td>
-                    <td class='table-cell text-left' role='gridcell'>
-                      <i
-                        class='fa-solid fa-faucet'
-                        data-action='cap-nhat-dien-nuoc'
-                        title='Cập nhật điện nước'
-                      >
-                      </i>
-                      <i
-                        class='fa-solid fa-money-check-dollar'
-                        data-action='thanh-toan'
-                        title='Thanh toán'
-                      >
-                      </i>
-                      <i
-                        class='fa-solid fa-address-card'
-                        data-action='xem-hop-dong'
-                        title='Xem hợp đồng'
-                      >
-                      </i>
-                      <i
-                        class='fa-solid fa-pen-to-square'
-                        data-action='cap-nhat-thong-tin'
-                        title='Cập nhật thông tin'
-                      >
-                      </i>
-                      <i
-                        class='fa-regular fa-note-sticky'
-                        data-action='cap-nhat-ghi-chu'
-                        title='Ghi chú'
-                      >
-                      </i>
-                      <i
-                        class='mdi mdi-cloud-upload fs-25 text-muted d-none'
-                        data-action='edit-log'
-                        title='Upload hợp đồng giấy'
-                      >
-                      </i>
-                      <i
-                        class='mdi mdi-lock-outline fs-25 text-danger c-pointer'
-                        data-action='secret-code-bill'
-                        title='Mật khẩu xem bill'
-                      >
-                      </i>
-                      <i
-                        class='fa-solid fa-user-check'
-                        title='Xác nhận thanh toán'
-                      >
-                      </i>
-                    </td>
-                    <td class='table-cell text-left' role='gridcell'>125/51/1
-                      BÙI ĐÌNH TUÝ</td>
-                    <td class='table-cell text-left' role='gridcell'>101</td>
-                    <td
-                      class='table-cell text-right'
-                      role='gridcell'
-                    >6,200,000</td>
-                    <td class='table-cell text-left' role='gridcell'>TRƯƠNG PHẠM
-                      MINH TRANG</td>
-                    <td
-                      class='table-cell text-left'
-                      role='gridcell'
-                    >0366677128</td>
-                    <td
-                      class='table-cell text-center'
-                      role='gridcell'
-                    >01/04/2024</td>
-                    <td class='table-cell text-left' role='gridcell'><span
-                        class='badge badge-primary'
-                      >Phòng Đang Thuê</span></td>
-                    <td class='table-cell text-left' role='gridcell'><span
-                        class='badge badge-danger'
-                      >Chưa thu tiền</span></td>
-                    <td class='table-cell text-right' role='gridcell'>4,179</td>
-                    <td class='table-cell text-right' role='gridcell'>4,179</td>
-                    <td class='table-cell text-right' role='gridcell'>0</td>
-                    <td class='table-cell text-right' role='gridcell'>0</td>
-                    <td class='table-cell text-right' role='gridcell'>0</td>
-                    <td
-                      class='table-cell text-right'
-                      role='gridcell'
-                    >100,000</td>
-                    <td class='table-cell text-right' role='gridcell'>0</td>
-                    <td
-                      class='table-cell text-right'
-                      role='gridcell'
-                    >20,000</td>
-                    <td
-                      class='table-cell text-right'
-                      role='gridcell'
-                    >150,000</td>
-                    <td
-                      class='table-cell text-right'
-                      role='gridcell'
-                    >160,000</td>
-                    <td class='table-cell text-right' role='gridcell'>0</td>
-                    <td
-                      class='table-cell text-right'
-                      role='gridcell'
-                    >310,000</td>
-                    <td
-                      class='table-cell text-right'
-                      role='gridcell'
-                    >48,078,000</td>
-                    <td
-                      class='table-cell text-right'
-                      role='gridcell'
-                    >48,078,000</td>
-                    <td
-                      class='table-cell text-right'
-                      role='gridcell'
-                    >6,200,000</td>
-                    <td
-                      class='table-cell text-center'
-                      role='gridcell'
-                    >01/09/2023</td>
-                    <td
-                      class='table-cell text-center'
-                      role='gridcell'
-                    >28/02/2024</td>
-                    <td class='table-cell text-left' role='gridcell'></td>
-
-                  </tr>
-                  <tr role='row' class='odd'>
-
-                    <td class='table-cell text-center' role='gridcell'>1</td>
-                    <td
-                      class='table-cell'
-                      style='text-align: center;'
-                      role='gridcell'
-                    ><input
-                        type='checkbox'
-                        class='custom-control-input Check-Item'
-                        data-check-item=''
-                        style='position: unset;left: 0px;opacity: 1;'
-                      /></td>
-                    <td class='table-cell text-left' role='gridcell'><i
-                        class='mdi mdi-table-edit fs-25 text-info c-pointer'
-                        data-action='cap-nhat-dien-nuoc'
-                        title='Cập nhật điện nước'
-                      ></i><i
-                        class='mdi mdi-cash-usd fs-28 text-info c-pointer'
-                        data-action='thanh-toan'
-                        title='Thanh toán'
-                      ></i><i
-                        class='mdi mdi-newspaper fs-25 text-info c-pointer'
-                        data-action='xem-hop-dong'
-                        title='Xem hợp đồng'
-                      ></i><i
-                        class='mdi mdi-pencil fs-25 text-warning c-pointer'
-                        data-action='cap-nhat-thong-tin'
-                        title='Cập nhật thông tin'
-                      ></i><i
-                        class='mdi mdi-tooltip-text fs-25 text-warning c-pointer'
-                        data-action='cap-nhat-ghi-chu'
-                        title='Ghi chú'
-                      ></i><i
-                        class='mdi mdi-cloud-upload fs-25 text-muted d-none'
-                        data-action='edit-log'
-                        title='Upload hợp đồng giấy'
-                      ></i><i
-                        class='mdi mdi-lock-outline fs-25 text-danger c-pointer'
-                        data-action='secret-code-bill'
-                        title='Mật khẩu xem bill'
-                      ></i><i
-                        class='mdi mdi-account-check fs-25 text-muted'
-                        title='Xác nhận thanh toán'
-                      ></i></td>
-                    <td class='table-cell text-left' role='gridcell'>125/51/1
-                      BÙI ĐÌNH TUÝ</td>
-                    <td class='table-cell text-left' role='gridcell'>101</td>
-                    <td
-                      class='table-cell text-right'
-                      role='gridcell'
-                    >6,200,000</td>
-                    <td class='table-cell text-left' role='gridcell'>TRƯƠNG PHẠM
-                      MINH TRANG</td>
-                    <td
-                      class='table-cell text-left'
-                      role='gridcell'
-                    >0366677128</td>
-                    <td
-                      class='table-cell text-center'
-                      role='gridcell'
-                    >01/04/2024</td>
-                    <td class='table-cell text-left' role='gridcell'><span
-                        class='badge badge-warning'
-                      >Sắp trả phòng</span></td>
-                    <td class='table-cell text-left' role='gridcell'><span
-                        class='badge badge-success'
-                      >Đã thu tiền</span></td>
-                    <td class='table-cell text-right' role='gridcell'>4,179</td>
-                    <td class='table-cell text-right' role='gridcell'>4,179</td>
-                    <td class='table-cell text-right' role='gridcell'>0</td>
-                    <td class='table-cell text-right' role='gridcell'>0</td>
-                    <td class='table-cell text-right' role='gridcell'>0</td>
-                    <td
-                      class='table-cell text-right'
-                      role='gridcell'
-                    >100,000</td>
-                    <td class='table-cell text-right' role='gridcell'>0</td>
-                    <td
-                      class='table-cell text-right'
-                      role='gridcell'
-                    >20,000</td>
-                    <td
-                      class='table-cell text-right'
-                      role='gridcell'
-                    >150,000</td>
-                    <td
-                      class='table-cell text-right'
-                      role='gridcell'
-                    >160,000</td>
-                    <td class='table-cell text-right' role='gridcell'>0</td>
-                    <td
-                      class='table-cell text-right'
-                      role='gridcell'
-                    >310,000</td>
-                    <td
-                      class='table-cell text-right'
-                      role='gridcell'
-                    >48,078,000</td>
-                    <td
-                      class='table-cell text-right'
-                      role='gridcell'
-                    >48,078,000</td>
-                    <td
-                      class='table-cell text-right'
-                      role='gridcell'
-                    >6,200,000</td>
-                    <td
-                      class='table-cell text-center'
-                      role='gridcell'
-                    >01/09/2023</td>
-                    <td
-                      class='table-cell text-center'
-                      role='gridcell'
-                    >28/02/2024</td>
-                    <td class='table-cell text-left' role='gridcell'></td>
-
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div
-              class='dataTables_info'
-              id='data-table-buttons_info'
-              role='status'
-              aria-live='polite'
-            >
-              Showing 1 to 2 of 2 entries</div>
-            <div
-              class='dataTables_paginate paging_simple_numbers'
-              id='data-table-buttons_paginate'
-            >
-              <ul class='pagination'>
-                <li
-                  class='paginate_button previous disabled'
-                  id='data-table-buttons_previous'
-                ><a
-                    href='#'
-                    aria-controls='data-table-buttons'
-                    data-dt-idx='0'
-                    tabindex='0'
-                  >Previous</a></li>
-                <li class='paginate_button active'><a
-                    href='#'
-                    aria-controls='data-table-buttons'
-                    data-dt-idx='1'
-                    tabindex='0'
-                  >1</a></li>
-                <li
-                  class='paginate_button next disabled'
-                  id='data-table-buttons_next'
-                ><a
-                    href='#'
-                    aria-controls='data-table-buttons'
-                    data-dt-idx='2'
-                    tabindex='0'
-                  >Next</a></li>
-              </ul>
-            </div>
-          </div>
+            <!-- end panel-body -->
         </div>
-        <!-- end panel-body -->
-      </div>
-      <!-- end panel -->
+        <!-- end panel -->
     </div>
     <!-- end col-12 -->
-  </div>
-  <!-- end row -->
 </div>
-<script
-  src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js'
-></script>
+<!-- end row -->
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js'></script>
 <script src='/js/room.js'></script>

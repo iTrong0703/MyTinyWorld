@@ -3,6 +3,7 @@ const path = require('path');
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
 const handlebars = require('express-handlebars');
+
 const axios = require('axios');
 const session = require('express-session');
 const app = express();
@@ -36,12 +37,17 @@ app.use(cookieParser());
 
 // HTTP logger
 // app.use(morgan('combined'))
-
+const helpers = {
+    eq: function(a, b, options) {
+        return a === b ? true : false;
+    }
+};
 //Template engine
 app.engine(
   'hbs',
   handlebars.engine({
     extname: '.hbs', // đổi lại đuôi .handlebars thành .hbs cho ngắn gọn
+    helpers: helpers
   })
 );
 app.set('view engine', 'hbs'); // set ứng dụng sử dụng view engine là handlebars

@@ -1,0 +1,656 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@22.0.2/build/css/intlTelInput.css">
+<div id="content" class="content">
+    <div class="container-fluid style-main-content" id="divSubContent" style="display: block;">
+
+
+        <div class="row page-titles">
+            <div class="col-12 col-sm-10 col-md-7 col-md-6 align-self-center p-l-0 centerX">
+                <h3 class="text-themecolor m-b-0 m-t-0 text-uppercase">Chỉnh sửa thông tin nhà trọ</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-10 col-md-7 col-md-6 centerX">
+                <form id="f-building-crud" name="f-building-crud" id-room="{{rooms.room._id}}">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <div class="form-group row m-b-6">
+                                <div class="col-12 m-b-5">
+                                    <ul class="nav nav-tabs customtab" role="tablist">
+                                        <li class="nav-item"> <a class="nav-link p-10 active" data-toggle="tab"
+                                                href="#tab01" role="tab" aria-selected="true">Tài chính</a> </li>
+                                        <li class="nav-item"> <a class="nav-link p-10" data-toggle="tab" href="#tab03"
+                                                role="tab" aria-selected="false">Thông tin phòng</a> </li>
+
+
+                                        <li class="nav-item"> <a class="nav-link p-10" data-toggle="tab" href="#tab05"
+                                                role="tab" aria-selected="false">Thông tin in bill</a> </li>
+                                    </ul>
+                                    <!-- Tab panes -->
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab01" role="tabpanel">
+                                            <div class="row m-t-20 ">
+                                                <div class="col-12 ">
+                                                    <div class="row">
+                                                        <div class="col-12 custom-field m-b-16">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue" >Tên
+                                                                nhà *</label>
+                                                            <input
+                                                                class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                type="text" id="house-name" name="buildingname"   disabled="disabled"
+                                                                required="true" value="{{buildingName}}"
+                                                                autocomplete="off" maxlength="29"
+                                                                title="Tên nhà tối đa 29 ký tự">
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-12 custom-field m-b-16">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Tên phòng</label>
+                                                            <input
+                                                                class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                required="true"
+                                                                type="text" id="house-address" name="buildingadress" disabled="disabled"
+                                                                value="{{rooms.room.roomindex}}" autocomplete="off" >
+                                                        </div>
+                                                    </div>
+                                                
+                                                    <!-- ROOM INFO -->
+
+
+
+                                                    <div class="row">
+                                                        <div class="col-6 custom-field">
+                                                            <div class="row m-b-15">
+                                                                <div class="col-12">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Giá
+                                                                        cọc * </label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-right text-number text-color-dark-blue"
+                                                                        type="text" id="current-room-rate"
+                                                                        name="roomdeposit" autocomplete="off" value="{{rooms.room.roomdeposit}}">
+
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-6 custom-field">
+                                                            <div class="row m-b-15">
+                                                                <div class="col-12">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Giá
+                                                                        phòng * </label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-right text-number text-color-dark-blue"
+                                                                        type="text" id="current-room-rate"
+                                                                        name="roomprice" autocomplete="off" value="{{rooms.room.roomprice}}">
+
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="row">
+                                                        <div class="col-6 custom-field">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Giá
+                                                                điện *</label>
+                                                            <input
+                                                                class="form-control form-control-sm custom-field__textbox text-number text-color-dark-blue text-right"
+                                                                type="text" id="electricity-fee" name="electric"
+                                                                autocomplete="off" value="{{rooms.service.electric}}">
+
+
+                                                        </div>
+                                                            <div class="col-6 custom-field">
+                                                                <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Giá
+                                                                        nước khoán *</label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-number text-color-dark-blue text-right"
+                                                                        type="text" id="water-fee" name="water"
+                                                                        autocomplete="off" value="{{rooms.service.water}}">
+
+                                                            </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-6 custom-field">
+                                                            <div class="row m-b-0">
+                                                                <div class="col-12">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Tính
+                                                                        theo</label>
+                                                                    <div class="custom-field">
+                                                                        <label
+                                                                            class="custom-control custom-radio d-inline-block m-r-10 m-b-0">
+                                                                            <input name="iswaterpayment" type="radio"
+                                                                                class="custom-control-input text-color-dark-blue"
+                                                                                value="true" checked="checked">
+                                                                            <span
+                                                                                class="custom-control-label p-t-5 text-color-dark-blue">Nước
+                                                                                chỉ số</span>
+                                                                        </label>
+                                                                        <label
+                                                                            class="custom-control custom-radio d-inline-block m-r-10 m-b-0">
+                                                                            <input name="iswaterpayment" type="radio"
+                                                                                class="custom-control-input text-color-dark-blue"
+                                                                                value="false">
+                                                                            <span
+                                                                                class="custom-control-label p-t-5 text-color-dark-blue">Nước
+                                                                                khoán</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+
+                                                        </div>
+                                                        <div class="col-6 custom-field m-b-0">
+                                                                <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Giá
+                                                                        nước theo chỉ số *</label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-number text-color-dark-blue text-right"
+                                                                        type="text" id="water-fee" name="water"
+                                                                        autocomplete="off" value="{{rooms.service.waterindex}}">
+
+                                                            </div>
+                                                    </div>
+
+
+
+                                                    {{!--
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <hr style="margin: 0 0 15px 0;">
+                                                        </div>
+                                                    </div> --}}
+                                                    <!-- THONG TIN CAC LOAI PHI -->
+                                                    <div class="row">
+                                                        <div class="col-6 custom-field">
+                                                            <div class="row m-b-15">
+                                                                <div class="col-12">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Phí gửi xe</label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-number text-right text-color-dark-blue"
+                                                                        type="text" id="generalservice"
+                                                                        name="motobike" autocomplete="off" value="">
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6 custom-field">
+                                                            <div class="row m-b-15">
+                                                                <div class="col-12">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Phí
+                                                                        thang máy</label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-number text-right text-color-dark-blue"
+                                                                        type="text" id="generalservice"
+                                                                        name="elevator" autocomplete="off" value="">
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                            
+                                                    </div>
+
+
+                                                    
+
+                                                    <div class="row m-t-5 m-b-5">
+                                                        <div class="col-12">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Dịch
+                                                                vụ chung</label>
+                                                            <input
+                                                                class="form-control form-control-sm custom-field__textbox text-number text-right text-color-dark-blue"
+                                                                type="text" id="generalservice"
+                                                                name="generalservice" autocomplete="off" value="{{rooms.service.generalservice}}">
+
+                                                        </div>
+                                                    </div>
+
+
+                                                    <!-- END - THONG TIN CAC LOAI PHI -->
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <hr style="margin: 0 0 15px 0;">
+                                                        </div>
+                                                    </div>
+
+
+                                                    <!-- THONG TIN TK NGAN HANG KHI IN HD -->
+
+
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="tab-pane" id="tab03" role="tabpanel">
+                                            <div class="row m-t-20 ">
+                                                <div class="col-6 custom-field">
+                                                    <div class="row">
+                                                        <div class="col-12 custom-field m-b-16">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Loại
+                                                                phòng </label>
+                                                            <select
+                                                                class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                id="room-info-cooling-type" name="roomtypes" value="">
+                                                                <option value=""></option>
+                                                                <option value="Studio" {{#if (eq rooms.room.roomtypes "Studio")}}selected{{/if}}>Phòng Studio</option>
+                                                                <option value="Duplex" {{#if (eq rooms.room.roomtypes "Duplex")}}selected{{/if}}>Phòng Duplex</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="col-12 custom-field m-b-16">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Diện
+                                                                tích </label>
+                                                            <input
+                                                                class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                type="text" autocomplete="off" id="room-area" 
+                                                                name="roomacreage" value="{{rooms.room.roomacreage}}">
+
+                                                        </div>
+                                                        <div class="col-12 custom-field m-b-16">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Toilet
+                                                            </label>
+                                                            <select
+                                                                class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                id="optToilet" name="roomtoilet">
+                                                                <option value=""></option>
+                                                                <option value="0" {{#if (eq rooms.room.roomtoilet 0)}}selected{{/if}}>Chung</option>
+                                                                <option value="1" {{#if (eq rooms.room.roomtoilet 1)}}selected{{/if}}>Riêng</option>
+                                                            </select>
+
+                                                        </div>
+                                                        <div class="col-12 custom-field m-b-16">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Sân
+                                                                phơi </label>
+                                                            <select
+                                                                class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                id="optSanPhoi" name="dryingyard">
+                                                                <option value=""></option>
+                                                                <option value="0" {{#if (eq rooms.room.dryingyard 0)}}selected{{/if}}>Chung</option>
+                                                                <option value="1" {{#if (eq rooms.room.dryingyard 1)}}selected{{/if}}>Riêng</option>
+                                                            </select>
+
+                                                        </div>
+                                                        {{!-- <div class="col-12 custom-field m-b-16">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Chổ
+                                                                để xe </label>
+                                                            <select
+                                                                class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                id="optNhaXe" name="optNhaXe">
+                                                                <option value="" selected="selected"></option>
+                                                                <option value="C">Chung</option>
+                                                                <option value="R">Trong phòng</option>
+                                                                <option value="OUT">Bãi ngoài</option>
+                                                            </select>
+
+                                                        </div>
+                                                        <div class="col-12 custom-field m-b-16">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Máy
+                                                                giặt </label>
+                                                            <select
+                                                                class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                id="may-giat" name="may-giat">
+                                                                <option value="" selected="selected"></option>
+                                                                <option value="R">Riêng</option>
+                                                                <option value="C">Chung</option>
+                                                                <option value="K">Không</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-12 custom-field m-b-16">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Loại
+                                                                khóa cổng </label>
+                                                            <select
+                                                                class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                id="optGateLockType" name="optGateLockType">
+                                                                <option value=""></option>
+                                                                <option value="Normal" selected="selected">Khóa thường
+                                                                </option>
+                                                                <option value="Fingerprint">Vân tay</option>
+                                                                <option value="Magnetic">Thẻ từ</option>
+                                                            </select>
+
+                                                        </div> --}}
+                                                        <div class="col-12 custom-field m-b-16">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Giờ
+                                                                giấc </label>
+                                                            <select
+                                                                class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                id="optGhe" name="opentimes">
+                                                                <option value=""></option>
+                                                                <option value="0" {{#if (eq rooms.room.opentimes 0)}}selected{{/if}}>Tự do</option>
+                                                                <option value="1" {{#if (eq rooms.room.opentimes 1)}}selected{{/if}}>Theo qui định</option>
+                                                            </select>
+
+                                                        </div>
+                                                        <div class="col-12 custom-field m-b-16">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Cho
+                                                                nuôi thú cưng </label>
+                                                            <select
+                                                                class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                id="optPet" name="pet">
+                                                                <option value=""></option>
+                                                                <option value="0" {{#if (eq rooms.room.pet 0)}}selected{{/if}}>Không</option>
+                                                                <option value="1" {{#if (eq rooms.room.pet 1)}}selected{{/if}}>Có</option>
+                                                                <option value="2" {{#if (eq rooms.room.pet 2)}}selected{{/if}}>Có (kèm điều kiện)</option>
+                                                            </select>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 custom-field">
+                                                    <div class="row">
+                                                        <div class="col-12 m-b-0">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    name="maylanh" value="true" {{#if (eq rooms.room.maylanh true)}}checked{{/if}}><span
+                                                                    class="custom-control-label p-t-5 text-red ">Máy
+                                                                    lạnh</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-0 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    name="giengtroi" value="true" {{#if (eq rooms.room.giengtroi true)}}checked{{/if}}><span
+                                                                    class="custom-control-label p-t-5 text-red ">Giếng
+                                                                    trời
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-0 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input" value="true"
+                                                                    name="gac" {{#if (eq rooms.room.gac true)}}checked{{/if}}><span
+                                                                    class="custom-control-label p-t-5 text-red ">Gác
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-0 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input" value="true"
+                                                                    name="kebep" {{#if (eq rooms.room.kebep true)}}checked{{/if}}><span
+                                                                    class="custom-control-label p-t-5 text-red ">Kệ bếp
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-0 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input" value="true"
+                                                                    name="bonruachen" {{#if (eq rooms.room.bonruachen true)}}checked{{/if}}><span
+                                                                    class="custom-control-label p-t-5 text-red ">Bồn rửa
+                                                                    chén </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-0 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input" value="true"
+                                                                    name="cuaso" {{#if (eq rooms.room.cuaso true)}}checked{{/if}}><span
+                                                                    class="custom-control-label p-t-5 text-red ">Cửa sổ
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-0 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input" value="true"
+                                                                    name="bancong" {{#if (eq rooms.room.bancong true)}}checked{{/if}}><span
+                                                                    class="custom-control-label p-t-5 text-red ">Ban
+                                                                    công
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-0 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input" value="true"
+                                                                    name="tulanh" {{#if (eq rooms.room.tulanh true)}}checked{{/if}}><span
+                                                                    class="custom-control-label p-t-5 text-red ">Tủ lạnh
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-0 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input" value="true"
+                                                                    name="tivi" {{#if (eq rooms.room.tivi true)}}checked{{/if}}><span
+                                                                    class="custom-control-label p-t-5 text-red ">Tivi
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-0 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input" value="true"
+                                                                    name="thangmay" {{#if (eq rooms.room.thangmay true)}}checked{{/if}}><span
+                                                                    class="custom-control-label p-t-5 text-red ">Thang
+                                                                    máy
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-0 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input" value="true"
+                                                                    name="nuocnong" {{#if (eq rooms.room.nuocnong true)}}checked{{/if}}><span
+                                                                    class="custom-control-label p-t-5 text-red ">Nước
+                                                                    nóng
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-0 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input" value="true"    
+                                                                    name="giuong" {{#if (eq rooms.room.giuong true)}}checked{{/if}}><span
+                                                                    class="custom-control-label p-t-5 text-red ">Giường
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-0 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input" value="true"
+                                                                    name="nem" {{#if (eq rooms.room.nem true)}}checked{{/if}}><span
+                                                                    class="custom-control-label p-t-5 text-red ">Nệm
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-0 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input" value="true"
+                                                                    name="tuquanao" {{#if (eq rooms.room.tuquanao true)}}checked{{/if}}><span
+                                                                    class="custom-control-label p-t-5 text-red ">Tủ quần
+                                                                    áo
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-0 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input" value="true"
+                                                                    name="chungchu" {{#if (eq rooms.room.chungchu true)}}checked{{/if}}><span
+                                                                    class="custom-control-label p-t-5 text-red ">Chung
+                                                                    chủ
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 m-b-10 m-t-10">
+                                                            <label
+                                                                class="custom-control custom-checkbox d-inline-block m-r-10 m-b-0 ">
+                                                                <input type="checkbox" class="custom-control-input" value="true"
+                                                                    name="baove" {{#if (eq rooms.room.baove true)}}checked{{/if}}><span
+                                                                    class="custom-control-label p-t-5 text-red ">Bảo vệ
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        {{!-- <div class="col-12 custom-field m-b-16">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Nội
+                                                                thất khác </label>
+                                                            <input
+                                                                class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                type="text" autocomplete="off" id="noi-that-khac"
+                                                                name="noi-that-khac" value="">
+
+                                                        </div> --}}
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+
+
+
+
+                                        </div>
+                                        <div class="tab-pane" id="tab05" role="tabpanel">
+                                            <div class="row m-t-20 ">
+                                                <div class="col-12 custom-field">
+                                                    <div class="row">
+                                                        <div class="col-12 custom-field centerX">
+                                                            <div class="row">
+                                                                <div class="col-12 m-b-15">
+                                                                    <span
+                                                                        class="text-uppercase text-decoration-underline text-color-dark-blue fw-700 ">Thông
+                                                                        tin chuyển khoản</span>
+                                                                </div>
+                                                                <div class="col-12 custom-field m-b-15">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-danger text-color-dark-blue">Số
+                                                                        tài khoản </label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                        type="text" id="bill-account-no"
+                                                                        name="accountnumber" autocomplete="off"
+                                                                        value="{{rooms.payment.accountnumber}}">
+
+                                                                </div>
+                                                                <div class="col-12 custom-field m-b-15">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-danger text-color-dark-blue">Tên
+                                                                        tài khoản </label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                        type="text" id="bill-account-name"
+                                                                        name="accountname" autocomplete="off"
+                                                                        value="{{rooms.payment.accountname}}">
+
+                                                                </div>
+                                                                <div class="col-12 custom-field m-b-15">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-danger text-color-dark-blue">Tại
+                                                                        ngân hàng </label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                        type="text" id="bill-bank-name"
+                                                                        name="bankname" autocomplete="off"
+                                                                        value="{{rooms.payment.bankname}}">
+
+                                                                </div>
+
+                                                                <div class="col-12 custom-field m-b-15">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-danger text-color-dark-blue">Nội
+                                                                        dung chuyển khoản </label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                        type="text" id="bill-content-transfer"
+                                                                        name="tranfercontent" autocomplete="off"
+                                                                        value="{{rooms.payment.tranfercontent}}">
+
+                                                                </div>
+
+                                                                
+                                                                <div class="col-12 custom-field m-b-10">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Lưu
+                                                                        ý </label>
+                                                                    <textarea
+                                                                        class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                        id="bill-warning" name="note" 
+                                                                        rows="4">{{rooms.payment.note}}</textarea>
+
+                                                                </div>
+
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <hr style="margin: 0 0 10px 0;">
+                                </div>
+                            </div>
+                            <div class="form-group row m-b-6">
+                                <div class="col-6">
+                                    <button type="button" onclick="location.href='/buildings';" data-action="back"
+                                        title="Quay lại" class="btn btn-sm btn-outline-secondary">Quay lại</button>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <button id="btnSubmit" class="btn btn-sm btn-primary btnadd btn-ses" type="submit"
+                                        title="Chấp nhận">Chấp
+                                        nhận</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </form>
+
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="/js/postRoom.js"></script>
+

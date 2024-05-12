@@ -1,0 +1,349 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@22.0.2/build/css/intlTelInput.css">
+<div id="content" class="content">
+    <div class="container-fluid style-main-content" id="divSubContent" style="display: block;">
+
+
+        <div class="row page-titles">
+            <div class="col-12 col-sm-10 col-md-7 col-md-6 align-self-center p-l-0 centerX">
+                <h3 class="text-themecolor m-b-0 m-t-0 text-uppercase">Cập nhật hóa đơn</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-10 col-md-7 col-md-6 centerX">
+                <form id="f-building-crud" name="f-building-crud" id-room="{{rooms.room._id}}">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <div class="form-group row m-b-6">
+                                <div class="col-12 m-b-5">
+                                    <ul class="nav nav-tabs customtab" role="tablist">
+                                        <li class="nav-item"> <a class="nav-link p-10 active" data-toggle="tab"
+                                                href="#tab01" role="tab" aria-selected="true">Tài chính</a> </li>
+                                    </ul>
+                                    <!-- Tab panes -->
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab01" role="tabpanel">
+                                            <div class="row m-t-20 ">
+                                                <div class="col-12 ">
+                                                    <div class="row">
+                                                        <div class="col-12 custom-field m-b-16">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue" >Tên
+                                                                nhà *</label>
+                                                            <input
+                                                                class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                type="text" id="house-name" name="buildingname"   disabled="disabled"
+                                                                required="true" value="{{buildingName}}"
+                                                                autocomplete="off" maxlength="29"
+                                                                title="Tên nhà tối đa 29 ký tự">
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-12 custom-field m-b-16">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Tên phòng</label>
+                                                            <input
+                                                                class="form-control form-control-sm custom-field__textbox text-color-dark-blue"
+                                                                required="true"
+                                                                type="text" id="house-address" name="buildingadress" disabled="disabled"
+                                                                value="{{rooms.room.roomindex}}" autocomplete="off" >
+                                                        </div>
+                                                    </div>
+                                                
+                                                    <!-- ROOM INFO -->
+
+
+
+                                                    <div class="row">
+                                                        <div class="col-6 custom-field">
+                                                            <div class="row m-b-15">
+                                                                <div class="col-12">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Chỉ số điện đầu * </label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-right text-number text-color-dark-blue"
+                                                                        type="text" id="current-room-rate"
+                                                                        required="true"
+                                                                        name="firstelecnumber" autocomplete="off" value="">
+
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-6 custom-field">
+                                                            <div class="row m-b-15">
+                                                                <div class="col-12">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Chỉ số điện cuối *</label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-right text-number text-color-dark-blue"
+                                                                        type="text" id="current-room-rate"
+                                                                        required="true"
+                                                                        name="lastelecnumber" autocomplete="off" value="{{rooms.room.roomprice}}">
+
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                    
+
+                                                    <div class="row">
+                                                        <div class="col-6 custom-field">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Giá
+                                                                điện *</label>
+                                                            <input
+                                                                class="form-control form-control-sm custom-field__textbox text-number text-color-dark-blue text-right"
+                                                                type="text" id="electricity-fee" name="elecprice"
+                                                                required="true"
+                                                                autocomplete="off" value="{{rooms.service.electric}}">
+
+
+                                                        </div>
+                                                           
+                                                    </div>
+                                                    
+                                                    
+                                                    <div class="row">
+                                                        <div class="col-6 custom-field">
+                                                            <div class="row m-b-15">
+                                                                <div class="col-12">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Chỉ số nước đầu * </label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-right text-number text-color-dark-blue"
+                                                                        type="text" id="current-room-rate"
+                                                                        required="true"
+                                                                        name="firstwaternumber" autocomplete="off" value="">
+
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-6 custom-field">
+                                                            <div class="row m-b-15">
+                                                                <div class="col-12">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Chỉ số nước cuối *</label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-right text-number text-color-dark-blue"
+                                                                        type="text" id="current-room-rate"
+                                                                        required="true"
+                                                                        name="lastwaternumber" autocomplete="off" value="{{rooms.room.roomprice}}">
+
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                    
+                                                    <div class="row">
+                                                         
+                                                         <div class="col-6 custom-field m-b-0">
+                                                                <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Giá
+                                                                        nước theo chỉ số *</label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-number text-color-dark-blue text-right"
+                                                                        type="text" id="water-fee" name="waterprice"
+                                                                        required="true"
+                                                                        autocomplete="off" value="{{rooms.service.waterindex}}">
+
+                                                            </div>
+                                                            <div class="col-6 custom-field">
+                                                                <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Giá
+                                                                        nước khoán *</label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-number text-color-dark-blue text-right"
+                                                                        type="text" id="water-fee" name="water"
+                                                                        required="true"
+                                                                        autocomplete="off" value="{{rooms.service.water}}">
+
+                                                            </div>
+                                                    </div>
+                                                    
+
+                                                    <div class="row">
+                                                        <div class="col-6 custom-field">
+                                                            <div class="row m-b-0">
+                                                                <div class="col-12">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Tính
+                                                                        theo</label>
+                                                                    <div class="custom-field">
+                                                                        <label
+                                                                            class="custom-control custom-radio d-inline-block m-r-10 m-b-0">
+                                                                            <input name="iswaterpayment" type="radio"
+                                                                                class="custom-control-input text-color-dark-blue"
+                                                                                value="true" checked="checked">
+                                                                            <span
+                                                                                class="custom-control-label p-t-5 text-color-dark-blue">Nước
+                                                                                chỉ số</span>
+                                                                        </label>
+                                                                        <label
+                                                                            class="custom-control custom-radio d-inline-block m-r-10 m-b-0">
+                                                                            <input name="iswaterpayment" type="radio"
+                                                                                class="custom-control-input text-color-dark-blue"
+                                                                                value="false">
+                                                                            <span
+                                                                                class="custom-control-label p-t-5 text-color-dark-blue">Nước
+                                                                                khoán</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+
+                                                        </div>
+                                                       
+                                                    </div>
+
+
+
+                                                    {{!--
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <hr style="margin: 0 0 15px 0;">
+                                                        </div>
+                                                    </div> --}}
+                                                    <!-- THONG TIN CAC LOAI PHI -->
+                                                    <div class="row">
+                                                        <div class="col-6 custom-field">
+                                                            <div class="row m-b-15">
+                                                                <div class="col-12">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Phí gửi xe</label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-number text-right text-color-dark-blue"
+                                                                        type="text" id="generalservice"
+                                                                        name="motobike" autocomplete="off" value="">
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6 custom-field">
+                                                            <div class="row m-b-15">
+                                                                <div class="col-12">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Phí
+                                                                        thang máy</label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-number text-right text-color-dark-blue"
+                                                                        type="text" id="generalservice"
+                                                                        name="elevator" autocomplete="off" value="">
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                            
+                                                    </div>
+
+<div class="row">
+                                                        <div class="col-6 custom-field">
+                                                            <div class="row m-b-15">
+                                                                <div class="col-12">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Số ngày ở</label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-number text-right text-color-dark-blue"
+                                                                        type="number" id="generalservice"
+                                                                        name="daystay" autocomplete="off" value="">
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6 custom-field">
+                                                            <div class="row m-b-15">
+                                                                <div class="col-12">
+                                                                    <label
+                                                                        class="col-form-label custom-field__textbox--label text-color-dark-blue">Thời hạn ở</label>
+                                                                    <input
+                                                                        class="form-control form-control-sm custom-field__textbox text-number text-right text-color-dark-blue"
+                                                                        type="date" id="generalservice"
+                                                                        name="period" autocomplete="off" value="">
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                            
+                                                    </div>
+                                                    
+
+                                                    <div class="row m-t-5 m-b-5">
+                                                        <div class="col-12">
+                                                            <label
+                                                                class="col-form-label custom-field__textbox--label text-color-dark-blue">Dịch
+                                                                vụ chung</label>
+                                                            <input
+                                                                class="form-control form-control-sm custom-field__textbox text-number text-right text-color-dark-blue"
+                                                                type="text" id="generalservice"
+                                                                name="generalservice" autocomplete="off" value="{{rooms.service.generalservice}}">
+
+                                                        </div>
+                                                    </div>
+
+
+                                                    <!-- END - THONG TIN CAC LOAI PHI -->
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <hr style="margin: 0 0 15px 0;">
+                                                        </div>
+                                                    </div>
+
+
+                                                    <!-- THONG TIN TK NGAN HANG KHI IN HD -->
+
+
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                       
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <hr style="margin: 0 0 10px 0;">
+                                </div>
+                            </div>
+                            <div class="form-group row m-b-6">
+                                <div class="col-6">
+                                    <button type="button" onclick="location.href='/buildings';" data-action="back"
+                                        title="Quay lại" class="btn btn-sm btn-outline-secondary">Quay lại</button>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <button id="btnSubmit" class="btn btn-sm btn-primary btnadd btn-ses" type="submit"
+                                        title="Chấp nhận">Chấp
+                                        nhận</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </form>
+
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="/js/postRoom.js"></script>
+
